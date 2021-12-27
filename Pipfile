@@ -8,6 +8,8 @@ django = "*"
 requests = "*"
 beautifulsoup4 = "*"
 aiohttp = "*"
+djangorestframework = "*"
+celery = "*"
 
 [dev-packages]
 
