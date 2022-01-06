@@ -1,7 +1,9 @@
 import os
 from pathlib import Path
+from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+load_dotenv()
 
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 DEBUG = int(os.getenv('DJANGO_DEBUG'))
@@ -15,7 +17,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'rest_framework',
+
     'news',
+    'landing',
 ]
 
 MIDDLEWARE = [
@@ -51,8 +56,13 @@ WSGI_APPLICATION = 'seventrans.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': os.getenv('DJAGNO_DB_ENGINE', 'django.db.backends.sqlite3'),
+        'OPTIONS': {'sql_mode': 'traditional', },
+        'NAME': os.getenv('DJAGNO_DB_NAME', BASE_DIR / 'db.sqlite3'),
+        'USER': os.getenv('DJAGNO_DB_USER'),
+        'PASSWORD': os.getenv('DJAGNO_DB_PASSWORD'),
+        'HOST': os.getenv('DJAGNO_DB_HOST'),
+        'PORT': os.getenv('DJAGNO_DB_PORT'),
     }
 }
 
@@ -76,7 +86,11 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-STATIC_URL = 'static/'
+STATIC_URL = 'statis/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'seventrans', 'static/')]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

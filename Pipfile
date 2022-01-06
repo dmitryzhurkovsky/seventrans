@@ -8,6 +8,9 @@ django = "*"
 requests = "*"
 beautifulsoup4 = "*"
 aiohttp = "*"
+djangorestframework = "*"
+celery = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
