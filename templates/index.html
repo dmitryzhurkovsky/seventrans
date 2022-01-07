@@ -1,0 +1,163 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+    <section class="banner">
+
+        <div class="banner__wrapper">
+
+            <div class="banner__content _container">
+
+                <div class="banner__body">
+
+                    <div class="banner__title">
+
+                        <div class="square title__col _flex">
+                            <div class="">25</div>
+                            <div>лет</div>
+                        </div>
+
+                        <div class="title__col">
+                            на рынке междунарожных грузоперевозок
+                        </div>
+                    </div><!--    banner__title-->
+                </div> <!-- ..body-->
+
+                <div class="banner__about about__block">
+                    <div class="table2x">
+                        <h2 class="">О компании</h2>
+                        <div class="about__text">
+                            <div>
+                                <p>ЧТУП «СевенТрансСервис» c 1996 года оказывает услуги в сфере международных
+                                    автомобильных
+                                    перевозок по Европе и странам СНГ.</p>
+                                <p>За время присутствия на рынке международных грузоперевозок наша компания
+                                    зарекомендовала
+                                    себя как надежный партнер для многочисленных клиентов и партнеров по всему миру.</p>
+                                <p>Приоритетными направлениями грузоперевозок для нас являются Венгрия, Словакия, Чехия,
+                                    Польша, Российская Федерация, Республика Беларусь.</p>
+                            </div>
+                            <div class="about__logo">
+                                <img src="{% static 'img/1.png' %}" alt="Логотип">
+                            </div>
+                        </div>
+                        <button class="btn mt-20"> Подробнее</button>
+
+                    </div> <!-- table2x-->
+
+                    <div class="table2x statistic_box">
+                        <div class="about__item">
+                            <div class="about__info">25 лет</div>
+                            <div class="about__subitem">безупречной работы</div>
+                        </div>
+                        <div class="about__item">
+                            <div class="about__subitem">более</div>
+                            <div class="about__info">50 млн. км.</div>
+                            <div class="about__subitem">пробега</div>
+                        </div>
+                        <div class="about__item">
+                            <div class="about__info">45000</div>
+                            <div class="about__subitem">перевозок</div>
+                        </div>
+
+
+                    </div> <!-- table2x-->
+
+                    <!-- <button class="btn btn-arrow"> Подробнее</button>-->
+
+
+                </div> <!--__about-->
+
+            </div>   <!-- ..content-->
+        </div>  <!-- ..content-->
+    </section>
+
+    <section class="news">
+        <div class="news__wrapper">
+            <div class="news__content _container">
+                <h2>Новости</h2>
+                <div class="news__body">
+
+                    <div class="news__block">
+                        <div class="one_news__block">
+                            <div class="one_news__img">
+                                <img src="{% static 'img/news/fura-1.png' %}" alt="Новости">
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="news__block">
+                        <div class="one_news__block">
+                            <div class="one_news__img">
+                                <img src="{% static 'img/news/fura-2.png' %} " alt="Новости">
+                            </div>
+                            <div class="one_news__description">
+                                <div class="one_news__date one_news__item">13.02.2021</div>
+                                <div class="one_news__title one_news__item"> Краткое название новости2 (определенное
+                                    количество символов)
+                                </div>
+                                <div class="one_news__text one_news__item">
+                                    Описание новости не больше двух предложений
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="one_news__block">
+                            <div class="one_news__img">
+                                <img src="{% static 'img/news/fura-3.png' %}" alt="Новости">
+                            </div>
+                            <div class="one_news__description">
+                                <div class="one_news__date one_news__item">13.02.2021</div>
+                                <div class="one_news__title one_news__item"> Краткое название новости2 (определенное
+                                    количество символов)
+                                </div>
+                                <div class="one_news__text one_news__item">
+                                    Описание новости не больше двух предложений
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div> <!-- ..body-->
+                <div class="news__body">
+                    <div class="news__block">
+                        <div class="one_news__block">
+                            <div class="one_news__description">
+                                <div class="one_news__date one_news__item">13.02.2021</div>
+                                <div class="one_news__title one_news__item"> Краткое название новости2 (определенное
+                                    количество символов)
+                                </div>
+                                <div class="one_news__text one_news__item">
+                                    Описание новости не больше двух предложений
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news__block">
+                        <div class="one_news__block">
+                            <button class="btn bnt-arrow">Смотреть все новости
+                                <img src="{% static 'img/arr_wh.svg' %}" width="26" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>   <!-- ..content-->
+        </div>  <!-- ..content-->
+    </section>
+
+    <section class="map">
+        <div class="map__wrapper">
+            <div class="map__content _container">
+
+                <div class="map__body">
+                </div> <!-- ..body-->
+            </div>   <!-- ..content-->
+        </div>  <!-- ..content-->
+    </section>
+{% endblock content %}
