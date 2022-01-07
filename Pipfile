@@ -9,6 +9,7 @@ requests = "*"
 beautifulsoup4 = "*"
 djangorestframework = "*"
 celery = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
