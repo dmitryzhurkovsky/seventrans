@@ -2,24 +2,54 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
-    <link rel="stylesheet" href="../seventrans/static/css/style.min.css">
-    <link rel="shortcut icon" href="../seventrans/static/img/favicon.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 
-    <title>7trans | Международные перевозки</title>
+  <title>7trans | Международные перевозки</title>
+
+  <style type="text/css">
+    /* Set a size for our map container, the Google Map will take up 100% of this container */
+    #map {
+      width: 100%;
+      height: 475px;
+    }
+  </style>
+
+  <!--
+      You need to include this script tag on any page that has a Google Map.
+
+      The following script tag will work when opening this example locally on your computer.
+      But if you use this on a localhost server or a live website you will need to include an API key.
+      Sign up for one here (it's free for small usage):
+          https://developers.google.com/maps/documentation/javascript/tutorial#api_key
+
+      After you sign up, use the following script tag with YOUR_GOOGLE_API_KEY replaced with your actual key.
+          <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY"></script>
+  -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+
+
 </head>
 
-<body>
-<header class="header">
+
+    <body>
+        <header class="header">
     <div class="header__wrapper">
         <div class="header__content  _container">
             <div class="header__body">
                 <nav class="header__navigation">
+                    <button id="burger" type="button" class="icon-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                     <div class="header__logo-box">
                         <a class="header__logo" href="/" alt="">
-                            <img class="header__img" src="../seventrans/static/img/logo.png" alt="seventrans">
+                            <img class="header__img" src="img/logo.png" alt="seventrans">
                         </a>
                         <div class="header__logo-text">
                             Международные
@@ -27,7 +57,7 @@
                             по Европе и странам СНГ
                         </div>
                     </div>
-                    <div class="header__menu menu _flex">
+                    <div class="header__menu menu">
                         <ul class="menu__list">
                             <li class="menu__item">
                                 <a class="menu__link" href="">О компании</a>
@@ -57,7 +87,7 @@
     </div>
 
 </header>
-<section class="banner">
+        <section class="banner">
 
     <div class="banner__wrapper">
 
@@ -83,15 +113,12 @@
                     <h2 class="">О компании</h2>
                     <div class="about__text">
                         <div>
-                            <p>ЧТУП «СевенТрансСервис» c 1996 года оказывает услуги в сфере международных автомобильных
-                                перевозок по Европе и странам СНГ.</p>
-                            <p>За время присутствия на рынке международных грузоперевозок наша компания зарекомендовала
-                                себя как надежный партнер для многочисленных клиентов и партнеров по всему миру.</p>
-                            <p>Приоритетными направлениями грузоперевозок для нас являются Венгрия, Словакия, Чехия,
-                                Польша, Российская Федерация, Республика Беларусь.</p>
+                            <p>ЧТУП «СевенТрансСервис» c 1996 года оказывает услуги в сфере международных автомобильных перевозок по Европе и странам СНГ.</p>
+                            <p>За время присутствия на рынке международных грузоперевозок наша компания зарекомендовала себя как надежный партнер для многочисленных клиентов и партнеров по всему миру.</p>
+                            <p>Приоритетными направлениями грузоперевозок для нас являются Венгрия, Словакия, Чехия, Польша, Российская Федерация, Республика Беларусь.</p>
                         </div>
                         <div class="about__logo">
-                            <img src="../seventrans/static/img/1.png" alt="Логотип">
+                            <img src="img/1.png" alt="Логотип">
                         </div>
                     </div>
                     <button class="btn mt-20"> Подробнее</button>
@@ -112,11 +139,7 @@
                         <div class="about__info">45000</div>
                         <div class="about__subitem">перевозок</div>
                     </div>
-
-
                 </div> <!-- table2x-->
-
-                <!-- <button class="btn btn-arrow"> Подробнее</button>-->
 
 
             </div> <!--__about-->
@@ -125,7 +148,7 @@
     </div>  <!-- ..content-->
 </section>
 
-<section class="news">
+        <section class="news">
     <div class="news__wrapper">
         <div class="news__content _container">
             <h2>Новости</h2>
@@ -134,7 +157,7 @@
                 <div class="news__block">
                     <div class="one_news__block">
                         <div class="one_news__img">
-                            <img src="../seventrans/static/img/news/fura-1.png" alt="Новости">
+                            <img src="img/news/fura-1.png" alt="Новости">
                         </div>
 
 
@@ -143,13 +166,11 @@
                 <div class="news__block">
                     <div class="one_news__block">
                         <div class="one_news__img">
-                            <img src="../seventrans/static/img/news/fura-2.png" alt="Новости">
+                            <img src="img/news/fura-2.png" alt="Новости">
                         </div>
                         <div class="one_news__description">
                             <div class="one_news__date one_news__item">13.02.2021</div>
-                            <div class="one_news__title one_news__item"> Краткое название новости2 (определенное
-                                количество символов)
-                            </div>
+                            <div class="one_news__title one_news__item"> Краткое название новости2 (определенное количество символов)</div>
                             <div class="one_news__text one_news__item">
                                 Описание новости не больше двух предложений
                             </div>
@@ -160,13 +181,11 @@
 
                     <div class="one_news__block">
                         <div class="one_news__img">
-                            <img src="../seventrans/static/img/news/fura-3.png" alt="Новости">
+                            <img src="img/news/fura-3.png" alt="Новости">
                         </div>
                         <div class="one_news__description">
                             <div class="one_news__date one_news__item">13.02.2021</div>
-                            <div class="one_news__title one_news__item"> Краткое название новости2 (определенное
-                                количество символов)
-                            </div>
+                            <div class="one_news__title one_news__item"> Краткое название новости2 (определенное количество символов)</div>
                             <div class="one_news__text one_news__item">
                                 Описание новости не больше двух предложений
                             </div>
@@ -175,6 +194,7 @@
                     </div>
 
                 </div>
+
 
 
             </div> <!-- ..body-->
@@ -183,9 +203,7 @@
                     <div class="one_news__block">
                         <div class="one_news__description">
                             <div class="one_news__date one_news__item">13.02.2021</div>
-                            <div class="one_news__title one_news__item"> Краткое название новости2 (определенное
-                                количество символов)
-                            </div>
+                            <div class="one_news__title one_news__item"> Краткое название новости2 (определенное количество символов)</div>
                             <div class="one_news__text one_news__item">
                                 Описание новости не больше двух предложений
                             </div>
@@ -195,7 +213,7 @@
                 <div class="news__block">
                     <div class="one_news__block">
                         <button class="btn bnt-arrow">Смотреть все новости
-                            <img src="../seventrans/static/img/arr_wh.svg" width="26" alt="">
+                            <img src="img/arr_wh.svg" width="26" alt="">
                         </button>
                     </div>
                 </div>
@@ -205,7 +223,7 @@
     </div>  <!-- ..content-->
 </section>
 
-<section class="map">
+        <section class="map">
     <div class="map__wrapper">
         <div class="map__content _container">
 
@@ -215,22 +233,240 @@
     </div>  <!-- ..content-->
 </section>
 
+        <section class="uslugi">
+    <div class="uslugi__wrapper">
+        <div class="uslugi__content  _container">
+            <div class="uslugi__body">
+                <div class="uslugi__paragraph">
 
-<footer class="footer">
+                    <p>Компания <strong> ЧТУП «СевенТрансСервис»</strong> на протяжении 25 лет осуществляет автомобильные международные грузоперевозки наземным транспортом, являясь надежным партнером для коллег и заказчиков.
+                        Одним из направлений деятельности компании является экспедирование грузов в страны Европы и СНГ.
+                        Автопарк компании включает в себя собственные тентованные и рефрижераторные автопоезда стандарта Евро-5, Евро-6.
+
+                    </p>
+                </div>
+                <div class="uslugi__box">
+                    <div class="uslugi__item usluga">
+                        <div class="usluga__img">
+                            <img src="img/usl.png" alt="">
+                        </div>
+                        <div class="usluga__textbox">
+                            <h4 class="usluga__title">Название услуги</h4>
+                            <div class="usluga__description">
+                                Негабаритный груз - это объекты грузоперевозок, которые не соответствуют установленным транспортным стандартам по форме, размерам или техническим особенностям.
+                            </div>
+                            <button class="btn btn-arrow">Подробнее
+                                <img src="img/arr_wh.svg" width="26" alt="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="uslugi__item usluga">
+                        <div class="usluga__img">
+                            <img src="img/usl.png" alt="">
+                        </div>
+                        <div class="usluga__textbox">
+                            <h4 class="usluga__title">Название услуги</h4>
+                            <div class="usluga__description">
+                                Негабаритный груз - это объекты грузоперевозок, которые не соответствуют установленным транспортным стандартам по форме, размерам или техническим особенностям.
+                            </div>
+                            <button class="btn btn-arrow">Подробнее
+                                <img src="img/arr_wh.svg" width="26" alt="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="uslugi__item usluga">
+                        <div class="usluga__img">
+                            <img src="img/usl.png" alt="">
+                        </div>
+                        <div class="usluga__textbox">
+                            <h4 class="usluga__title">Название услуги</h4>
+                            <div class="usluga__description">
+                                Негабаритный груз - это объекты грузоперевозок, которые не соответствуют установленным транспортным стандартам по форме, размерам или техническим особенностям.
+                            </div>
+                            <button class="btn btn-arrow">Подробнее
+                                <img src="img/arr_wh.svg" width="26" alt="">
+                            </button>
+                        </div>
+                    </div>
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+</section>
+        <section class="contacts">
+    <div class="contacts__wrapper">
+        <div class="contacts__content  _container">
+            <div class="contacts__body">
+
+                <div class="contacts__box _flex">
+                    <div class="table2x">
+                        <div>
+                            <div class="contacts__item"><strong>Юридические данные:</strong></div>
+                            <div class="contacts__item"><strongПолное наименование:</strong>
+                                <span>
+                                     ЧТУП «СевенТрансСервис»
+                                </span>
+                            </div>
+                            <div class="contacts__item"><strong>Юридические адрес:</strong>
+                                <span>
+                                      223710, Минская обл., Солигорский р-н, Чижевичский с/с, д.68, пом.56, Район промзоны 1 РУ
+                                </span>
+                            </div>
+                            <div class="contacts__item"><strong>УНП:</strong>
+                                <span>
+                                    690630311
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="table2x">
+                        <div class="contacts__row">
+                            <img class="contacts__icon" src="img/svg/point.svg" alt="Adress">
+                            <div class="contacts__item">Адрес:
+                                <span>
+                                      ул. К.Заслонова 47-17, 46, 223709, г.Солигорск,
+                                      Минская область, Республика Беларусь.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="contacts__row">
+                            <img class="contacts__icon" src="img/svg/time.svg" alt="Working time">
+                            <div class="contacts__item">Время работы:
+                                <span>
+                                    пн-пт с 8.00 до 17.00
+                                </span>
+                            </div>
+                        </div>
+                        <div class="contacts__row">
+                            <img class="contacts__icon" src="img/svg/phone.svg" alt="Telephon">
+                            <div class="contacts__item">Наш телефон:
+                                <span>
+                                      +375 17 432-33-23
+                                </span>
+                            </div>
+                        </div>
+                        <div class="contacts__row">
+                            <img class="contacts__icon" src="img/svg/email.svg" alt="Email">
+                            <div class="contacts__item">Наша почта:
+                                <span>
+                                      seventrans@mail.ru
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div> <!-- __box-->
+
+                <div class="contacts__box">
+                    <div class="contacts__map">
+<!--                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A352c3295463f92c6382358a083d5a52435bac81250f666f21ea7b56bb0605926&amp;width=100%25&amp;height=475&amp;lang=ru_RU&amp;scroll=true"></script>-->
+                        <!-- The element that will contain our Google Map. This is used in both the Javascript and CSS above. -->
+                        <div id="map"></div>
+                    </div>  <!-- __box-->
+
+                </div> <!-- __box-->
+
+
+
+            </div><!-- __body-->
+        </div><!-- __content-->
+    </div><!-- __wrapper-->
+
+</section>
+        <section class="list_news">
+    <div class="list_news__wrapper">
+        <div class="list_news__content  _container">
+            <div class="list_news__body">
+                <div class="list_news__paragraph">
+
+                    <p>
+                        В условиях постоянно развивающейся экономики нашей страны, международные перевозки грузов
+                        обретают все большую популярность. На сегодняшний день ни одна фирма, которая осуществляет
+                        внешнеэкономическую деятельность, не обходится без сотрудничества с компанией, осуществляющей
+                        международные грузоперевозки.
+                    </p>
+                </div>
+                <div class="list_news__box">
+                    <div class="list_news__item">
+                        <div class="list_news__img">
+                            <img src="img/news/fura-1.png" alt="">
+                        </div>
+
+                        <div class="list_news__description">
+                            <div class="one_news__date one_news__item">13.02.2021</div>
+                            <div class="one_news__title one_news__item"> Название заголовка первой новости,
+                                в две строчки</div>
+                            <div class="one_news__text one_news__item">
+                                Негабаритный груз - это объекты грузоперевозок, которые не соответствуют установленным
+                                транспортным стандартам по форме, размерам или техническим особенностям
+                            </div>
+                        </div>
+                    </div> <!--one_news-->
+
+                    <div class="list_news__item">
+                        <div class="list_news__img">
+                            <img src="img/news/fura-1.png" alt="">
+                        </div>
+
+                        <div class="list_news__description">
+                            <div class="one_news__date one_news__item">13.02.2021</div>
+                            <div class="one_news__title one_news__item"> Краткое название новости2 (определенное количество символов)</div>
+                            <div class="one_news__text one_news__item">
+                                Описание новости не больше двух предложений
+                            </div>
+                        </div>
+                    </div> <!--one_news-->
+                    <div class="list_news__item">
+                        <div class="list_news__img">
+                            <img src="img/news/fura-1.png" alt="">
+                        </div>
+
+                        <div class="list_news__description">
+                            <div class="one_news__date one_news__item">13.02.2021</div>
+                            <div class="one_news__title one_news__item"> Краткое название новости2 (определенное количество символов)</div>
+                            <div class="one_news__text one_news__item">
+                                Описание новости не больше двух предложений
+                            </div>
+                        </div>
+                    </div> <!--one_news-->
+                </div> <!--__box-->
+                <div class="list_news__pagination pagination _flex">
+                    <div class="pagination__link page_back">Назад</div>
+                    <ul class="pagination__numbers">
+                        <li class="pagination__item _active">1</li>
+                        <li class="pagination__item">2</li>
+                        <li class="pagination__item">3</li>
+                    </ul>
+                    <div class="pagination__link page_next">Вперед</div>
+
+                </div>
+        </div><!--__body-->
+    </div><!--__content-->
+    </div> <!--__wrapper-->
+
+</section>
+        <footer class="footer">
     <div class="footer__wrapper">
         <div class="footer__content _container">
             <div class="footer__body">
-                <div class="company_name">ЧТУП «СевенТрансСервис»</div>
+                <div class="company_name">ЧТУП «СевенТрансСервис» </div>
                 <div class="footer__menu">
                     <div class="footer__col">
                         <div class="company__item">УНП 690630311</div>
                         <div class="company__item">
                             223710, Минская обл., Солигорский р-н,
                             Чижевичский с/с, д.68, пом.56,
-                            Район промзоны 1 РУ
-                        </div>
+                            Район промзоны 1 РУ</div>
                         <div class="company__item">Разработка сайта -
-                            <a href="https://profox.by/" class="page__link">ProFox</a>
+                            <a  href="https://profox.by/" class="page__link">ProFox</a>
                         </div>
 
                     </div> <!--__col-->
@@ -238,34 +474,46 @@
                     <div class="footer__col">
                         <div class="company__item">Время работы: пн-пт с 8.00 до 17.00</div>
                         <div class="company__item">E-mail:
-                            <a class="_link_underline" href="mailto:info@remohire.co">seventrans@mail.ru</a>
+                            <a class="_link_underline"  href="mailto:info@remohire.co" >seventrans@mail.ru</a>
                         </div>
                         <div class="company__item">
                             <a class="_link mr-20" href="tel:+375174323323">+375 (174) 323323,</a>
                             <a class="_link" href="tel:+375296253512">+375 (29) 6253512</a>
                         </div>
                         <div class="company__item">
-                            <a href="">
-                                <img class="_icon mr-20" src="../seventrans/static/img/instagram.svg" alt="instagram">
+                            <a href="" >
+                                <img class="_icon mr-20" src="img/instagram.svg" alt="instagram">
                             </a>
                             <a href="">
-                                <img class="_icon" src="../seventrans/static/img/linkedin.svg" alt="linkedin">
+                                <img class="_icon" src="img/linkedin.svg" alt="linkedin">
                             </a>
                         </div>
                     </div> <!--__col-->
                     <div class="footer__col maps__block">
                         <div class="maps__logo">
-                            <img src="../seventrans/static/img/logo.png" alt="seventrans">
+                            <img src="img/logo.png" alt="seventrans">
                         </div> <!--__item-->
                     </div> <!--__col-->
 
                 </div> <!--__menu-->
 
 
+
             </div> <!--__body-->
         </div> <!--__content-->
     </div><!--__wrapper-->
 </footer>
-<script src="../seventrans/static/js/app.min.js"></script>
-</body>
+        <section class="preheader">
+    <div class="preheader__wrapper">
+        <div class="preheader__content  _container">
+            <div class="preheader__body">
+                <div class="breadcrumbs">Главная / О компании</div>
+                <h2 class="preheader__title">О компании</h2>
+            </div> <!--  __content-->
+       </div><!--  __content-->
+    </div>  <!-- __wrapper-->
+</section>
+
+        <script src="js/app.min.js"></script>
+    </body>
 </html>
