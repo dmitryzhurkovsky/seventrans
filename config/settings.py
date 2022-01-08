@@ -7,7 +7,7 @@ load_dotenv()
 
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 DEBUG = int(os.getenv('DJANGO_DEBUG'))
-ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS').split()
+ALLOWED_HOSTS = os.getenv('DJANGO_ALLOWED_HOSTS').split(',')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -20,7 +20,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     'news',
-    'landing',
+    'pages',
 ]
 
 MIDDLEWARE = [
@@ -33,7 +33,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'seventrans.urls'
+ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
     {
@@ -52,12 +52,12 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'seventrans.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
         'ENGINE': os.getenv('DJAGNO_DB_ENGINE', 'django.db.backends.sqlite3'),
-        'OPTIONS': {'sql_mode': 'traditional', },
+        # 'OPTIONS': {'sql_mode': 'traditional', },
         'NAME': os.getenv('DJAGNO_DB_NAME', BASE_DIR / 'db.sqlite3'),
         'USER': os.getenv('DJAGNO_DB_USER'),
         'PASSWORD': os.getenv('DJAGNO_DB_PASSWORD'),
@@ -86,11 +86,12 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-STATIC_URL = 'statis/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-MEDIA_URL = 'media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'seventrans', 'static/')]
+STATIC_URL = '/seventrans/static/'
+STATIC_ROOT = '/home/a7transb/repositories/seventrans/static/'
+MEDIA_URL = '/seventrans/media/'
+MEDIA_ROOT = '/home/a7transb/repositories/seventrans/media/'
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'config', 'static/')]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

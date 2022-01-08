@@ -1,9 +1,7 @@
 from news.models import Article
 from news.parsers import TransInfoParser
-from seventrans.celery import app
 
 
-@app.task
 def parse_news_and_populate_database():
     parser = TransInfoParser()
 
