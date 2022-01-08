@@ -9,7 +9,7 @@ class Article(models.Model):
     publish_date = models.DateField()
 
     body = models.TextField()
-    preview_body = models.CharField(max_length=255)
+    preview_body = models.TextField()
 
     img_url = models.CharField(max_length=255, blank=True, null=True)
 
