@@ -86,9 +86,9 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-STATIC_URL = '/seventrans/static/'
+STATIC_URL = 'static/'
 STATIC_ROOT = '/home/a7transb/repositories/seventrans/static/'
-MEDIA_URL = '/seventrans/media/'
+MEDIA_URL = 'media/'
 MEDIA_ROOT = '/home/a7transb/repositories/seventrans/media/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'config', 'static/')]
