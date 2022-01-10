@@ -36,10 +36,12 @@
                                     Польша, Российская Федерация, Республика Беларусь.</p>
                             </div>
                             <div class="about__logo">
-                                <img src="{% static 'img/1.png' %}" alt="Логотип">
+                                <img src="img/1.png" alt="Логотип">
                             </div>
                         </div>
-                        <button class="btn mt-20"> Подробнее</button>
+                        <button class="btn mt-20 btn-arrow"> Подробнее
+                            <img src="{% static 'img/arr_wh.svg' %}" width="26" alt="">
+                        </button>
 
                     </div> <!-- table2x-->
 
@@ -77,12 +79,23 @@
                             <div class="one_news__img">
                                 <img src="{% static 'img/news/fura-1.png' %}" alt="Новости">
                             </div>
+                            <div class="one_news__description">
+                                <div class="one_news__date one_news__item">13.02.2021</div>
+                                <div class="one_news__title one_news__item"> Краткое название новости2 (определенное
+                                    количество символов)
+                                </div>
+                                <div class="one_news__text one_news__item">
+                                    Описание новости не больше двух предложений
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
                     <div class="news__block">
                         <div class="one_news__block">
                             <div class="one_news__img">
-                                <img src="{% static 'img/news/fura-2.png' %} " alt="Новости">
+                                <img src="{% static 'img/news/fura-2.png' %}" alt="Новости">
                             </div>
                             <div class="one_news__description">
                                 <div class="one_news__date one_news__item">13.02.2021</div>
@@ -117,28 +130,9 @@
 
 
                 </div> <!-- ..body-->
-                <div class="news__body">
-                    <div class="news__block">
-                        <div class="one_news__block">
-                            <div class="one_news__description">
-                                <div class="one_news__date one_news__item">13.02.2021</div>
-                                <div class="one_news__title one_news__item"> Краткое название новости2 (определенное
-                                    количество символов)
-                                </div>
-                                <div class="one_news__text one_news__item">
-                                    Описание новости не больше двух предложений
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="news__block">
-                        <div class="one_news__block">
-                            <button class="btn bnt-arrow">Смотреть все новости
-                                <img src="{% static 'img/arr_wh.svg' %}" width="26" alt="">
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <a url="/news" class="btn bnt-arrow">Смотреть все новости
+                    <img src="img/arr_wh.svg" width="26" alt="">
+                </a>
 
             </div>   <!-- ..content-->
         </div>  <!-- ..content-->
