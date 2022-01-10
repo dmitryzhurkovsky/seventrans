@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 from django.conf import settings
 
 
-# from seventrans import settings # only for testing!
+# from config import settings # only for testing!
 
 
 class BamapParser:
@@ -70,17 +70,21 @@ class TransInfoParser:
         news = []
 
         for article in raw_data[:self.COUNT_OF_RECORDS_ON_PAGE]:
-            title = article.find('h2', {'class': 'list-item_title'}).text
-            preview_body = article.find('p', {'class': 'list-item_text'}).text
-            img_url = article.find('div', {'class': 'list-item_img'}).a.img.get('src')
-            article_url = article.find('h2', {'class': 'list-item_title'}).a.get('href')
 
-            news.append({
-                'title': title,
-                'preview_body': preview_body,
-                'img_url': img_url,
-                'article_url': article_url
-            })
+            raw_title = article.find('h2', {'class': 'list-item_title'})
+            if raw_title:
+                title = raw_title.text
+
+                preview_body = article.find('p', {'class': 'list-item_text'}).text
+                img_url = article.find('div', {'class': 'list-item_img'}).a.img.get('src')
+                article_url = article.find('h2', {'class': 'list-item_title'}).a.get('href')
+
+                news.append({
+                    'title': title,
+                    'preview_body': preview_body,
+                    'img_url': img_url,
+                    'article_url': article_url
+                })
 
         return news
 

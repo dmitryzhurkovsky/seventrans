@@ -57,7 +57,7 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': os.getenv('DJAGNO_DB_ENGINE', 'django.db.backends.sqlite3'),
-        # 'OPTIONS': {'sql_mode': 'traditional', },
+        'OPTIONS': {'sql_mode': 'traditional', },
         'NAME': os.getenv('DJAGNO_DB_NAME', BASE_DIR / 'db.sqlite3'),
         'USER': os.getenv('DJAGNO_DB_USER'),
         'PASSWORD': os.getenv('DJAGNO_DB_PASSWORD'),
@@ -87,9 +87,12 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
-STATIC_ROOT = '/home/a7transb/repositories/seventrans/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_URL = 'media/'
-MEDIA_ROOT = '/home/a7transb/repositories/seventrans/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+# STATIC_ROOT = '/home/a7transb/repositories/seventrans/static/'
+# MEDIA_ROOT = '/home/a7transb/repositories/seventrans/media/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'config', 'static/')]
 
