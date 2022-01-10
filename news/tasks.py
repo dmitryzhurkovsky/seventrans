@@ -2,11 +2,11 @@ from news.models import Article
 from news.parsers import TransInfoParser
 
 
-def parse_news_and_populate_database(pages: int = 10) -> None:
+def parse_news_and_populate_database(pages: int = 2) -> None:
     parser = TransInfoParser()
 
     articles = Article.objects.all()
-    if articles:
+    if not articles:
         pages = parser.get_count_of_pages()
 
     for page in range(pages):
