@@ -1,0 +1,87 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+        <section class="preheader">
+    <div class="preheader__wrapper">
+        <div class="preheader__content  _container">
+            <div class="preheader__body">
+                <div class="breadcrumbs">Главная / Новости</div>
+                <h2 class="preheader__title">Новости</h2>
+            </div> <!--  __content-->
+       </div><!--  __content-->
+    </div>  <!-- __wrapper-->
+</section>
+
+        <section class="list_news">
+    <div class="list_news__wrapper">
+        <div class="list_news__content  _container">
+            <div class="list_news__body">
+                <div class="list_news__paragraph">
+
+                    <p>
+                        В условиях постоянно развивающейся экономики нашей страны, международные перевозки грузов
+                        обретают все большую популярность. На сегодняшний день ни одна фирма, которая осуществляет
+                        внешнеэкономическую деятельность, не обходится без сотрудничества с компанией, осуществляющей
+                        международные грузоперевозки.
+                    </p>
+                </div>
+                <div class="list_news__box">
+                    <div class="list_news__item">
+                        <div class="list_news__img">
+                            <img src="img/news/fura-2.png" alt="">
+                        </div>
+
+                        <div class="list_news__description">
+                            <div class="one_news__date one_news__item">13.02.2021</div>
+                            <div class="one_news__title one_news__item"> Название заголовка первой новости,
+                                в две строчки</div>
+                            <div class="one_news__text one_news__item">
+                                Негабаритный груз - это объекты грузоперевозок, которые не соответствуют установленным
+                                транспортным стандартам по форме, размерам или техническим особенностям
+                            </div>
+                        </div>
+                    </div> <!--one_news-->
+
+                    <div class="list_news__item">
+                        <div class="list_news__img">
+                            <img src="img/news/fura-1.png" alt="">
+                        </div>
+
+                        <div class="list_news__description">
+                            <div class="one_news__date one_news__item">13.02.2021</div>
+                            <div class="one_news__title one_news__item"> Краткое название новости2 (определенное количество символов)</div>
+                            <div class="one_news__text one_news__item">
+                                Описание новости не больше двух предложений
+                            </div>
+                        </div>
+                    </div> <!--one_news-->
+                    <div class="list_news__item">
+                        <div class="list_news__img">
+                            <img src="img/news/fura-1.png" alt="">
+                        </div>
+
+                        <div class="list_news__description">
+                            <div class="one_news__date one_news__item">13.02.2021</div>
+                            <div class="one_news__title one_news__item"> Краткое название новости2 (определенное количество символов)</div>
+                            <div class="one_news__text one_news__item">
+                                Описание новости не больше двух предложений
+                            </div>
+                        </div>
+                    </div> <!--one_news-->
+                </div> <!--__box-->
+                <div class="list_news__pagination pagination _flex">
+                    <div class="pagination__link page_back">Назад</div>
+                    <ul class="pagination__numbers">
+                        <li class="pagination__item _active">1</li>
+                        <li class="pagination__item">2</li>
+                        <li class="pagination__item">3</li>
+                    </ul>
+                    <div class="pagination__link page_next">Вперед</div>
+
+                </div>
+        </div><!--__body-->
+    </div><!--__content-->
+    </div> <!--__wrapper-->
+
+</section>
+{% endblock content %}
