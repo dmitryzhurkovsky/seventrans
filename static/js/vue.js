@@ -16,7 +16,7 @@ app.component('news', {
     methods: {
         async fetchNews() {
             try {
-                const response = await axios.get('http://localhost:8000/api/v1/news', {params: {page: this.page}});
+                const response = await axios.get('http://7trans.by/api/v1/news', {params: {page: this.page}});
                 this.news = response.data.results;
                 this.totalPages = Math.ceil(response.data.count / this.pageLimit);
             } catch (e) {
