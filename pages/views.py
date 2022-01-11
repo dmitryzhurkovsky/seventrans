@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.views import View
+from django.views.generic import ListView
+
 
 
 class IndexView(View):
@@ -16,7 +18,7 @@ class AboutView(View):
         )
 
 
-class NewsView(View):
+class NewsView(ListView):
     def get(self, request, *args, **kwargs):
         return render(
             request, template_name='news.html', context={}

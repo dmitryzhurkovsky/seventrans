@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 
 from pages.views import (
     IndexView,
@@ -14,5 +14,5 @@ urlpatterns = [
     path('news/', NewsView.as_view()),
     path('contacts/', ContactsView.as_view()),
     path('services/', ServicesView.as_view()),
-
+    path('api/v1/', include('news.urls'))
 ]

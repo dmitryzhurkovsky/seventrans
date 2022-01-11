@@ -1,9 +1,9 @@
 from rest_framework.routers import DefaultRouter
 
-from news.models import Article
+from news.views import NewsViewSet
 
 router = DefaultRouter()
 
-router.register(r'news', Article, basename='news')
+router.register(r'news', NewsViewSet, basename='news')
 
-urls = router.urls
+urlpatterns = router.urls
