@@ -1,13 +1,14 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block content %}
 <section class="preheader">
     <div class="preheader__wrapper">
         <div class="preheader__wrapper__bg"></div>
         <div class="preheader__content  _container">
             <div class="preheader__body">
-                <div class="breadcrumbs">Главная / Контакты</div>
-                <h2 class="preheader__title">Контакты</h2>
+                <div class="breadcrumbs">{% trans 'Главная / Контакты' %}</div>
+                <h2 class="preheader__title">{% trans 'Контакты' %}</h2>
             </div> <!--  __content-->
        </div><!--  __content-->
     </div>  <!-- __wrapper-->
@@ -21,13 +22,13 @@
                 <div class="contacts__box _flex">
                     <div class="table2x">
                         <div>
-                            <div class="contacts__item"><strong>Юридические данные:</strong></div>
-                            <div class="contacts__item"><strongПолное наименование:</strong>
+                            <div class="contacts__item"><strong>{% trans 'Юридические данные:' %}</strong></div>
+                            <div class="contacts__item"><strong>{% trans 'Полное наименование:' %}</strong>
                                 <span>
                                      ЧТУП «СевенТрансСервис»
                                 </span>
                             </div>
-                            <div class="contacts__item"><strong>Юридические адрес:</strong>
+                            <div class="contacts__item"><strong>{% trans 'Юридические адрес:' %}</strong>
                                 <span>
                                       223710, Минская обл., Солигорский р-н, Чижевичский с/с, д.68, пом.56, Район промзоны 1 РУ
                                 </span>
@@ -44,7 +45,7 @@
                     <div class="table2x">
                         <div class="contacts__row">
                             <img class="contacts__icon" src="{% static 'img/svg/point.svg' %}" alt="Adress">
-                            <div class="contacts__item">Адрес:
+                            <div class="contacts__item">{% tran 'Адрес:' %}
                                 <span>
                                       ул. К.Заслонова 47-17, 46, 223709, г.Солигорск,
                                       Минская область, Республика Беларусь.
@@ -53,15 +54,17 @@
                         </div>
                         <div class="contacts__row">
                             <img class="contacts__icon" src="{% static 'img/svg/time.svg' %}" alt="Working time">
-                            <div class="contacts__item">Время работы:
+                            <div class="contacts__item">
+                                {% trans 'Время работы:' %}
                                 <span>
-                                    пн-пт с 8.00 до 17.00
+                                    {% trans 'пн-пт с 8.00 до 17.00' %}
                                 </span>
                             </div>
                         </div>
                         <div class="contacts__row">
                             <img class="contacts__icon" src="{% static 'img/svg/phone.svg' %}" alt="Telephon">
-                            <div class="contacts__item">Наш телефон:
+                            <div class="contacts__item">
+                                {% trans 'Наш телефон:' %}
                                 <span>
                                       +375 17 432-33-23
                                 </span>
@@ -69,7 +72,8 @@
                         </div>
                         <div class="contacts__row">
                             <img class="contacts__icon" src="{% static 'img/svg/email.svg' %}" alt="Email">
-                            <div class="contacts__item">Наша почта:
+                            <div class="contacts__item">
+                                {% trans 'Наша почта:' %}
                                 <span>
                                       seventrans@mail.ru
                                 </span>

@@ -6,8 +6,8 @@
             <div class="preheader__wrapper__bg"></div>
             <div class="preheader__content  _container">
                 <div class="preheader__body">
-                    <div class="breadcrumbs">Главная / Новости</div>
-                    <h2 class="preheader__title">Новости</h2>
+                    <div class="breadcrumbs">{% trans 'Главная / Новости' %}</div>
+                    <h2 class="preheader__title">{% trans 'Новости' %}</h2>
                 </div> <!--  __content-->
             </div><!--  __content-->
         </div>  <!-- __wrapper-->
@@ -20,11 +20,13 @@
                     <div class="list_news__paragraph">
 
                         <p>
+                            {% blocktranslate %}
                             В условиях постоянно развивающейся экономики нашей страны, международные перевозки грузов
                             обретают все большую популярность. На сегодняшний день ни одна фирма, которая осуществляет
                             внешнеэкономическую деятельность, не обходится без сотрудничества с компанией,
                             осуществляющей
                             международные грузоперевозки.
+                            {% endblocktranslate %}
                         </p>
                     </div>
                     <news></news>

@@ -1,5 +1,6 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block content %}
     <section class="banner">
 
@@ -13,20 +14,21 @@
 
                         <div class="square title__col _flex">
                             <div class="">25</div>
-                            <div>лет</div>
+                            <div>{% trans 'лет' %}</div>
                         </div>
 
                         <div class="title__col">
-                            на рынке междунарожных грузоперевозок
+                            {% trans 'на рынке междунарожных грузоперевозок' %}
                         </div>
                     </div><!--    banner__title-->
                 </div> <!-- ..body-->
 
                 <div class="banner__about about__block">
                     <div class="table2x">
-                        <h2 class="">О компании</h2>
+                        <h2 class="">{% trans 'О компании' %}</h2>
                         <div class="about__text">
                             <div>
+                                {% blocktranslate %}
                                 <p>ЧТУП «СевенТрансСервис» c 1996 года оказывает услуги в сфере международных
                                     автомобильных перевозок по Европе и странам СНГ.</p>
                                 <p>За время присутствия на рынке международных грузоперевозок наша компания
@@ -34,12 +36,13 @@
                                     всему миру.</p>
                                 <p>Приоритетными направлениями грузоперевозок для нас являются Венгрия, Словакия, Чехия,
                                     Польша, Российская Федерация, Республика Беларусь.</p>
+                                {% endblocktranslate %}
                             </div>
                             <div class="about__logo">
                                 <img src="{% static 'img/1.png' %}" alt="Логотип">
                             </div>
                         </div>
-                        <button class="btn mt-20 btn-arrow"> Подробнее
+                        <button class="btn mt-20 btn-arrow"> {% trans 'Подробнее' %}
                             <img src="{% static 'img/arr_wh.svg' %}" width="26" alt="">
                         </button>
 
@@ -47,17 +50,17 @@
 
                     <div class="table2x statistic_box">
                         <div class="about__item">
-                            <div class="about__info">25 лет</div>
-                            <div class="about__subitem">безупречной работы</div>
+                            <div class="about__info">25 {% trans 'лет' %}</div>
+                            <div class="about__subitem">{% trans 'безупречной работы' %}</div>
                         </div>
                         <div class="about__item">
-                            <div class="about__subitem">более</div>
-                            <div class="about__info">50 млн. км.</div>
-                            <div class="about__subitem">пробега</div>
+                            <div class="about__subitem">{% trans 'более' %}</div>
+                            <div class="about__info">{% trans '50 млн. км.' %}</div>
+                            <div class="about__subitem">{% trans 'пробега' %}</div>
                         </div>
                         <div class="about__item">
                             <div class="about__info">45000</div>
-                            <div class="about__subitem">перевозок</div>
+                            <div class="about__subitem">{% trans 'перевозок' %}</div>
                         </div>
                     </div> <!-- table2x-->
 
@@ -71,7 +74,7 @@
     <section class="news">
         <div class="news__wrapper">
             <div class="news__content _container">
-                <h2>Новости</h2>
+                <h2>{% trans 'Новости' %}</h2>
                 <div class="news__body">
 
                     <div class="news__block">
@@ -125,7 +128,7 @@
                             </div>
                 </div>
                 <div class="one_news__btn">
-                    <button class="btn bnt-arrow">Смотреть все новости
+                    <button class="btn bnt-arrow">{% trans 'Смотреть все новости' %}
                         <img src="img/arr_wh.svg" width="26" alt="">
                     </button>
                 </div>

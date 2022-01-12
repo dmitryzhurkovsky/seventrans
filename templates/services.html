@@ -6,8 +6,8 @@
         <div class="preheader__wrapper__bg"></div>
         <div class="preheader__content  _container">
             <div class="preheader__body">
-                <div class="breadcrumbs">Главная / Услуги</div>
-                <h2 class="preheader__title">Услуги</h2>
+                <div class="breadcrumbs">{% trans 'Главная / Услуги' %}</div>
+                <h2 class="preheader__title">{% trans 'Услуги' %}</h2>
             </div> <!--  __content-->
        </div><!--  __content-->
     </div>  <!-- __wrapper-->
@@ -19,10 +19,12 @@
             <div class="uslugi__body">
                 <div class="uslugi__paragraph">
 
-                    <p>Компания <strong> ЧТУП «СевенТрансСервис»</strong> на протяжении 25 лет осуществляет автомобильные международные грузоперевозки наземным транспортом, являясь надежным партнером для коллег и заказчиков.
+                    <p>
+                        {% blocktranslate %}
+                        Компания <strong> ЧТУП «СевенТрансСервис»</strong> на протяжении 25 лет осуществляет автомобильные международные грузоперевозки наземным транспортом, являясь надежным партнером для коллег и заказчиков.
                         Одним из направлений деятельности компании является экспедирование грузов в страны Европы и СНГ.
                         Автопарк компании включает в себя собственные тентованные и рефрижераторные автопоезда стандарта Евро-5, Евро-6.
-
+                        {% endblocktranslate %}
                     </p>
                 </div>
                 <div class="uslugi__box">

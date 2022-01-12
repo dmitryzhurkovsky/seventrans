@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <header class="header">
     <div class="header__wrapper">
         <div class="header__content  _container">
@@ -14,37 +15,29 @@
                             <img class="header__img" src="{% static 'img/logo.png' %}" alt="seventrans">
                         </a>
                         <div class="header__logo-text">
-                            Международные
-                            автомобильные перевозки
-                            по Европе и странам СНГ
+                            {% trans 'Международные автомобильные перевозки по Европе и странам СНГ' %}
                         </div>
                     </div>
                     <div class="header__menu menu">
                         <nav id="burger_menu" class="menu__body">
                             <ul class="menu__list">
                                 <li class="menu__item">
-                                    <a class="menu__link" href="/about">О компании</a>
+                                    <a class="menu__link" href="/about">{% trans 'О компании' %}</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="menu__link" href="/services">Услуги</a>
+                                    <a class="menu__link" href="/services">{% trans 'Услуги' %}</a>
                                 </li>
 
                                 <li class="menu__item">
-                                    <a class="menu__link" href="/news">Новости</a>
+                                    <a class="menu__link" href="/news">{% trans 'Новости' %}</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a class="menu__link" href="/contacts">Контакты</a>
+                                    <a class="menu__link" href="/contacts">{% trans 'Контакты' %}</a>
                                 </li>
                             </ul>
                         </nav>
                     </div>
-                    <div class="header__language language _flex">
-                        <div class="language__box">
-                            <div class="language__item _active _flex">RU</div>
-                            <div class="language__item _flex">EN</div>
-                        </div>
-
-                    </div>
+                    <lagnuage-tumbler></lagnuage-tumbler>
                 </nav>
             </div>
         </div>

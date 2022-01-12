@@ -4,6 +4,37 @@ const config = {
 
 const app = Vue.createApp(config)
 
+app.component('lagnuage-tumbler', {
+    data() {
+        return {
+            language: 'ru'
+        }
+    },
+    methods: {
+        changeLanguage (language) {
+            this.language = language
+            console.log(language)
+        }
+    },
+    template:
+    `
+    <div class="header__language language _flex">
+        <div class="language__box">
+            <div
+                    @click="changeLanguage('ru')"
+                    :class="{'_active': this.language === 'ru'}"
+                    class="language__item _flex"
+            >RU</div>
+            <div
+                    @click="changeLanguage('en')"
+                    :class="{'_active': this.language === 'en'}"
+                    class="language__item _flex"
+            >EN</div>
+        </div>
+        
+    </div>
+    `
+})
 app.component('news', {
     data() {
         return {
@@ -11,12 +42,31 @@ app.component('news', {
             totalPages: null,
             pageLimit: 6,
             page: 1,
+            numberOfPages: []
+        }
+    },
+    computed: {
+        getCountOfPages: function () {
+            if (this.page === 1) {
+                this.numberOfPages = [this.page, this.page + 1, this.page + 2, this.page + 3, this.page + 4];
+            } else if (this.page === 2) {
+                this.numberOfPages = [this.page - 1, this.page, this.page + 1, this.page + 2, this.page + 3];
+            } else if (this.page === this.totalPages) {
+                this.numberOfPages = [this.page - 4, this.page - 3, this.page - 2, this.page - 1, this.page];
+            } else if (this.page === this.totalPages - 1) {
+                this.numberOfPages = [this.page - 3, this.page - 2, this.page - 1, this.page, this.page + 1];
+            } else {
+                this.numberOfPages = [this.page - 2, this.page - 1, this.page, this.page + 1, this.page + 2];
+            }
         }
     },
     methods: {
         async fetchNews() {
             try {
-                const response = await axios.get('http://7trans.by/api/v1/news', {params: {page: this.page}});
+                const response = await axios.get('http://7trans.by/api/v1/news', {
+                    params: {page: this.page},
+                    headers: {'Accept-Language': this.language}
+                });
                 this.news = response.data.results;
                 this.totalPages = Math.ceil(response.data.count / this.pageLimit);
             } catch (e) {
@@ -47,7 +97,7 @@ app.component('news', {
         class="list_news__item"
     >
         <div class="list_news__img">
-            <img src="article.img_url" alt="">
+            <img :src="article.img_url" alt="">
         </div>
 
         <div class="list_news__description">
@@ -61,7 +111,7 @@ app.component('news', {
         <div class="pagination__link page_back" @click="changePage('previous')">Назад</div>
         <ul class="pagination__numbers">
             <li 
-                v-for="pageNumber in totalPages"
+                v-for="pageNumber in numberOfPages"
                 :key="page"
                 :class="{'_active': page === pageNumber}"
                 @click="changePage(pageNumber)"

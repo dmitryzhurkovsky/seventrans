@@ -1,7 +1,7 @@
+from celery.beat import Service
 from django.shortcuts import render
 from django.views import View
 from django.views.generic import ListView
-
 
 
 class IndexView(View):
