@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width", initial-scale="1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+  <title>7trans | Международные перевозки</title>
+
+  <style type="text/css">
+    /* Set a size for our map container, the Google Map will take up 100% of this container */
+    #map {
+      width: 100%;
+      height: 475px;
+    }
+  </style>
+
+  <!--
+      You need to include this script tag on any page that has a Google Map.
+
+      The following script tag will work when opening this example locally on your computer.
+      But if you use this on a localhost server or a live website you will need to include an API key.
+      Sign up for one here (it's free for small usage):
+          https://developers.google.com/maps/documentation/javascript/tutorial#api_key
+
+      After you sign up, use the following script tag with YOUR_GOOGLE_API_KEY replaced with your actual key.
+          <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY"></script>
+  -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+
+
+</head>
+
+
+    <body>
+        <header class="header">
+    <div class="header__wrapper">
+        <div class="header__content  _container">
+            <div class="header__body">
+                <nav class="header__navigation">
+                    <button id="burger" type="button" class="icon-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="header__logo-box">
+                        <a class="header__logo" href="/" alt="">
+                            <img class="header__img" src="img/logo.png" alt="seventrans">
+                        </a>
+                        <div class="header__logo-text">
+                            Международные
+                            автомобильные перевозки
+                            по Европе и странам СНГ
+                        </div>
+                    </div>
+                    <div  class="header__menu menu">
+                        <nav id="burger_menu" class="menu__body">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a class="menu__link" href="">О компании</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="">Услуги</a>
+                                </li>
+
+                                <li class="menu__item">
+                                    <a class="menu__link" href="">Новости</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link" href="">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header__language language _flex">
+                        <div class="language__box">
+                            <div class="language__item _active _flex">RU</div>
+                            <div class="language__item _flex">EN</div>
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+</header>
+        <section class="banner">
+
+    <div class="banner__wrapper">
+        <div class="banner__wrapper__bg"></div>
+        <div class="banner__content _container">
+
+            <div class="banner__body">
+
+                <div class="banner__title">
+
+                    <div class="square title__col _flex">
+                        <div class="">25</div>
+                        <div>лет</div>
+                    </div>
+
+                    <div class="title__col">
+                        на рынке междунарожных грузоперевозок
+                    </div>
+                </div><!--    banner__title-->
+            </div> <!-- ..body-->
+
+            <div class="banner__about about__block">
+                <div class="table2x">
+                    <h2 class="">О компании</h2>
+                    <div class="about__text">
+                        <div>
+                            <p>ЧТУП «СевенТрансСервис» c 1996 года оказывает услуги в сфере международных автомобильных перевозок по Европе и странам СНГ.</p>
+                            <p>За время присутствия на рынке международных грузоперевозок наша компания зарекомендовала себя как надежный партнер для многочисленных клиентов и партнеров по всему миру.</p>
+                            <p>Приоритетными направлениями грузоперевозок для нас являются Венгрия, Словакия, Чехия, Польша, Российская Федерация, Республика Беларусь.</p>
+                        </div>
+                        <div class="about__logo">
+                            <img src="img/1.png" alt="Логотип">
+                        </div>
+                    </div>
+                    <button class="btn mt-20 btn-arrow"> Подробнее
+                        <img src="img/arr_wh.svg" width="26" alt="">
+                    </button>
+
+                </div> <!-- table2x-->
+
+                <div class="table2x statistic_box">
+                    <div class="about__item">
+                        <div class="about__info">25 лет</div>
+                        <div class="about__subitem">безупречной работы</div>
+                    </div>
+                    <div class="about__item">
+                        <div class="about__subitem">более</div>
+                        <div class="about__info">50 млн. км.</div>
+                        <div class="about__subitem">пробега</div>
+                    </div>
+                    <div class="about__item">
+                        <div class="about__info">45000</div>
+                        <div class="about__subitem">перевозок</div>
+                    </div>
+                </div> <!-- table2x-->
+
+
+            </div> <!--__about-->
+
+        </div>   <!-- ..content-->
+    </div>  <!-- ..wrapper-->
+</section>
+
+        <section class="news">
+    <div class="news__wrapper">
+        <div class="news__content _container">
+            <h2>Новости</h2>
+            <div class="news__body">
+
+                <div class="news__block">
+                    <div class="one_news__block">
+                        <div class="one_news__img">
+                            <img src="img/news/fura-1.png" alt="Новости">
+                        </div>
+                        <div class="one_news__description">
+                            <div class="one_news__date one_news__item">13.02.2021</div>
+                            <div class="one_news__title one_news__item"> Краткое название новости2 (определенное количество символов)</div>
+                            <div class="one_news__text one_news__item">
+                                Описание новости не больше двух предложений
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="news__block">
+                    <div class="one_news__block">
+                        <div class="one_news__img">
+                            <img src="img/news/fura-2.png" alt="Новости">
+                        </div>
+                        <div class="one_news__description">
+                            <div class="one_news__date one_news__item">13.02.2021</div>
+                            <div class="one_news__title one_news__item"> Краткое название новости2 (определенное количество символов)</div>
+                            <div class="one_news__text one_news__item">
+                                Описание новости не больше двух предложений
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="one_news__block">
+                        <div class="one_news__img">
+                            <img src="img/news/fura-3.png" alt="Новости">
+                        </div>
+                        <div class="one_news__description">
+                            <div class="one_news__date one_news__item">13.02.2021</div>
+                            <div class="one_news__title one_news__item"> Краткое название новости2 (определенное количество символов)</div>
+                            <div class="one_news__text one_news__item">
+                                Описание новости не больше двух предложений
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="one_news__btn">
+                        <button class="btn bnt-arrow">Смотреть все новости
+                            <img src="img/arr_wh.svg" width="26" alt="">
+                        </button>
+                    </div>
+
+
+                </div>
+
+
+
+            </div> <!-- ..body-->
+
+
+        </div>   <!-- ..content-->
+    </div>  <!-- ..content-->
+</section>
+
+        <section class="map">
+    <div class="map__wrapper">
+        <div class="map__content _container">
+
+            <div class="map__body">
+            </div> <!-- ..body-->
+        </div>   <!-- ..content-->
+    </div>  <!-- ..content-->
+</section>
+
+
+        <footer class="footer">
+    <div class="footer__wrapper">
+        <div class="footer__content _container">
+            <div class="footer__body">
+                <div class="company_name">ЧТУП «СевенТрансСервис» </div>
+                <div class="footer__menu">
+                    <div class="footer__col">
+                        <div class="company__item">УНП 690630311</div>
+                        <div class="company__item">
+                            223710, Минская обл., Солигорский р-н,
+                            Чижевичский с/с, д.68, пом.56,
+                            Район промзоны 1 РУ</div>
+                        <div class="company__item">Разработка сайта -
+                            <a  href="https://profox.by/" class="page__link">ProFox</a>
+                        </div>
+
+                    </div> <!--__col-->
+
+                    <div class="footer__col">
+                        <div class="company__item">Время работы: пн-пт с 8.00 до 17.00</div>
+                        <div class="company__item">E-mail:
+                            <a class="_link_underline"  href="mailto:info@remohire.co" >seventrans@mail.ru</a>
+                        </div>
+                        <div class="company__item">
+                            <a class="_link mr-20" href="tel:+375174323323">+375 (174) 323323,</a>
+                            <a class="_link" href="tel:+375296253512">+375 (29) 6253512</a>
+                        </div>
+                        <div class="company__item">
+                            <a href="" >
+                                <img class="_icon mr-20" src="img/instagram.svg" alt="instagram">
+                            </a>
+                            <a href="">
+                                <img class="_icon" src="img/linkedin.svg" alt="linkedin">
+                            </a>
+                        </div>
+                    </div> <!--__col-->
+                    <div class="footer__col maps__block">
+                        <div class="maps__logo">
+                            <img src="img/logo.png" alt="seventrans">
+                        </div> <!--__item-->
+                    </div> <!--__col-->
+
+                </div> <!--__menu-->
+
+
+
+            </div> <!--__body-->
+        </div> <!--__content-->
+    </div><!--__wrapper-->
+</footer>
+
+
+        <script src="js/app.min.js"></script>
+    </body>
+</html>
