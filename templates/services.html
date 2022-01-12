@@ -1,0 +1,80 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+        <section class="preheader">
+    <div class="preheader__wrapper">
+        <div class="preheader__content  _container">
+            <div class="preheader__body">
+                <div class="breadcrumbs">Главная / Услуги</div>
+                <h2 class="preheader__title">Услуги</h2>
+            </div> <!--  __content-->
+       </div><!--  __content-->
+    </div>  <!-- __wrapper-->
+</section>
+
+        <section class="uslugi">
+    <div class="uslugi__wrapper">
+        <div class="uslugi__content  _container">
+            <div class="uslugi__body">
+                <div class="uslugi__paragraph">
+
+                    <p>Компания <strong> ЧТУП «СевенТрансСервис»</strong> на протяжении 25 лет осуществляет автомобильные международные грузоперевозки наземным транспортом, являясь надежным партнером для коллег и заказчиков.
+                        Одним из направлений деятельности компании является экспедирование грузов в страны Европы и СНГ.
+                        Автопарк компании включает в себя собственные тентованные и рефрижераторные автопоезда стандарта Евро-5, Евро-6.
+
+                    </p>
+                </div>
+                <div class="uslugi__box">
+                    <div class="uslugi__item usluga">
+                        <div class="usluga__img">
+                            <img src="{% static 'img/usl.png' %}" alt="">
+                        </div>
+                        <div class="usluga__textbox">
+                            <h4 class="usluga__title">Название услуги</h4>
+                            <div class="usluga__description">
+                                Негабаритный груз - это объекты грузоперевозок, которые не соответствуют установленным транспортным стандартам по форме, размерам или техническим особенностям.
+                            </div>
+                            <button class="btn btn-arrow">Подробнее
+                                <img src="{% static 'img/arr_wh.svg' %}" width="26" alt="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="uslugi__item usluga">
+                        <div class="usluga__img">
+                            <img src="{% static 'img/usl.png' %}" alt="">
+                        </div>
+                        <div class="usluga__textbox">
+                            <h4 class="usluga__title">Название услуги</h4>
+                            <div class="usluga__description">
+                                Негабаритный груз - это объекты грузоперевозок, которые не соответствуют установленным транспортным стандартам по форме, размерам или техническим особенностям.
+                            </div>
+                            <button class="btn btn-arrow">Подробнее
+                                <img src="{% static 'img/arr_wh.svg' %}" width="26" alt="">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="uslugi__item usluga">
+                        <div class="usluga__img">
+                            <img src="{% static 'img/usl.png' %}" alt="">
+                        </div>
+                        <div class="usluga__textbox">
+                            <h4 class="usluga__title">Название услуги</h4>
+                            <div class="usluga__description">
+                                Негабаритный груз - это объекты грузоперевозок, которые не соответствуют установленным транспортным стандартам по форме, размерам или техническим особенностям.
+                            </div>
+                            <button class="btn btn-arrow">Подробнее
+                                <img src="{% static 'img/arr_wh.svg' %}" width="26" alt="">
+                            </button>
+                        </div>
+                    </div>
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+</section>
+{% endblock content %}

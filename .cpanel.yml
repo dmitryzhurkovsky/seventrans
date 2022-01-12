@@ -1,0 +1,6 @@
+
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/a7transb/public/
+    - /bin/cp -R * $DEPLOYPATH
+    - /bin/cp -R config/static $DEPLOYPATH
