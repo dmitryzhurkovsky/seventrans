@@ -19,14 +19,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
-    'corsheaders',
+    # 'corsheaders',
 
     'news',
     'pages',
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
+    # 'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -36,7 +36,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = ['http://7trans.by']
+# CORS_ALLOWED_ORIGINS = ['http://7trans.by']
 
 ROOT_URLCONF = 'config.urls'
 
@@ -95,9 +95,6 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-
-# STATIC_ROOT = '/home/a7transb/repositories/seventrans/static/'
-# MEDIA_ROOT = '/home/a7transb/repositories/seventrans/media/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'config', 'static/')]
 

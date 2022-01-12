@@ -47,7 +47,7 @@ app.component('news', {
         class="list_news__item"
     >
         <div class="list_news__img">
-            <img src="{{ article.img_url}} " alt="">
+            <img src="article.img_url" alt="">
         </div>
 
         <div class="list_news__description">
