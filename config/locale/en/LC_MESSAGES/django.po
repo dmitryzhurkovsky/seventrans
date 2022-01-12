@@ -1,0 +1,188 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-12 15:34+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: config/settings.py:99
+msgid "English"
+msgstr "English"
+
+#: config/settings.py:100
+msgid "Rusian"
+msgstr "Rusian"
+
+#: templates/about.html:10
+#, fuzzy
+#| msgid "О компании"
+msgid "Главная / О компании"
+msgstr "Main / About company"
+
+#: templates/about.html:11 templates/base/header.html:25
+#: templates/index.html:28
+msgid "О компании"
+msgstr "About company"
+
+#: templates/about.html:55 templates/index.html:17 templates/index.html:53
+msgid "лет"
+msgstr "years"
+
+#: templates/about.html:56 templates/index.html:54
+msgid "безупречной работы"
+msgstr "flawless work"
+
+#: templates/about.html:58 templates/index.html:58
+msgid "50 млн. км."
+msgstr "50 mil. km."
+
+#: templates/about.html:59 templates/index.html:59
+msgid "пробега"
+msgstr "mileage"
+
+#: templates/about.html:63 templates/index.html:63
+msgid "перевозок"
+msgstr "transportation"
+
+#: templates/base/footer.html:23
+msgid "Время работы: пн-пт с 8.00 до 17.00"
+msgstr "Working time: Mon-Fr from 8.00 to 17.00"
+
+#: templates/base/header.html:18
+msgid "Международные автомобильные перевозки по Европе и странам СНГ"
+msgstr "International road transport in Europe and the CIS countries"
+
+#: templates/base/header.html:28 templates/services.html:10
+msgid "Услуги"
+msgstr "Services"
+
+#: templates/base/header.html:32 templates/index.html:77 templates/news.html:10
+msgid "Новости"
+msgstr "News"
+
+#: templates/base/header.html:35 templates/contacts.html:11
+msgid "Контакты"
+msgstr "Contacts"
+
+#: templates/contacts.html:10
+#, fuzzy
+#| msgid "Новости"
+msgid "Главная / Контакты"
+msgstr "Main / News"
+
+#: templates/contacts.html:25
+msgid "Юридические данные:"
+msgstr "Legal data:"
+
+#: templates/contacts.html:26
+msgid "Полное наименование:"
+msgstr "Full name:"
+
+#: templates/contacts.html:31
+msgid "Юридические адрес:"
+msgstr "Legal address:"
+
+#: templates/contacts.html:58
+#, fuzzy
+#| msgid "Время работы: пн-пт с 8.00 до 17.00"
+msgid "Время работы:"
+msgstr "Working time:"
+
+#: templates/contacts.html:60
+#, fuzzy
+#| msgid "Время работы: пн-пт с 8.00 до 17.00"
+msgid "пн-пт с 8.00 до 17.00"
+msgstr "Working time: Mon-Fr from 8.00 to 17.00"
+
+#: templates/contacts.html:67
+msgid "Наш телефон:"
+msgstr "Our phone:"
+
+#: templates/contacts.html:76
+msgid "Наша почта:"
+msgstr "Our email:"
+
+#: templates/index.html:21
+msgid "на рынке междунарожных грузоперевозок"
+msgstr "on the international cargo transportation market"
+
+#: templates/index.html:31
+msgid ""
+"\n"
+"                                <p>ЧТУП «СевенТрансСервис» c 1996 года "
+"оказывает услуги в сфере международных\n"
+"                                    автомобильных перевозок по Европе и "
+"странам СНГ.</p>\n"
+"                                <p>За время присутствия на рынке "
+"международных грузоперевозок наша компания\n"
+"                                    зарекомендовала себя как надежный "
+"партнер для многочисленных клиентов и партнеров по\n"
+"                                    всему миру.</p>\n"
+"                                <p>Приоритетными направлениями "
+"грузоперевозок для нас являются Венгрия, Словакия, Чехия,\n"
+"                                    Польша, Российская Федерация, Республика "
+"Беларусь.</p>\n"
+"                                "
+msgstr ""
+
+#: templates/index.html:45
+msgid "Подробнее"
+msgstr "More details"
+
+#: templates/index.html:57
+msgid "более"
+msgstr "more than"
+
+#: templates/index.html:131
+msgid "Смотреть все новости"
+msgstr "See all news"
+
+#: templates/news.html:9
+#, fuzzy
+#| msgid "Новости"
+msgid "Главная / Новости"
+msgstr "Main / News"
+
+#: templates/news.html:23
+msgid ""
+"\n"
+"                            В условиях постоянно развивающейся экономики "
+"нашей страны, международные перевозки грузов\n"
+"                            обретают все большую популярность. На "
+"сегодняшний день ни одна фирма, которая осуществляет\n"
+"                            внешнеэкономическую деятельность, не обходится "
+"без сотрудничества с компанией,\n"
+"                            осуществляющей\n"
+"                            международные грузоперевозки.\n"
+"                            "
+msgstr ""
+
+#: templates/services.html:9
+msgid "Главная / Услуги"
+msgstr "Main / Services"
+
+#: templates/services.html:23
+msgid ""
+"\n"
+"                        Компания <strong> ЧТУП «СевенТрансСервис»</strong> "
+"на протяжении 25 лет осуществляет автомобильные международные грузоперевозки "
+"наземным транспортом, являясь надежным партнером для коллег и заказчиков.\n"
+"                        Одним из направлений деятельности компании является "
+"экспедирование грузов в страны Европы и СНГ.\n"
+"                        Автопарк компании включает в себя собственные "
+"тентованные и рефрижераторные автопоезда стандарта Евро-5, Евро-6.\n"
+"                        "
+msgstr ""
