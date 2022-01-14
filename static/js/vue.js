@@ -116,7 +116,7 @@ app.component('news', {
     template: `
     <div class="list_news__box">
         <div 
-        v-for="article, idx in news" 
+        v-for="(article, idx) in news" 
         :key="article.id"
         class="list_news__item"
     >
@@ -136,7 +136,7 @@ app.component('news', {
         <ul class="pagination__numbers">
             <li 
                 v-for="pageNumber in numberOfPages"
-                :key="page"
+                :key="pageNumber"
                 :class="{'_active': page === pageNumber}"
                 @click="changePage(pageNumber)"
                 class="pagination__item"
@@ -145,26 +145,6 @@ app.component('news', {
         <div class="pagination__link page_next" @click="changePage('next')">Вперед</div>
     </div>
     `
-})
-
-app.component('', {
-    template: `
-     <div class="uslugi__item usluga">
-        <div class="usluga__img">
-            <img src="{% static 'img/usl.png' %}" alt="">
-        </div>
-        <div class="usluga__textbox">
-            <h4 class="usluga__title">Название услуги</h4>
-            <div class="usluga__description">
-                Негабаритный груз - это объекты грузоперевозок, которые не соответствуют
-                установленным транспортным стандартам по форме, размерам или техническим
-                особенностям.
-            </div>
-            <button class="btn btn-arrow">Подробнее
-                <img src="{% static 'img/arr_wh.svg' %}" width="26" alt="">
-            </button>
-        </div>
-    </div>`
 })
 
 const vm = app.mount('#app')
