@@ -97,7 +97,7 @@ LANGUAGE_CODE = 'ru'
 
 LANGUAGES = (
     ('en', _('English')),
-    ('ru', _('Rusian')),
+    ('ru', _('Russian')),
 )
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'config', 'locale'),

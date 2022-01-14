@@ -9,7 +9,7 @@
             <div class="preheader__content  _container">
                 <div class="preheader__body">
                     <div class="breadcrumbs">{% trans 'Главная / О компании' %}</div>
-                    <h2>{% trans 'О компании'%}</h2>
+                    <h2>{% trans 'О компании' %}</h2>
                 </div>
             </div>
         </div>
@@ -22,40 +22,40 @@
 
                         <h3>
                             {% if LANGUAGE_CODE == 'ru' %}
-                            {{ about_company.sub_title_ru|safe }}
+                                {{ about_company.sub_title_ru|safe }}
                             {% else %}
-                            {{ about_company.sub_title_en|safe }}
+                                {{ about_company.sub_title_en|safe }}
                             {% endif %}
                         </h3>
                         <p>
                             {% if LANGUAGE_CODE == 'ru' %}
-                            {{ about_company.body_ru|safe }}
+                                {{ about_company.body_ru|safe }}
                             {% else %}
-                            {{ about_company.body_en|safe }}
+                                {{ about_company.body_en|safe }}
                             {% endif %}
                         </p>
                     </div>
-                        <div class="table2x statistic_box">
-                            <div class="about__item">25 {% trans 'лет' %}
-                                <div class="about__subitem">{% trans 'безупречной работы' %}</div>
-                            </div>
-                            <div class="about__item">{% trans '50 млн. км.' %}
-                                <div class="about__subitem">{% trans 'пробега' %}</div>
-                            </div>
-                            <div class="about__item">
-                                45000
-                                <div class="about__subitem">{% trans 'перевозок' %}</div>
-                            </div>
+                    <div class="table2x statistic_box">
+                        <div class="about__item">25 {% trans 'лет' %}
+                            <div class="about__subitem">{% trans 'безупречной работы' %}</div>
                         </div>
-
-                    </div>
-
-                    <div class="content__paragraph">
-                        <h3>Подзаголовок для этого текста</h3>
+                        <div class="about__item">{% trans '50 млн. км.' %}
+                            <div class="about__subitem">{% trans 'пробега' %}</div>
+                        </div>
+                        <div class="about__item">
+                            45000
+                            <div class="about__subitem">{% trans 'перевозок' %}</div>
+                        </div>
                     </div>
 
                 </div>
+
+                <div class="content__paragraph">
+                    <h3>Подзаголовок для этого текста</h3>
+                </div>
+
             </div>
+        </div>
         </div>
 
     </section>

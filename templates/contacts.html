@@ -2,102 +2,116 @@
 {% load static %}
 {% load i18n %}
 {% block content %}
-<section class="preheader">
-    <div class="preheader__wrapper">
-        <div class="preheader__wrapper__bg"></div>
-        <div class="preheader__content  _container">
-            <div class="preheader__body">
-                <div class="breadcrumbs">{% trans 'Главная / Контакты' %}</div>
-                <h2 class="preheader__title">{% trans 'Контакты' %}</h2>
-            </div> <!--  __content-->
-       </div><!--  __content-->
-    </div>  <!-- __wrapper-->
-</section>
+    <section class="preheader">
+        <div class="preheader__wrapper">
+            <div class="preheader__wrapper__bg"></div>
+            <div class="preheader__content  _container">
+                <div class="preheader__body">
+                    <div class="breadcrumbs">{% trans 'Главная / Контакты' %}</div>
+                    <h2 class="preheader__title">{% trans 'Контакты' %}</h2>
+                </div> <!--  __content-->
+            </div><!--  __content-->
+        </div>  <!-- __wrapper-->
+    </section>
 
-        <section class="contacts">
-    <div class="contacts__wrapper">
-        <div class="contacts__content  _container">
-            <div class="contacts__body">
+    <section class="contacts">
+        <div class="contacts__wrapper">
+            <div class="contacts__content  _container">
+                <div class="contacts__body">
 
-                <div class="contacts__box _flex">
-                    <div class="table2x">
-                        <div>
-                            <div class="contacts__item"><strong>{% trans 'Юридические данные:' %}</strong></div>
-                            <div class="contacts__item"><strong>{% trans 'Полное наименование:' %}</strong>
-                                <span>
-                                     ЧТУП «СевенТрансСервис»
+                    <div class="contacts__box _flex">
+                        <div class="table2x">
+                            <div>
+                                <div class="contacts__item"><strong>{% trans 'Юридические данные:' %}</strong></div>
+                                <div class="contacts__item"><strong>{% trans 'Полное наименование:' %}</strong>
+                                    <span>
+                                     {% if  LANGUAGE_CODE == 'ru' %}
+                                         {{ contacts.full_name_ru|safe }}
+                                     {% else %}
+                                         {{ contacts.full_name_en|safe }}
+                                     {% endif %}
                                 </span>
-                            </div>
-                            <div class="contacts__item"><strong>{% trans 'Юридические адрес:' %}</strong>
-                                <span>
-                                      223710, Минская обл., Солигорский р-н, Чижевичский с/с, д.68, пом.56, Район промзоны 1 РУ
+                                </div>
+                                <div class="contacts__item"><strong>{% trans 'Юридические адрес:' %}</strong>
+                                    <span>
+                                      {% if  LANGUAGE_CODE == 'ru' %}
+                                          {{ contacts.legal_address_ru|safe }}
+                                      {% else %}
+                                          {{ contacts.legal_address_en|safe }}
+                                      {% endif %}
                                 </span>
-                            </div>
-                            <div class="contacts__item"><strong>УНП:</strong>
-                                <span>
-                                    690630311
+                                </div>
+                                <div class="contacts__item"><strong>УНП:</strong>
+                                    <span>
+                                    {{ contacts.unp }}
                                 </span>
+                                </div>
                             </div>
+
                         </div>
 
-                    </div>
-
-                    <div class="table2x">
-                        <div class="contacts__row">
-                            <img class="contacts__icon" src="{% static 'img/svg/point.svg' %}" alt="Adress">
-                            <div class="contacts__item">{% trans 'Адрес:' %}
-                                <span>
-                                      ул. К.Заслонова 47-17, 46, 223709, г.Солигорск,
-                                      Минская область, Республика Беларусь.
+                        <div class="table2x">
+                            <div class="contacts__row">
+                                <img class="contacts__icon" src="{% static 'img/svg/point.svg' %}" alt="Adress">
+                                <div class="contacts__item">{% trans 'Адрес:' %}
+                                    <span>
+                                        {% if  LANGUAGE_CODE == 'ru' %}
+                                            {{ contacts.address_ru|safe }}
+                                        {% else %}
+                                            {{ contacts.address_en|safe }}
+                                        {% endif %}
                                 </span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="contacts__row">
-                            <img class="contacts__icon" src="{% static 'img/svg/time.svg' %}" alt="Working time">
-                            <div class="contacts__item">
-                                {% trans 'Время работы:' %}
-                                <span>
-                                    {% trans 'пн-пт с 8.00 до 17.00' %}
+                            <div class="contacts__row">
+                                <img class="contacts__icon" src="{% static 'img/svg/time.svg' %}" alt="Working time">
+                                <div class="contacts__item">
+                                    {% trans 'Время работы:' %}
+                                    <span>
+                                    {% if  LANGUAGE_CODE == 'ru' %}
+                                        {{ contacts.working_time_ru|safe }}
+                                    {% else %}
+                                        {{ contacts.working_time_en|safe }}
+                                    {% endif %}
                                 </span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="contacts__row">
-                            <img class="contacts__icon" src="{% static 'img/svg/phone.svg' %}" alt="Telephon">
-                            <div class="contacts__item">
-                                {% trans 'Наш телефон:' %}
-                                <span>
-                                      +375 17 432-33-23
+                            <div class="contacts__row">
+                                <img class="contacts__icon" src="{% static 'img/svg/phone.svg' %}" alt="Telephon">
+                                <div class="contacts__item">
+                                    {% trans 'Наш телефон:' %}
+                                    <span>
+                                        {{ contacts.phone_number }}
                                 </span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="contacts__row">
-                            <img class="contacts__icon" src="{% static 'img/svg/email.svg' %}" alt="Email">
-                            <div class="contacts__item">
-                                {% trans 'Наша почта:' %}
-                                <span>
-                                      seventrans@mail.ru
+                            <div class="contacts__row">
+                                <img class="contacts__icon" src="{% static 'img/svg/email.svg' %}" alt="Email">
+                                <div class="contacts__item">
+                                    {% trans 'Наша почта:' %}
+                                    <span>
+                                      {{ contacts.email }}
                                 </span>
+                                </div>
                             </div>
+
                         </div>
 
-                    </div>
+                    </div> <!-- __box-->
 
-                </div> <!-- __box-->
+                    <div class="contacts__box">
+                        <div class="contacts__map">
+                            <!--                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A352c3295463f92c6382358a083d5a52435bac81250f666f21ea7b56bb0605926&amp;width=100%25&amp;height=475&amp;lang=ru_RU&amp;scroll=true"></script>-->
+                            <!-- The element that will contain our Google Map. This is used in both the Javascript and CSS above. -->
+                            <div id="map"></div>
+                        </div>  <!-- __box-->
 
-                <div class="contacts__box">
-                    <div class="contacts__map">
-<!--                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A352c3295463f92c6382358a083d5a52435bac81250f666f21ea7b56bb0605926&amp;width=100%25&amp;height=475&amp;lang=ru_RU&amp;scroll=true"></script>-->
-                        <!-- The element that will contain our Google Map. This is used in both the Javascript and CSS above. -->
-                        <div id="map"></div>
-                    </div>  <!-- __box-->
-
-                </div> <!-- __box-->
+                    </div> <!-- __box-->
 
 
+                </div><!-- __body-->
+            </div><!-- __content-->
+        </div><!-- __wrapper-->
 
-            </div><!-- __body-->
-        </div><!-- __content-->
-    </div><!-- __wrapper-->
-
-</section>
+    </section>
 {% endblock content %}

@@ -1,6 +1,7 @@
 {% extends 'base/base.html' %}
 {% load static %}
 {% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 {% block content %}
     <section class="banner">
 
@@ -28,15 +29,11 @@
                         <h2 class="">{% trans 'О компании' %}</h2>
                         <div class="about__text">
                             <div>
-                                {% blocktranslate %}
-                                <p>ЧТУП «СевенТрансСервис» c 1996 года оказывает услуги в сфере международных
-                                    автомобильных перевозок по Европе и странам СНГ.</p>
-                                <p>За время присутствия на рынке международных грузоперевозок наша компания
-                                    зарекомендовала себя как надежный партнер для многочисленных клиентов и партнеров по
-                                    всему миру.</p>
-                                <p>Приоритетными направлениями грузоперевозок для нас являются Венгрия, Словакия, Чехия,
-                                    Польша, Российская Федерация, Республика Беларусь.</p>
-                                {% endblocktranslate %}
+                                {% if LANGUAGE_CODE == 'ru'%}
+                                    {{ about_company_text_block.content_ru|safe }}
+                                {% else %}
+                                    {{ about_company_text_block.content_en|safe }}
+                                {% endif %}
                             </div>
                             <div class="about__logo">
                                 <img src="{% static 'img/1.png' %}" alt="Логотип">
@@ -127,11 +124,11 @@
                                 </div>
                             </div>
                 </div>
-                <div class="one_news__btn">
+                <a href="/about" class="one_news__btn">
                     <button class="btn bnt-arrow">{% trans 'Смотреть все новости' %}
                         <img src="img/arr_wh.svg" width="26" alt="">
                     </button>
-                </div>
+                </a>
 
 
 

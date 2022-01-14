@@ -1,32 +1,53 @@
 {% load static %}
 {% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 <footer class="footer">
     <div class="footer__wrapper">
         <div class="footer__content _container">
             <div class="footer__body">
-                <div class="company_name">ЧТУП «СевенТрансСервис»</div>
+                <div class="company_name">
+                    {% if  LANGUAGE_CODE == 'ru' %}
+                        {{ contacts.full_name_ru|safe }}
+                    {% else %}
+                        {{ contacts.full_name_en|safe }}
+                    {% endif %}
+                </div>
                 <div class="footer__menu">
                     <div class="footer__col">
-                        <div class="company__item">УНП 690630311</div>
                         <div class="company__item">
-                            223710, Минская обл., Солигорский р-н,
-                            Чижевичский с/с, д.68, пом.56,
-                            Район промзоны 1 РУ
+                            {% trans 'УНП' %}{{ contacts.UNP }}
                         </div>
-                        <div class="company__item">Разработка сайта -
+                        <div class="company__item">
+                            {% if  LANGUAGE_CODE == 'ru' %}
+                                {{ contacts.address_ru|safe }}
+                            {% else %}
+                                {{ contacts.address_en|safe }}
+                            {% endif %}
+
+                        </div>
+                        <div class="company__item">{% trans 'Разработка сайта' %} -
                             <a href="https://profox.by/" class="page__link">ProFox</a>
                         </div>
 
                     </div> <!--__col-->
 
                     <div class="footer__col">
-                        <div class="company__item">{% trans 'Время работы: пн-пт с 8.00 до 17.00' %}</div>
+                        <div class="company__item">
+                            {% if  LANGUAGE_CODE == 'ru' %}
+                                {{ contacts.legal_address_ru|safe }}
+                            {% else %}
+                                {{ contacts.legal_address_en|safe }}
+                            {% endif %}
+                        </div>
                         <div class="company__item">E-mail:
-                            <a class="_link_underline" href="mailto:info@remohire.co">seventrans@mail.ru</a>
+                            <a class="_link_underline" href="{{ contacts.email }}">
+                                {{ contacts.email }}
+                            </a>
                         </div>
                         <div class="company__item">
-                            <a class="_link mr-20" href="tel:+375174323323">+375 (174) 323323,</a>
-                            <a class="_link" href="tel:+375296253512">+375 (29) 6253512</a>
+                            <a class="_link mr-20" href="tel:{{ contacts.phone_number }}">
+                                {{ contacts.phone_number|safe }}
+                            </a>
                         </div>
                         <div class="company__item">
                             <a href="">
@@ -48,5 +69,5 @@
 
             </div> <!--__body-->
         </div> <!--__content-->
-    </div><!--__wrapper-->
+    </div><!--__footer__wrapper-->
 </footer>
