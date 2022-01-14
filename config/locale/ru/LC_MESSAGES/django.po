@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-12 15:34+0000\n"
+"POT-Creation-Date: 2022-01-14 18:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,53 +25,59 @@ msgid "English"
 msgstr "Английский"
 
 #: config/settings.py:100
-msgid "Rusian"
+#, fuzzy
+#| msgid "Rusian"
+msgid "Russian"
 msgstr "Русский"
 
-#: templates/about.html:10
+#: templates/about.html:11
 #, fuzzy
 #| msgid "О компании"
 msgid "Главная / О компании"
 msgstr "Главная / О компании"
 
-#: templates/about.html:11 templates/base/header.html:25
-#: templates/index.html:28
+#: templates/about.html:12 templates/base/header.html:25
+#: templates/index.html:29
 msgid "О компании"
 msgstr "О компании"
 
-#: templates/about.html:55 templates/index.html:17 templates/index.html:53
+#: templates/about.html:39 templates/index.html:18 templates/index.html:50
 msgid "лет"
 msgstr "лет"
 
-#: templates/about.html:56 templates/index.html:54
+#: templates/about.html:40 templates/index.html:51
 msgid "безупречной работы"
 msgstr "безупречной работы"
 
-#: templates/about.html:58 templates/index.html:58
+#: templates/about.html:42 templates/index.html:55
 msgid "50 млн. км."
 msgstr "50 млн. км."
 
-#: templates/about.html:59 templates/index.html:59
+#: templates/about.html:43 templates/index.html:56
 msgid "пробега"
 msgstr "пробега"
 
-#: templates/about.html:63 templates/index.html:63
+#: templates/about.html:47 templates/index.html:60
 msgid "перевозок"
 msgstr "перевозок"
 
-#: templates/base/footer.html:23
-msgid "Время работы: пн-пт с 8.00 до 17.00"
-msgstr "Время работы: пн-пт с 8.00 до 17.00"
+#: templates/base/footer.html:18
+msgid "УНП"
+msgstr ""
+
+#: templates/base/footer.html:28
+msgid "Разработка сайта"
+msgstr ""
 
 #: templates/base/header.html:18
 msgid "Международные автомобильные перевозки по Европе и странам СНГ"
 msgstr "Международные автомобильные перевозки по Европе и странам СНГ"
 
-#: templates/base/header.html:28 templates/services.html:10
+#: templates/base/header.html:28 templates/services.html:11
 msgid "Услуги"
 msgstr "Услуги"
 
-#: templates/base/header.html:32 templates/index.html:77 templates/news.html:10
+#: templates/base/header.html:32 templates/index.html:74 templates/news.html:11
 msgid "Новости"
 msgstr "Новости"
 
@@ -93,98 +99,52 @@ msgstr "Юридические данные:"
 msgid "Полное наименование:"
 msgstr "Полное наименование:"
 
-#: templates/contacts.html:31
+#: templates/contacts.html:35
 msgid "Юридические адрес:"
 msgstr "Юридические адрес:"
 
-#: templates/contacts.html:58
+#: templates/contacts.html:56
+msgid "Адрес:"
+msgstr ""
+
+#: templates/contacts.html:69
 #, fuzzy
 #| msgid "Время работы: пн-пт с 8.00 до 17.00"
 msgid "Время работы:"
 msgstr "Время работы:"
 
-#: templates/contacts.html:60
-#, fuzzy
-#| msgid "Время работы: пн-пт с 8.00 до 17.00"
-msgid "пн-пт с 8.00 до 17.00"
-msgstr "пн-пт с 8.00 до 17.00"
-
-#: templates/contacts.html:67
+#: templates/contacts.html:82
 msgid "Наш телефон:"
 msgstr "Наш телефон:"
 
-#: templates/contacts.html:76
+#: templates/contacts.html:91
 msgid "Наша почта:"
 msgstr "Наша почта:"
 
-#: templates/index.html:21
-msgid "на рынке междунарожных грузоперевозок"
-msgstr "на рынке междунарожных грузоперевозок"
+#: templates/index.html:22
+#, fuzzy
+#| msgid "на рынке междунарожных грузоперевозок"
+msgid "на рынке международных грузоперевозок"
+msgstr "на рынке международных грузоперевозок"
 
-#: templates/index.html:31
-msgid ""
-"\n"
-"                                <p>ЧТУП «СевенТрансСервис» c 1996 года "
-"оказывает услуги в сфере международных\n"
-"                                    автомобильных перевозок по Европе и "
-"странам СНГ.</p>\n"
-"                                <p>За время присутствия на рынке "
-"международных грузоперевозок наша компания\n"
-"                                    зарекомендовала себя как надежный "
-"партнер для многочисленных клиентов и партнеров по\n"
-"                                    всему миру.</p>\n"
-"                                <p>Приоритетными направлениями "
-"грузоперевозок для нас являются Венгрия, Словакия, Чехия,\n"
-"                                    Польша, Российская Федерация, Республика "
-"Беларусь.</p>\n"
-"                                "
-msgstr ""
-
-#: templates/index.html:45
+#: templates/index.html:42
 msgid "Подробнее"
 msgstr "Подробнее"
 
-#: templates/index.html:57
+#: templates/index.html:54
 msgid "более"
 msgstr "более"
 
-#: templates/index.html:131
+#: templates/index.html:128
 msgid "Смотреть все новости"
 msgstr "Смотреть все новости"
 
-#: templates/news.html:9
+#: templates/news.html:10
 #, fuzzy
 #| msgid "Новости"
 msgid "Главная / Новости"
 msgstr "Главная / Новости"
 
-#: templates/news.html:23
-msgid ""
-"\n"
-"                            В условиях постоянно развивающейся экономики "
-"нашей страны, международные перевозки грузов\n"
-"                            обретают все большую популярность. На "
-"сегодняшний день ни одна фирма, которая осуществляет\n"
-"                            внешнеэкономическую деятельность, не обходится "
-"без сотрудничества с компанией,\n"
-"                            осуществляющей\n"
-"                            международные грузоперевозки.\n"
-"                            "
-msgstr ""
-
-#: templates/services.html:9
+#: templates/services.html:10
 msgid "Главная / Услуги"
 msgstr "Главная / Услуги"
-
-#: templates/services.html:23
-msgid ""
-"\n"
-"                        Компания <strong> ЧТУП «СевенТрансСервис»</strong> "
-"на протяжении 25 лет осуществляет автомобильные международные грузоперевозки "
-"наземным транспортом, являясь надежным партнером для коллег и заказчиков.\n"
-"                        Одним из направлений деятельности компании является "
-"экспедирование грузов в страны Европы и СНГ.\n"
-"                        Автопарк компании включает в себя собственные "
-"тентованные и рефрижераторные автопоезда стандарта Евро-5, Евро-6.\n"
-"                        "
-msgstr ""
