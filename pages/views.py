@@ -1,8 +1,10 @@
-from celery.beat import Service
 from django.shortcuts import render
 from django.views import View
 from django.views.generic import ListView
-
+from cms_integration.models import (
+    AboutCompany,
+    Service
+)
 
 class IndexView(View):
     def get(self, request, *args, **kwargs):
@@ -13,8 +15,9 @@ class IndexView(View):
 
 class AboutView(View):
     def get(self, request, *args, **kwargs):
+        about_company = AboutCompany.objects.first()
         return render(
-            request, template_name='about.html', context={}
+            request, template_name='about.html', context={'about_company': about_company}
         )
 
 
