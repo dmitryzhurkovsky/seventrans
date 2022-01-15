@@ -5,7 +5,8 @@ from pages.views import (
     AboutView,
     NewsView,
     ContactsView,
-    ServicesView
+    ServicesView,
+    ServiceView
 )
 
 urlpatterns = [
@@ -14,5 +15,6 @@ urlpatterns = [
     path('news/', NewsView.as_view()),
     path('contacts/', ContactsView.as_view()),
     path('services/', ServicesView.as_view()),
+    path('services/<int:pk>/', ServiceView.as_view()),
     path('api/v1/', include('news.urls'))
 ]

@@ -36,8 +36,7 @@
 </head>
 
 <body>
-<script src="https://unpkg.com/vue@next"></script>
-<script src="{% static 'js/vue.js' %}"></script>
+{% include 'base/vue_conetction.html' %}
 <div id="app">
 {% include 'base/header.html' %}
 {% block content %}{% endblock %}

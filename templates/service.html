@@ -1,0 +1,23 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% block content %}
+    <div class="service">
+        <span class="service__name">
+            {% if LANGUAGE_CODE == 'ru' %}
+                {{ service.title_ru }}
+            {% else %}
+                {{ service.title_en }}
+            {% endif %}
+        </span>
+        <span class="service__text">
+            {% if LANGUAGE_CODE == 'ru' %}
+                {{ service.content_ru }}
+            {% else %}
+                {{ service.content_en }}
+            {% endif %}
+        </span>
+        <img src="{{ service.img.url }}" alt="">
+    </div>
+{% endblock %}

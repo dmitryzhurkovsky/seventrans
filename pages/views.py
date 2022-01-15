@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import View
 from django.views.generic import ListView
+
 from cms_integration.models import (
     AboutCompanyOnIndexPage,
     ServiceText,
@@ -9,6 +10,7 @@ from cms_integration.models import (
     Contact,
     NewsSubTitle
 )
+
 
 class IndexView(View):
     def get(self, request, *args, **kwargs):
@@ -52,14 +54,27 @@ class NewsView(ListView):
 class ServicesView(View):
     def get(self, request, *args, **kwargs):
         contacts = Contact.objects.get()
-        service_page_sub_title = ServiceSubTitle.objects.first()
+        service_page_text = ServiceText.objects.first()
         services = Service.objects.all()
 
         return render(
             request, template_name='services.html', context={
-                'service_page_sub_title': service_page_sub_title,
+                'service_page_text': service_page_text,
                 'services': services,
                 'contacts': contacts
+            }
+        )
+
+
+class ServiceView(View):
+    def get(self, request, pk, *args, **kwargs):
+        contacts = Contact.objects.get()
+        service = Service.objects.get(id=pk)
+
+        return render(
+            request, template_name='service.html', context={
+                'contacts': contacts,
+                'service': service
             }
         )
 
