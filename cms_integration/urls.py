@@ -4,6 +4,6 @@ from cms_integration.views import ServiceViewSet
 
 router = DefaultRouter()
 
-router.register(r'service', ServiceViewSet, basename='service')
+router.register(r'services', ServiceViewSet, basename='services')
 
 urlpatterns = router.urls

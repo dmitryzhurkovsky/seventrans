@@ -8,57 +8,87 @@
             <div class="preheader__wrapper__bg"></div>
             <div class="preheader__content  _container">
                 <div class="preheader__body">
-                    <div class="breadcrumbs">{% trans 'Главная / О компании' %}</div>
-                    <h2>{% trans 'О компании' %}</h2>
-                </div>
-            </div>
-        </div>
+                    <div class="breadcrumbs">Главная / О компании</div>
+                    <h2 class="preheader__title">О компании</h2>
+                </div> <!--  __content-->
+            </div><!--  __content-->
+        </div>  <!-- __wrapper-->
     </section>
     <section class="content">
         <div class="content__wrapper">
             <div class="content__content  _container">
                 <div class="content__body">
                     <div class="content__paragraph">
-
                         <h3>
                             {% if LANGUAGE_CODE == 'ru' %}
-                                {{ about_company.sub_title_ru|safe }}
+                                {{ about_company.sub_title_1_ru|safe }}
                             {% else %}
-                                {{ about_company.sub_title_en|safe }}
+                                {{ about_company.sub_title_1_en|safe }}
                             {% endif %}
                         </h3>
                         <p>
                             {% if LANGUAGE_CODE == 'ru' %}
-                                {{ about_company.body_ru|safe }}
+                                {{ about_company.body_1_ru|safe }}
                             {% else %}
-                                {{ about_company.body_en|safe }}
+                                {{ about_company.body_1_en|safe }}
                             {% endif %}
                         </p>
-                    </div>
-                    <div class="table2x statistic_box">
-                        <div class="about__item">
-                            <div class="about__info">25 {% trans 'лет' %}</div>
-                            <div class="about__subitem">{% trans 'безупречной работы' %}</div>
-                        </div>
-                        <div class="about__item">
-                            <div class="about__subitem">{% trans 'более' %}</div>
-                            <div class="about__info">{% trans '50 млн. км.' %}</div>
-                            <div class="about__subitem">{% trans 'пробега' %}</div>
-                        </div>
-                        <div class="about__item">
-                            <div class="about__info">45000</div>
-                            <div class="about__subitem">{% trans 'перевозок' %}</div>
-                        </div>
-                    </div> <!-- table2x-->
+                    </div> <!--   paragraph-->
+                    <div class="content__box">
+                        <div class="table2x">
+                            <div class="content__paragraph">
+                                <p>
+                                    {% transblock %}
+                                        Такая услуга, как грузоперевозки, становится все более востребованной на
+                                        белорусском рынке. И это не удивительно, поскольку бизнес не стоит на месте,
+                                        а постоянно развивается.
+                                        Сегодня многие компании заключают международные договора на  поставку и
+                                        очень важно, чтобы груз был доставлен вовремя, аккуратно и без повреждений.
+                                        Такие высокие требования способен удовлетворить не каждый, поэтому крайне важно
+                                        выбрать надежного и ответственного партнера, для которого интересы клиента
+                                        превыше всего!
+                                    {% endtransblock %}
+                                </p>
+                            </div>
+                            <div class="content__paragraph">
+                                <h3>
+                                    {% if LANGUAGE_CODE == 'ru' %}
+                                        {{ about_company.sub_title_2_ru|safe }}
+                                    {% else %}
+                                        {{ about_company.sub_title_2_en|safe }}
+                                    {% endif %}
+                                </h3>
+                                <p>
+                                    {% if LANGUAGE_CODE == 'ru' %}
+                                        {{ about_company.body_1_ru|safe }}
+                                    {% else %}
+                                        {{ about_company.body_1_en|safe }}
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </div> <!--   paragraph-->
 
-                </div> <!-- box-->
+                        <div class="table2x statistic_box">
+                            <div class="about__item">
+                                <div class="about__info">25 лет</div>
+                                <div class="about__subitem">безупречной работы</div>
+                            </div>
+                            <div class="about__item">
+                                <div class="about__subitem">более</div>
+                                <div class="about__info">50 млн. км.</div>
+                                <div class="about__subitem">пробега</div>
+                            </div>
+                            <div class="about__item">
+                                <div class="about__info">45000</div>
+                                <div class="about__subitem">перевозок</div>
+                            </div>
+                        </div> <!-- table2x-->
 
-                <div class="content__paragraph">
-                    <h3>Подзаголовок для этого текста</h3>
+                    </div> <!-- box-->
+
+
                 </div>
-
             </div>
-        </div>
         </div>
 
     </section>

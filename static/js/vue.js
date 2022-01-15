@@ -109,14 +109,14 @@ app.component('news', {
             this.fetchNews();
         },
     },
-
     mounted() {
-        this.fetchNews()
+        this.fetchNews();
+        this.getCountOfPages();
     },
     template: `
     <div class="list_news__box">
-        <div 
-        v-for="(article, idx) in news" 
+        <div
+        v-for="(article, idx) in news"
         :key="article.id"
         class="list_news__item"
     >
@@ -134,9 +134,9 @@ app.component('news', {
     <div class="list_news__pagination pagination _flex">
         <div class="pagination__link page_back" @click="changePage('previous')">Назад</div>
         <ul class="pagination__numbers">
-            <li 
+            <li
                 v-for="pageNumber in numberOfPages"
-                :key="pageNumber"
+                :key="this.page"
                 :class="{'_active': page === pageNumber}"
                 @click="changePage(pageNumber)"
                 class="pagination__item"

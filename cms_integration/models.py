@@ -14,16 +14,16 @@ class AboutCompanyOnIndexPage(models.Model):
         return 'Блок "О компании" на Главной странице. Должен быть только в 1 экземпляре.'
 
 
-class ServiceSubTitle(models.Model):
+class ServiceText(models.Model):
     """ Service page """
-    sub_title_ru = models.CharField(max_length=255, verbose_name='Подзаголовок страницы услуг на русском')
-    sub_title_en = models.CharField(max_length=255, verbose_name='Подзаголовок страницы услуг на английском')
+    text_ru = models.CharField(max_length=255, verbose_name='Текст страницы услуг на русском')
+    text_en = models.CharField(max_length=255, verbose_name='Текст страницы услуг на английском')
 
     class Meta:
         verbose_name_plural = 'Страница "Услуги". Текст в верху страницы'
 
     def __str__(self):
-        return 'Подзаголовок страницы услуг. Должен быть только в 1 экземпляре.'
+        return 'Текст на странице услуг. Должен быть только в 1 экземпляре.'
 
 
 class Service(models.Model):
@@ -45,11 +45,29 @@ class Service(models.Model):
 
 class AboutCompany(models.Model):
     """ About page """
-    sub_title_en = models.CharField(max_length=255, verbose_name='Подзаголовк на английском', null=True, blank=True)
-    sub_title_ru = models.CharField(max_length=255, verbose_name='Подзаголовок на русском', null=True, blank=True)
+    sub_title_1_en = models.CharField(
+        max_length=255,
+        verbose_name='Подзаголовок 1 блока на английском',
+    )
+    sub_title_1_ru = models.CharField(
+        max_length=255,
+        verbose_name='Подзаголовок 1 блока на русском',
+    )
 
-    body_en = RichTextField(verbose_name='Содержимое "О компании" на английском')
-    body_ru = RichTextField(verbose_name='Содержимое "О компании" на русском')
+    body_1_en = RichTextField(verbose_name='Текст 1 блока на английском')
+    body_1_ru = RichTextField(verbose_name='Текст 1 блока на русском')
+
+    sub_title_2_en = models.CharField(
+        max_length=255,
+        verbose_name='Подзаголовок 2 блока на английском',
+    )
+    sub_title_2_ru = models.CharField(
+        max_length=255,
+        verbose_name='Подзаголовок 2 блока на русском',
+    )
+
+    body_2_en = RichTextField(verbose_name='Текст 2 блока на английском')
+    body_2_ru = RichTextField(verbose_name='Текст 2 блока на русском')
 
     class Meta:
         verbose_name_plural = 'Страница "О компании"'

@@ -3,7 +3,7 @@ from django.views import View
 from django.views.generic import ListView
 from cms_integration.models import (
     AboutCompanyOnIndexPage,
-    ServiceSubTitle,
+    ServiceText,
     Service,
     AboutCompany,
     Contact,

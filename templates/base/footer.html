@@ -33,10 +33,10 @@
 
                     <div class="footer__col">
                         <div class="company__item">
-                            {% if  LANGUAGE_CODE == 'ru' %}
-                                {{ contacts.legal_address_ru|safe }}
+                            {% if LANGUAGE_CODE == 'ru' %}
+                                {{ contacts.working_time_ru }}
                             {% else %}
-                                {{ contacts.legal_address_en|safe }}
+                                {{ contacts.working_time_en }}
                             {% endif %}
                         </div>
                         <div class="company__item">E-mail:
