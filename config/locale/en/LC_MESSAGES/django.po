@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-14 18:37+0000\n"
+"POT-Creation-Date: 2022-01-15 16:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,34 +26,33 @@ msgstr "English"
 msgid "Russian"
 msgstr "Russian"
 
-#: templates/about.html:11
-msgid "Главная / О компании"
-msgstr "Main / About company"
+#: templates/about.html:41
+msgid ""
+"\n"
+"                                        Такая услуга, как грузоперевозки, "
+"становится все более востребованной на\n"
+"                                        белорусском рынке. И это не "
+"удивительно, поскольку бизнес не стоит на месте,\n"
+"                                        а постоянно развивается.\n"
+"                                        Сегодня многие компании заключают "
+"международные договора на  поставку и\n"
+"                                        очень важно, чтобы груз был "
+"доставлен вовремя, аккуратно и без повреждений.\n"
+"                                        Такие высокие требования способен "
+"удовлетворить не каждый, поэтому крайне важно\n"
+"                                        выбрать надежного и ответственного "
+"партнера, для которого интересы клиента\n"
+"                                        превыше всего!\n"
+"                                    "
+msgstr ""
+"\n"
+"Such a service as cargo transportation is becoming more and more in demand on the Belarusian market. "
+"And this is not surprising, since the business does not stand still, but is constantly evolving."
+"Today, many companies conclude international supply agreements and it is very important that the goods are delivered"
+" on time, accurately and without damage. Not everyone is able to meet such high requirements,"
+" so it is extremely important to choose a reliable and responsible partner,"
+" for whom the interests of the client are above all else!"
 
-#: templates/about.html:12 templates/base/header.html:25
-#: templates/index.html:29
-msgid "О компании"
-msgstr "About company"
-
-#: templates/about.html:39 templates/index.html:18 templates/index.html:50
-msgid "лет"
-msgstr "years"
-
-#: templates/about.html:40 templates/index.html:51
-msgid "безупречной работы"
-msgstr "flawless work"
-
-#: templates/about.html:42 templates/index.html:55
-msgid "50 млн. км."
-msgstr "50 million km."
-
-#: templates/about.html:43 templates/index.html:56
-msgid "пробега"
-msgstr "mileage"
-
-#: templates/about.html:47 templates/index.html:60
-msgid "перевозок"
-msgstr "transportation"
 
 #: templates/base/footer.html:18
 msgid "УНП"
@@ -66,6 +65,10 @@ msgstr "Website development"
 #: templates/base/header.html:18
 msgid "Международные автомобильные перевозки по Европе и странам СНГ"
 msgstr "International road transport in Europe and CIS countries"
+
+#: templates/base/header.html:25 templates/index.html:29
+msgid "О компании"
+msgstr "About company"
 
 #: templates/base/header.html:28 templates/services.html:11
 msgid "Услуги"
@@ -111,6 +114,10 @@ msgstr "Our phone:"
 msgid "Наша почта:"
 msgstr "Our email:"
 
+#: templates/index.html:18 templates/index.html:50
+msgid "лет"
+msgstr "years"
+
 #: templates/index.html:22
 #, fuzzy
 #| msgid "на рынке междунарожных грузоперевозок"
@@ -121,9 +128,25 @@ msgstr "on the international cargo transportation market"
 msgid "Подробнее"
 msgstr "Detailed"
 
+#: templates/index.html:51
+msgid "безупречной работы"
+msgstr "flawless work"
+
 #: templates/index.html:54
 msgid "более"
 msgstr "more than"
+
+#: templates/index.html:55
+msgid "50 млн. км."
+msgstr "50 million km."
+
+#: templates/index.html:56
+msgid "пробега"
+msgstr "mileage"
+
+#: templates/index.html:60
+msgid "перевозок"
+msgstr "transportation"
 
 #: templates/index.html:128
 msgid "Смотреть все новости"

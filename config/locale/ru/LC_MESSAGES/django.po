@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-14 18:37+0000\n"
+"POT-Creation-Date: 2022-01-15 16:43+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,36 +30,41 @@ msgstr "Английский"
 msgid "Russian"
 msgstr "Русский"
 
-#: templates/about.html:11
-#, fuzzy
-#| msgid "О компании"
-msgid "Главная / О компании"
-msgstr "Главная / О компании"
-
-#: templates/about.html:12 templates/base/header.html:25
-#: templates/index.html:29
-msgid "О компании"
-msgstr "О компании"
-
-#: templates/about.html:39 templates/index.html:18 templates/index.html:50
-msgid "лет"
-msgstr "лет"
-
-#: templates/about.html:40 templates/index.html:51
-msgid "безупречной работы"
-msgstr "безупречной работы"
-
-#: templates/about.html:42 templates/index.html:55
-msgid "50 млн. км."
-msgstr "50 млн. км."
-
-#: templates/about.html:43 templates/index.html:56
-msgid "пробега"
-msgstr "пробега"
-
-#: templates/about.html:47 templates/index.html:60
-msgid "перевозок"
-msgstr "перевозок"
+#: templates/about.html:41
+msgid ""
+"\n"
+"                                        Такая услуга, как грузоперевозки, "
+"становится все более востребованной на\n"
+"                                        белорусском рынке. И это не "
+"удивительно, поскольку бизнес не стоит на месте,\n"
+"                                        а постоянно развивается.\n"
+"                                        Сегодня многие компании заключают "
+"международные договора на  поставку и\n"
+"                                        очень важно, чтобы груз был "
+"доставлен вовремя, аккуратно и без повреждений.\n"
+"                                        Такие высокие требования способен "
+"удовлетворить не каждый, поэтому крайне важно\n"
+"                                        выбрать надежного и ответственного "
+"партнера, для которого интересы клиента\n"
+"                                        превыше всего!\n"
+"                                    "
+msgstr ""
+"\n"
+"                                        Такая услуга, как грузоперевозки, "
+"становится все более востребованной на\n"
+"                                        белорусском рынке. И это не "
+"удивительно, поскольку бизнес не стоит на месте,\n"
+"                                        а постоянно развивается.\n"
+"                                        Сегодня многие компании заключают "
+"международные договора на  поставку и\n"
+"                                        очень важно, чтобы груз был "
+"доставлен вовремя, аккуратно и без повреждений.\n"
+"                                        Такие высокие требования способен "
+"удовлетворить не каждый, поэтому крайне важно\n"
+"                                        выбрать надежного и ответственного "
+"партнера, для которого интересы клиента\n"
+"                                        превыше всего!\n"
+"                                    "
 
 #: templates/base/footer.html:18
 msgid "УНП"
@@ -72,6 +77,10 @@ msgstr ""
 #: templates/base/header.html:18
 msgid "Международные автомобильные перевозки по Европе и странам СНГ"
 msgstr "Международные автомобильные перевозки по Европе и странам СНГ"
+
+#: templates/base/header.html:25 templates/index.html:29
+msgid "О компании"
+msgstr "О компании"
 
 #: templates/base/header.html:28 templates/services.html:11
 msgid "Услуги"
@@ -121,6 +130,10 @@ msgstr "Наш телефон:"
 msgid "Наша почта:"
 msgstr "Наша почта:"
 
+#: templates/index.html:18 templates/index.html:50
+msgid "лет"
+msgstr "лет"
+
 #: templates/index.html:22
 #, fuzzy
 #| msgid "на рынке междунарожных грузоперевозок"
@@ -131,9 +144,25 @@ msgstr "на рынке международных грузоперевозок"
 msgid "Подробнее"
 msgstr "Подробнее"
 
+#: templates/index.html:51
+msgid "безупречной работы"
+msgstr "безупречной работы"
+
 #: templates/index.html:54
 msgid "более"
 msgstr "более"
+
+#: templates/index.html:55
+msgid "50 млн. км."
+msgstr "50 млн. км."
+
+#: templates/index.html:56
+msgid "пробега"
+msgstr "пробега"
+
+#: templates/index.html:60
+msgid "перевозок"
+msgstr "перевозок"
 
 #: templates/index.html:128
 msgid "Смотреть все новости"
