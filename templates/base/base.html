@@ -34,11 +34,12 @@
 
 
 </head>
-<body id="app">
+<body>
+<div id="app">
 {% include 'base/header.html' %}
 {% block content %}{% endblock %}
 {% include 'base/footer.html' %}
-
+</div>
 {% include 'base/vue_conetction.html' %}
 <script src="{% static 'js/app.min.js' %}"></script>
 </body>
