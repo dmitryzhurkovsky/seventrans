@@ -1,6 +1,7 @@
 {% extends 'base/base.html' %}
 {% load static %}
 {% load i18n %}
+{% load bleach_tags %}
 {% get_current_language as LANGUAGE_CODE %}
 {% block content %}
     <section class="preheader">
@@ -21,16 +22,16 @@
                     <div class="content__paragraph">
                         <h3>
                             {% if LANGUAGE_CODE == 'ru' %}
-                                {{ about_company.sub_title_1_ru|safe }}
+                                {{ about_company.sub_title_1_ru|bleach }}
                             {% else %}
-                                {{ about_company.sub_title_1_en|safe }}
+                                {{ about_company.sub_title_1_en|bleach }}
                             {% endif %}
                         </h3>
                         <p>
                             {% if LANGUAGE_CODE == 'ru' %}
-                                {{ about_company.body_1_ru|safe }}
+                                {{ about_company.body_1_ru|bleach }}
                             {% else %}
-                                {{ about_company.body_1_en|safe }}
+                                {{ about_company.body_1_en|bleach }}
                             {% endif %}
                         </p>
                     </div> <!--   paragraph-->
@@ -53,16 +54,16 @@
                             <div class="content__paragraph">
                                 <h3>
                                     {% if LANGUAGE_CODE == 'ru' %}
-                                        {{ about_company.sub_title_2_ru|safe }}
+                                        {{ about_company.sub_title_2_ru|bleach }}
                                     {% else %}
-                                        {{ about_company.sub_title_2_en|safe }}
+                                        {{ about_company.sub_title_2_en|bleach }}
                                     {% endif %}
                                 </h3>
                                 <p>
                                     {% if LANGUAGE_CODE == 'ru' %}
-                                        {{ about_company.body_2_ru|safe }}
+                                        {{ about_company.body_2_ru|bleach }}
                                     {% else %}
-                                        {{ about_company.body_2_en|safe }}
+                                        {{ about_company.body_2_en|bleach }}
                                     {% endif %}
                                 </p>
                             </div>

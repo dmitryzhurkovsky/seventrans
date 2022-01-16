@@ -33,9 +33,8 @@ servicesComponent = {
                     <img src="service.img.url" alt="">
                 </div>
                 <div class="usluga__textbox">
-                    <h4 class="usluga__title">{{ service.title }}</h4>
-                    <div class="usluga__description">
-                        {{ service.content }}
+                    <h4 v-html="service.title" class="usluga__title"></h4>
+                    <div v-html="service.content" class="usluga__description">
                     </div>
                 </div>
             </a>
