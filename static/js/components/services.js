@@ -30,7 +30,7 @@ servicesComponent = {
                 class="uslugi__item usluga"
             >
                 <div class="usluga__img">
-                    <img src="service.img" alt="">
+                    <img :src="service.img" alt="">
                 </div>
                 <div class="usluga__textbox">
                     <h4 v-html="service.title" class="usluga__title"></h4>
