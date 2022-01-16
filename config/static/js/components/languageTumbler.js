@@ -1,4 +1,4 @@
-languageTumbler = {
+languageTumblerComponent = {
     data() {
         return {
             language: this.getCookie('django_language'),

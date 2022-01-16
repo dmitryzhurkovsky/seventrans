@@ -20,18 +20,25 @@
                 <div class="list_news__body">
                     <div class="list_news__paragraph">
 
-                        <p>
-                            {% if LANGUAGE_CODE == 'ru' %}
-                                {{ news_page_sub_title.sub_title_ru|safe }}
-                            {% else %}
-                                {{ news_page_sub_title.sub_title_en|safe }}
-                            {% endif %}
-                        </p>
+                        <div class="list_news__item">
+                            <div class="list_news__img">
+                                <img src="{{ article.img.url }}" alt="">
+                            </div>
+
+                            <div class="list_news__description">
+                                <div class="one_news__date one_news__item">{{ article.publish_date }}</div>
+                                <div class="one_news__title one_news__item">{{ article.title }}</div>
+                            </div>
+                            <p>
+                                {{ article.body }}
+                            </p>
+                        </div>
                     </div>
-                    <news></news>
                 </div><!--__body-->
             </div><!--__content-->
         </div> <!--__wrapper-->
 
     </section>
+
 {% endblock content %}
+{% static 'js/fetchNews.js' %}

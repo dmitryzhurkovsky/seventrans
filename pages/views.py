@@ -10,6 +10,7 @@ from cms_integration.models import (
     Contact,
     NewsSubTitle
 )
+from news.models import Article
 
 
 class IndexView(View):
@@ -51,16 +52,27 @@ class NewsView(ListView):
         )
 
 
+class ArticleView(ListView):
+    def get(self, request, pk, *args, **kwargs):
+        contacts = Contact.objects.get()
+        article = Article.objects.get(id=pk)
+
+        return render(
+            request, template_name='article.html', context={
+                'article': article,
+                'contacts': contacts
+            }
+        )
+
+
 class ServicesView(View):
     def get(self, request, *args, **kwargs):
         contacts = Contact.objects.get()
         service_page_text = ServiceText.objects.first()
-        services = Service.objects.all()
 
         return render(
             request, template_name='services.html', context={
                 'service_page_text': service_page_text,
-                'services': services,
                 'contacts': contacts
             }
         )

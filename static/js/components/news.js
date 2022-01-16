@@ -1,7 +1,7 @@
-news = {
+newsComponent = {
     data() {
         return {
-            news: [],
+            news: null,
             totalPages: null,
             pageLimit: 6,
             page: 1,
@@ -26,7 +26,7 @@ news = {
     methods: {
         async fetchNews() {
             try {
-                const response = await axios.get('http://7trans.by/api/v1/news', {
+                const response = await axios.get('http://localhost:8000/api/v1/news', {
                     params: {page: this.page},
                     headers: {'Accept-Language': this.language}
                 });
@@ -47,6 +47,9 @@ news = {
             }
             this.fetchNews();
         },
+        getArticleUrl(articleId) {
+            return `http://localhost:8000/news/${articleId}/`
+        }
     },
     mounted() {
         this.fetchNews();
@@ -54,9 +57,10 @@ news = {
     },
     template: `
     <div class="list_news__box">
-        <div
+        <a
         v-for="(article, idx) in news"
         :key="article.id"
+        :href="getArticleUrl(article.id)"
         class="list_news__item"
     >
         <div class="list_news__img">
@@ -68,13 +72,13 @@ news = {
             <div class="one_news__title one_news__item">{{ article.title }}</div>
             <div class="one_news__text one_news__item">{{ article.preview_body }}</div>
         </div>
-    </div>
+    </a>
     </div> <!--__box-->
     <div class="list_news__pagination pagination _flex">
         <div class="pagination__link page_back" @click="changePage('previous')">Назад</div>
         <ul class="pagination__numbers">
             <li
-                v-for="pageNumber in numberOfPages"
+                v-for="(pageNumber, idx) in numberOfPages"
                 :key="this.page"
                 :class="{'_active': page === pageNumber}"
                 @click="changePage(pageNumber)"

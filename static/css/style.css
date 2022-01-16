@@ -313,7 +313,7 @@
     flex-basis: 50%;
     padding-left: 25px;
     display: flex;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
   .news__block:nth-child(1) .one_news__img {
     flex-basis: 50%;
@@ -341,19 +341,6 @@
 .news__block:nth-child(2) .one_news__description {
   flex-basis: 50%;
   padding-left: 20px;
-}
-.news__block:nth-child(2) .one_news__btn {
-  text-align: right;
-  display: flex;
-  justify-content: right;
-}
-@media (max-width: 767.98px) {
-  .news__block:nth-child(2) .one_news__btn {
-    justify-content: center;
-  }
-  .news__block:nth-child(2) .one_news__btn .btn-arrow img {
-    display: none;
-  }
 }
 .news .one_news__img img {
   width: 100%;
@@ -532,7 +519,7 @@
 .about__text div:nth-child(1) {
   font-size: 18px;
   line-height: 30px;
-  font-weight: 300;
+  font-weight: 500;
 }
 .about__text div:nth-child(1) p {
   margin-bottom: 5px;
@@ -677,60 +664,6 @@ h6 {
   font-size: inherit;
 }
 
-.content__body {
-  font-weight: 300;
-  font-size: 17px;
-  line-height: 27px;
-  color: #212121;
-  margin: 30px 0;
-}
-.content__body h3 {
-  font-weight: 500;
-  font-size: 22px;
-  line-height: 30px;
-  margin: 10px 0;
-}
-.content__paragraph p {
-  margin-bottom: 15px;
-}
-.content__box {
-  display: flex;
-  align-items: flex-start;
-}
-@media (max-width: 767.98px) {
-  .content__box {
-    flex-direction: column;
-  }
-}
-.content__box .table2x:nth-child(1) {
-  flex-basis: 70%;
-  padding-right: 30px;
-}
-.content__box .table2x:nth-child(1) .content__paragraph:nth-child(1) {
-  background: #F1F7FC;
-  padding: 30px 20px;
-  border: 1px solid #DFEAF3;
-}
-.content__box .table2x:nth-child(2) {
-  flex-basis: 30%;
-  background: #102B43;
-}
-@media (max-width: 767.98px) {
-  .content__box .table2x:nth-child(2) {
-    margin-top: 20px;
-    display: flex;
-    width: 100%;
-  }
-}
-@media (max-width: 479.98px) {
-  .content__box .table2x:nth-child(2) {
-    flex-direction: column;
-    width: 100%;
-  }
-}
-.content__list {
-  list-style-type: circle;
-}
 .uslugi__paragraph {
   margin: 40px 0;
   font-weight: 300;
@@ -921,16 +854,6 @@ h6 {
   background-image: url("../img/prebanner1.png");
   background-size: cover;
   background-repeat: no-repeat;
-  position: relative;
-}
-.preheader__wrapper__bg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: rgba(11, 37, 61, 0.7);
-}
-.preheader__body {
-  padding: 20px 0 40px;
 }
 .preheader__wrapper__bg {
   width: 100%;
@@ -939,16 +862,17 @@ h6 {
   background: rgba(11, 37, 61, 0.7);
 }
 .preheader__body .breadcrumbs {
+  padding-top: 20px;
   font-size: 16px;
   line-height: 25px;
   color: #D4E4F3;
-  margin-bottom: 30px;
 }
 .preheader__title {
   font-weight: bold;
   font-size: 50px;
   line-height: 60px;
   color: #FFFFFF;
+  margin-top: 40px;
 }
 
 .footer__wrapper {
