@@ -30,7 +30,7 @@ servicesComponent = {
                 class="uslugi__item usluga"
             >
                 <div class="usluga__img">
-                    <img src="" alt="">
+                    <img src="service.img.url" alt="">
                 </div>
                 <div class="usluga__textbox">
                     <h4 class="usluga__title">{{ service.title }}</h4>
