@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-15 16:43+0000\n"
+"POT-Creation-Date: 2022-01-16 09:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,13 +46,25 @@ msgid ""
 "                                    "
 msgstr ""
 "\n"
-"Such a service as cargo transportation is becoming more and more in demand on the Belarusian market. "
-"And this is not surprising, since the business does not stand still, but is constantly evolving."
-"Today, many companies conclude international supply agreements and it is very important that the goods are delivered"
-" on time, accurately and without damage. Not everyone is able to meet such high requirements,"
-" so it is extremely important to choose a reliable and responsible partner,"
-" for whom the interests of the client are above all else!"
+"Such a service as cargo transportation is becoming more and more in demand "
+"on the Belarusian market. And this is not surprising, since the business "
+"does not stand still, but is constantly evolving.Today, many companies "
+"conclude international supply agreements and it is very important that the "
+"goods are delivered on time, accurately and without damage. Not everyone is "
+"able to meet such high requirements, so it is extremely important to choose "
+"a reliable and responsible partner, for whom the interests of the client are "
+"above all else!"
 
+#: templates/article.html:10 templates/news.html:10
+#, fuzzy
+#| msgid "Главная / О компании"
+msgid "Главная / Новости"
+msgstr "Main / News"
+
+#: templates/article.html:11 templates/base/header.html:32
+#: templates/index.html:74 templates/news.html:11
+msgid "Новости"
+msgstr "News"
 
 #: templates/base/footer.html:18
 msgid "УНП"
@@ -73,10 +85,6 @@ msgstr "About company"
 #: templates/base/header.html:28 templates/services.html:11
 msgid "Услуги"
 msgstr "Services"
-
-#: templates/base/header.html:32 templates/index.html:74 templates/news.html:11
-msgid "Новости"
-msgstr "News"
 
 #: templates/base/header.html:35 templates/contacts.html:11
 msgid "Контакты"
@@ -119,8 +127,6 @@ msgid "лет"
 msgstr "years"
 
 #: templates/index.html:22
-#, fuzzy
-#| msgid "на рынке междунарожных грузоперевозок"
 msgid "на рынке международных грузоперевозок"
 msgstr "on the international cargo transportation market"
 
@@ -151,12 +157,6 @@ msgstr "transportation"
 #: templates/index.html:128
 msgid "Смотреть все новости"
 msgstr "See all news"
-
-#: templates/news.html:10
-#, fuzzy
-#| msgid "Главная / О компании"
-msgid "Главная / Новости"
-msgstr "Main / News"
 
 #: templates/services.html:10
 #, fuzzy

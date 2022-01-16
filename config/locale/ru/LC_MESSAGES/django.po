@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-15 16:43+0000\n"
+"POT-Creation-Date: 2022-01-16 09:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -66,6 +66,17 @@ msgstr ""
 "                                        превыше всего!\n"
 "                                    "
 
+#: templates/article.html:10 templates/news.html:10
+#, fuzzy
+#| msgid "Новости"
+msgid "Главная / Новости"
+msgstr "Главная / Новости"
+
+#: templates/article.html:11 templates/base/header.html:32
+#: templates/index.html:74 templates/news.html:11
+msgid "Новости"
+msgstr "Новости"
+
 #: templates/base/footer.html:18
 msgid "УНП"
 msgstr ""
@@ -85,10 +96,6 @@ msgstr "О компании"
 #: templates/base/header.html:28 templates/services.html:11
 msgid "Услуги"
 msgstr "Услуги"
-
-#: templates/base/header.html:32 templates/index.html:74 templates/news.html:11
-msgid "Новости"
-msgstr "Новости"
 
 #: templates/base/header.html:35 templates/contacts.html:11
 msgid "Контакты"
@@ -167,12 +174,6 @@ msgstr "перевозок"
 #: templates/index.html:128
 msgid "Смотреть все новости"
 msgstr "Смотреть все новости"
-
-#: templates/news.html:10
-#, fuzzy
-#| msgid "Новости"
-msgid "Главная / Новости"
-msgstr "Главная / Новости"
 
 #: templates/services.html:10
 msgid "Главная / Услуги"
