@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-16 09:59+0000\n"
+"POT-Creation-Date: 2022-01-17 15:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,7 +62,7 @@ msgid "Главная / Новости"
 msgstr "Main / News"
 
 #: templates/article.html:11 templates/base/header.html:32
-#: templates/index.html:74 templates/news.html:11
+#: templates/index.html:75 templates/news.html:11
 msgid "Новости"
 msgstr "News"
 
@@ -73,6 +73,10 @@ msgstr "UNP"
 #: templates/base/footer.html:28
 msgid "Разработка сайта"
 msgstr "Website development"
+
+#: templates/base/footer.html:36 templates/contacts.html:69
+msgid "Время работы:"
+msgstr "Working time:"
 
 #: templates/base/header.html:18
 msgid "Международные автомобильные перевозки по Европе и странам СНГ"
@@ -110,10 +114,6 @@ msgstr "Legal address"
 msgid "Адрес:"
 msgstr "Address"
 
-#: templates/contacts.html:69
-msgid "Время работы:"
-msgstr "Working time"
-
 #: templates/contacts.html:82
 msgid "Наш телефон:"
 msgstr "Our phone:"
@@ -122,7 +122,7 @@ msgstr "Our phone:"
 msgid "Наша почта:"
 msgstr "Our email:"
 
-#: templates/index.html:18 templates/index.html:50
+#: templates/index.html:18 templates/index.html:51
 msgid "лет"
 msgstr "years"
 
@@ -130,36 +130,35 @@ msgstr "years"
 msgid "на рынке международных грузоперевозок"
 msgstr "on the international cargo transportation market"
 
-#: templates/index.html:42
+#: templates/index.html:43
 msgid "Подробнее"
 msgstr "Detailed"
 
-#: templates/index.html:51
+#: templates/index.html:52
 msgid "безупречной работы"
 msgstr "flawless work"
 
-#: templates/index.html:54
+#: templates/index.html:55
 msgid "более"
 msgstr "more than"
 
-#: templates/index.html:55
+#: templates/index.html:56
 msgid "50 млн. км."
 msgstr "50 million km."
 
-#: templates/index.html:56
+#: templates/index.html:57
 msgid "пробега"
 msgstr "mileage"
 
-#: templates/index.html:60
+#: templates/index.html:61
 msgid "перевозок"
 msgstr "transportation"
-
-#: templates/index.html:128
-msgid "Смотреть все новости"
-msgstr "See all news"
 
 #: templates/services.html:10
 #, fuzzy
 #| msgid "Главная / О компании"
 msgid "Главная / Услуги"
 msgstr "Main / Services"
+
+#~ msgid "Смотреть все новости"
+#~ msgstr "See all news"

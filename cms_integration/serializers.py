@@ -31,6 +31,6 @@ class ServiceSerializer(serializers.ModelSerializer):
         language = self.get_language()
 
         if language == 'ru':
-            return instance.content_ru
+            return instance.title_ru
 
-        return instance.content_en
+        return instance.title_en

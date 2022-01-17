@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-16 09:56+0000\n"
+"POT-Creation-Date: 2022-01-17 15:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -73,7 +73,7 @@ msgid "Главная / Новости"
 msgstr "Главная / Новости"
 
 #: templates/article.html:11 templates/base/header.html:32
-#: templates/index.html:74 templates/news.html:11
+#: templates/index.html:75 templates/news.html:11
 msgid "Новости"
 msgstr "Новости"
 
@@ -84,6 +84,12 @@ msgstr ""
 #: templates/base/footer.html:28
 msgid "Разработка сайта"
 msgstr ""
+
+#: templates/base/footer.html:36 templates/contacts.html:69
+#, fuzzy
+#| msgid "Время работы: пн-пт с 8.00 до 17.00"
+msgid "Время работы:"
+msgstr "Время работы:"
 
 #: templates/base/header.html:18
 msgid "Международные автомобильные перевозки по Европе и странам СНГ"
@@ -123,12 +129,6 @@ msgstr "Юридические адрес:"
 msgid "Адрес:"
 msgstr ""
 
-#: templates/contacts.html:69
-#, fuzzy
-#| msgid "Время работы: пн-пт с 8.00 до 17.00"
-msgid "Время работы:"
-msgstr "Время работы:"
-
 #: templates/contacts.html:82
 msgid "Наш телефон:"
 msgstr "Наш телефон:"
@@ -137,7 +137,7 @@ msgstr "Наш телефон:"
 msgid "Наша почта:"
 msgstr "Наша почта:"
 
-#: templates/index.html:18 templates/index.html:50
+#: templates/index.html:18 templates/index.html:51
 msgid "лет"
 msgstr "лет"
 
@@ -147,34 +147,33 @@ msgstr "лет"
 msgid "на рынке международных грузоперевозок"
 msgstr "на рынке международных грузоперевозок"
 
-#: templates/index.html:42
+#: templates/index.html:43
 msgid "Подробнее"
 msgstr "Подробнее"
 
-#: templates/index.html:51
+#: templates/index.html:52
 msgid "безупречной работы"
 msgstr "безупречной работы"
 
-#: templates/index.html:54
+#: templates/index.html:55
 msgid "более"
 msgstr "более"
 
-#: templates/index.html:55
+#: templates/index.html:56
 msgid "50 млн. км."
 msgstr "50 млн. км."
 
-#: templates/index.html:56
+#: templates/index.html:57
 msgid "пробега"
 msgstr "пробега"
 
-#: templates/index.html:60
+#: templates/index.html:61
 msgid "перевозок"
 msgstr "перевозок"
-
-#: templates/index.html:128
-msgid "Смотреть все новости"
-msgstr "Смотреть все новости"
 
 #: templates/services.html:10
 msgid "Главная / Услуги"
 msgstr "Главная / Услуги"
+
+#~ msgid "Смотреть все новости"
+#~ msgstr "Смотреть все новости"

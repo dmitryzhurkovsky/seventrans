@@ -33,6 +33,7 @@
 
                     <div class="footer__col">
                         <div class="company__item">
+                            {% trans 'Время работы:' %}
                             {% if LANGUAGE_CODE == 'ru' %}
                                 {{ contacts.working_time_ru }}
                             {% else %}

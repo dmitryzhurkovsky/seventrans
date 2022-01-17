@@ -29,7 +29,7 @@
                         <h2 class="">{% trans 'О компании' %}</h2>
                         <div class="about__text">
                             <div>
-                                {% if LANGUAGE_CODE == 'ru'%}
+                                {% if LANGUAGE_CODE == 'ru' %}
                                     {{ about_company_text_block.content_ru|safe }}
                                 {% else %}
                                     {{ about_company_text_block.content_en|safe }}
@@ -39,9 +39,10 @@
                                 <img src="{% static 'img/1.png' %}" alt="Логотип">
                             </div>
                         </div>
-                        <a href="/about" class="btn mt-20 btn-arrow"> {% trans 'Подробнее' %}
+                        <button @click="redirectToPage('about')" href="/about" class="btn mt-20 btn-arrow">
+                            {% trans 'Подробнее' %}
                             <img src="{% static 'img/arr_wh.svg' %}" width="26" alt="">
-                        </a>
+                        </button>
 
                     </div> <!-- table2x-->
 
@@ -72,68 +73,8 @@
         <div class="news__wrapper">
             <div class="news__content _container">
                 <h2>{% trans 'Новости' %}</h2>
-                <div class="news__body">
 
-                    <div class="news__block">
-                        <div class="one_news__block">
-                            <div class="one_news__img">
-                                <img src="{% static 'img/news/fura-2.png' %}" alt="Новости">
-                            </div>
-                            <div class="one_news__description  mt-20">
-                                <div class="one_news__date one_news__item">13.02.2021</div>
-                                <div class="one_news__title one_news__item"> Краткое название новости2 (определенное
-                                    количество символов)
-                                </div>
-                                <div class="one_news__text one_news__item">
-                                    Описание новости не больше двух предложений
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                    <div class="news__block">
-                        <div class="one_news__block">
-                            <div class="one_news__img">
-                                <img src="{% static 'img/news/fura-2.png' %}" alt="Новости">
-                            </div>
-                            <div class="one_news__description">
-                                <div class="one_news__date one_news__item">13.02.2021</div>
-                                <div class="one_news__title one_news__item"> Краткое название новости2 (определенное
-                                    количество символов)
-                                </div>
-                                <div class="one_news__text one_news__item">
-                                    Описание новости не больше двух предложений
-                                </div>
-                            </div>
-
-
-                        </div>
-
-                        <div class="one_news__block">
-                            <div class="one_news__img">
-                                <img src="{% static 'img/news/fura-3.png' %}" alt="Новости">
-                            </div>
-                            <div class="one_news__description">
-                                <div class="one_news__date one_news__item">13.02.2021</div>
-                                <div class="one_news__title one_news__item"> Краткое название новости2 (определенное
-                                    количество символов)
-                                </div>
-                                <div class="one_news__text one_news__item">
-                                    Описание новости не больше двух предложений
-                                </div>
-                            </div>
-                </div>
-                <a href="/about" class="one_news__btn">
-                    <a href="/news" class="btn btn-arrow">{% trans 'Смотреть все новости' %}
-                        <img src="img/arr_wh.svg" width="26" alt="">
-                    </a>
-                </a>
-
-
-
-            </div> <!-- ..body-->
-
+                <news-banner></news-banner>
 
 
             </div>   <!-- ..content-->
@@ -150,3 +91,4 @@
         </div>  <!-- ..content-->
     </section>
 {% endblock content %}
+
