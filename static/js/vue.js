@@ -3,9 +3,9 @@ const config = {
     methods: {
         redirectToPage(endPoint) {
             if (endPoint === 'news') {
-                window.open(`${this.url}/news`);
+                window.open(`http://7trnas.by/news`);
             } else if (endPoint === 'about') {
-                window.open(`${this.url}/about`);
+                window.open(`http://7trnas.by/about`);
             }
         }
     }
