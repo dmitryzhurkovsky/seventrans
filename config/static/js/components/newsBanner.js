@@ -2,6 +2,7 @@ newsBannerComponent = {
     data() {
         return {
             news: null,
+            language: this.getCookie('django_language'),
         }
     },
     methods: {

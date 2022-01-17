@@ -1,5 +1,6 @@
 const config = {
     delimiters: ["[[", "]]"],
+    mixins: [cookieMixin],
     methods: {
         redirectToPage(endPoint) {
             if (endPoint === 'news') {
