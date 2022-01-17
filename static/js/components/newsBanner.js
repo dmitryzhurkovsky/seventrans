@@ -31,7 +31,7 @@ newsBannerComponent = {
         >
             <a :href="getArticleUrl(article.id)" class="one_news__block">
                 <div class="one_news__img">
-                    <img :src="getArticleUrl(article.id)" alt="Новости">
+                    <img :src="article.img_url" alt="Новости">
                 </div>
                 <div class="one_news__description  mt-20">
                     <div class="one_news__date one_news__item">{{ article.publish_date }}</div>
