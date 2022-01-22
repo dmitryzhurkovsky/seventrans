@@ -1,12 +1,13 @@
 from datetime import datetime
+from datetime import timedelta
 from typing import Optional
 
 import requests
 from bs4 import BeautifulSoup
-from django.conf import settings
+# from django.conf import settings
 
 
-# from config import settings # only for testing!
+from config import settings # only for testing!
 
 
 class BamapParser:
@@ -64,9 +65,6 @@ class TransInfoParser:
 
         raw_data = soup.find_all('div', {'class': 'list-item_inner'})
 
-        if not raw_data:
-            return None
-
         news = []
 
         for article in raw_data[:self.COUNT_OF_RECORDS_ON_PAGE]:
@@ -78,6 +76,14 @@ class TransInfoParser:
                 preview_body = article.find('p', {'class': 'list-item_text'}).text
                 img_url = article.find('div', {'class': 'list-item_img'}).a.img.get('src')
                 article_url = article.find('h2', {'class': 'list-item_title'}).a.get('href')
+
+                if 'transinfo' in title.lower().split() or 'transinfo' in preview_body.lower().split():
+                    continue
+
+                body_article, publication_date = self.get_article_date_and_body(article_url=article_url)
+
+                if 'transinfo' in body_article.lower().split():
+                    continue
 
                 news.append({
                     'title': title,
@@ -94,7 +100,23 @@ class TransInfoParser:
 
         article_body = soup.find('div', {'class': 'news_view__text'}).text.strip()
         raw_publication_date = soup.find('p', {'class': 'news-view__date'}).span.text[13:]
-        publication_date = datetime.strptime(raw_publication_date, '%d.%m.%Y, %H:%M')
+
+        raw_date = raw_publication_date.lower().split(', ')[0]
+        raw_time = raw_publication_date.lower().split(', ')[1]
+        time = datetime.strptime(raw_time, '%H:%M')
+
+        if 'Сегодня' in raw_date:
+            publication_date = datetime.today()
+            publication_date.hour = time.hour
+            publication_date.minute = time.minute
+
+        elif 'Вчера' in raw_date:
+            publication_date = datetime.today() - timedelta(days=1)
+            publication_date.hour = time.hour
+            publication_date.minute = time.minute
+
+        else:
+            publication_date = datetime.strptime(raw_publication_date, '%d.%m.%Y, %H:%M')
 
         return article_body, publication_date
 

@@ -10,7 +10,8 @@ languageTumblerComponent = {
             this.setCookie('django_language', language, 1);
             this.setCookie('language', language, 1);
             location.reload();
-        }
+        },
+
     },
     template:
         `
