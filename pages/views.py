@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.shortcuts import render
 from django.views import View
 from django.views.generic import ListView
@@ -11,6 +12,7 @@ from cms_integration.models import (
     NewsSubTitle
 )
 from news.models import Article
+from pages.utils import modify_len_title_and_body_of_news
 
 
 class IndexView(View):
@@ -19,6 +21,7 @@ class IndexView(View):
         about_company_text_block = AboutCompanyOnIndexPage.objects.first()
 
         news = Article.objects.all()[:3]
+        news = modify_len_title_and_body_of_news(news)
 
         return render(
             request, template_name='index.html', context={
