@@ -97,3 +97,8 @@ class TransInfoParser:
         publication_date = datetime.strptime(raw_publication_date, '%d.%m.%Y, %H:%M')
 
         return article_body, publication_date
+
+
+parser = TransInfoParser()
+
+parser.get_news()

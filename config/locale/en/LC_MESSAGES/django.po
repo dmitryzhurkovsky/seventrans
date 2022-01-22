@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-17 15:06+0000\n"
+"POT-Creation-Date: 2022-01-22 10:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -154,11 +154,12 @@ msgstr "mileage"
 msgid "перевозок"
 msgstr "transportation"
 
+#: templates/index.html:121
+msgid "Смотреть все новости"
+msgstr "See all news"
+
 #: templates/services.html:10
 #, fuzzy
 #| msgid "Главная / О компании"
 msgid "Главная / Услуги"
 msgstr "Main / Services"
-
-#~ msgid "Смотреть все новости"
-#~ msgstr "See all news"

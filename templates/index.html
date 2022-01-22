@@ -70,16 +70,70 @@
     </section>
 
     <section class="news">
-        <div class="news__wrapper">
-            <div class="news__content _container">
-                <h2>{% trans 'Новости' %}</h2>
+    <div class="news__wrapper">
+        <div class="news__content _container">
+            <h2>{% trans 'Новости' %}</h2>
+            <div class="news__body">
 
-                <news-banner></news-banner>
+                <div class="news__block">
+                    <div class="one_news__block">
+                        <div class="one_news__img">
+                            <img src="{{ first_article.img_url }}" alt="Новости">
+                        </div>
+                        <div class="one_news__description mt-20">
+                            <div class="one_news__date one_news__item">{{ first_article.publish_date }}</div>
+                            <div class="one_news__title one_news__item"> {{ first_article.title }}</div>
+                            <div class="one_news__text one_news__item">{{ frist_article.preview_body }}
+                            </div>
+                        </div>
 
 
-            </div>   <!-- ..content-->
-        </div>  <!-- ..wrapper-->
-    </section>
+                    </div>
+                </div>
+                <div class="news__block">
+                    <div class="one_news__block">
+                        <div class="one_news__img">
+                            <img src="{{ second_article.img_url }}" alt="Новости">
+                        </div>
+                        <div class="one_news__description mt-20">
+                            <div class="one_news__date one_news__item">{{ second_article.publish_date }}</div>
+                            <div class="one_news__title one_news__item"> {{ second_article.title }}</div>
+                            <div class="one_news__text one_news__item">{{ second_article.preview_body }}
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="one_news__block">
+                        <div class="one_news__img">
+                            <img src="{{ third_article.img_url }}" alt="Новости">
+                        </div>
+                        <div class="one_news__description mt-20">
+                            <div class="one_news__date one_news__item">{{ third_article.publish_date }}</div>
+                            <div class="one_news__title one_news__item"> {{ third_article.title }}</div>
+                            <div class="one_news__text one_news__item">{{ third_article.preview_body }}
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="one_news__btn">
+                        <button @click="redirectToPage('news')" class="btn btn-arrow">{% trans 'Смотреть все новости' %}
+                            <img src="img/arr_wh.svg" width="26" alt="">
+                        </button>
+                    </div>
+
+
+                </div>
+
+
+
+            </div> <!-- ..body-->
+
+
+        </div>   <!-- ..content-->
+    </div>  <!-- ..content-->
+</section>
 
     <section class="map">
         <div class="map__wrapper">

@@ -18,10 +18,15 @@ class IndexView(View):
         contacts = Contact.objects.get()
         about_company_text_block = AboutCompanyOnIndexPage.objects.first()
 
+        news = Article.objects.all()[:3]
+
         return render(
             request, template_name='index.html', context={
                 'contacts': contacts,
-                'about_company_text_block': about_company_text_block
+                'about_company_text_block': about_company_text_block,
+                'first_article': news[0],
+                'second_article': news[1],
+                'third_article': news[2],
             }
         )
 

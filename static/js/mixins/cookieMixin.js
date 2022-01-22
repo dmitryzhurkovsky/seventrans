@@ -1,6 +1,11 @@
 const cookieMixin = {
+    data() {
+        return {
+            language: 'ru'
+        }
+    },
     methods: {
-        getCookie(cookieName) {
+        getCookie: function (cookieName) {
             let name = cookieName + "=";
             let decodedCookie = decodeURIComponent(document.cookie);
             let ca = decodedCookie.split(';');
@@ -15,7 +20,7 @@ const cookieMixin = {
             }
             return "";
         },
-        setCookie(cookieName, cookieValue, exDays) {
+        setCookie: function (cookieName, cookieValue, exDays) {
             const d = new Date();
             d.setTime(d.getTime() + (exDays * 24 * 60 * 60 * 1000));
             let expires = "expires=" + d.toUTCString();
