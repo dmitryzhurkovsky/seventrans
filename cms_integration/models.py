@@ -57,6 +57,9 @@ class AboutCompany(models.Model):
     body_1_en = RichTextField(verbose_name='Текст 1 блока на английском')
     body_1_ru = RichTextField(verbose_name='Текст 1 блока на русском')
 
+    text_with_blue_background_en = RichTextField(verbose_name='Текст блока с синим фоном на английском')
+    text_with_blue_background_ru = RichTextField(verbose_name='Текст блока с синим фоном на русском')
+
     sub_title_2_en = models.CharField(
         max_length=255,
         verbose_name='Подзаголовок 2 блока на английском',
