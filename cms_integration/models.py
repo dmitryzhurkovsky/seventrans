@@ -16,8 +16,8 @@ class AboutCompanyOnIndexPage(models.Model):
 
 class ServiceText(models.Model):
     """ Service page """
-    text_ru = models.CharField(max_length=255, verbose_name='Текст страницы услуг на русском')
-    text_en = models.CharField(max_length=255, verbose_name='Текст страницы услуг на английском')
+    text_ru = models.TextField(verbose_name='Текст страницы услуг на русском')
+    text_en = models.TextField(verbose_name='Текст страницы услуг на английском')
 
     class Meta:
         verbose_name_plural = 'Страница "Услуги". Текст в верху страницы'
