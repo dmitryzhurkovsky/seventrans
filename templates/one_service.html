@@ -9,14 +9,13 @@
         <div class="preheader__content  _container">
             <div class="preheader__body">
                 <div class="breadcrumbs">
-                    {% trans 'Главная / Услуги' %} /
+                    {% trans 'Главная' %} / {% trans 'Услуги' %} /
                     {% if LANGUAGE_CODE == 'ru' %}
                         {{ service.title_ru }}
                     {% else %}
                         {{ service.title_en }}
                     {% endif %}
                 </div>
-                <h2 class="preheader__title">{% trans 'Услуга' %}</h2>
             </div> <!--  __content-->
        </div><!--  __content-->
     </div>  <!-- __wrapper-->

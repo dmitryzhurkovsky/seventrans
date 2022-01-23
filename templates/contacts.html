@@ -7,7 +7,7 @@
             <div class="preheader__wrapper__bg"></div>
             <div class="preheader__content  _container">
                 <div class="preheader__body">
-                    <div class="breadcrumbs">{% trans 'Главная / Контакты' %}</div>
+                    <div class="breadcrumbs">{% trans 'Главная' %} / {% trans 'Контакты' %}</div>
                     <h2 class="preheader__title">{% trans 'Контакты' %}</h2>
                 </div> <!--  __content-->
             </div><!--  __content-->
@@ -115,27 +115,27 @@
 
     </section>
 {% endblock content %}
- <script src="js/app.min.js"></script>
+<script src="js/app.min.js"></script>
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4RjNAs-iv&#45;&#45;Chv06QHTpempTq4QoRKAY&callback=initMap&libraries=&v=weekly">
+    <!--   AIzaSyA4RjNAs-iv&#45;&#45;Chv06QHTpempTq4QoRKAY-->
 
-        <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-        <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4RjNAs-iv&#45;&#45;Chv06QHTpempTq4QoRKAY&callback=initMap&libraries=&v=weekly" >
-            <!--   AIzaSyA4RjNAs-iv&#45;&#45;Chv06QHTpempTq4QoRKAY-->
 
+</script>
+<script defer>
+    // Initialize and add the map
+    function initMap() {
+        const myLatLng = {lat: 52.7859359, lng: 27.5199607};
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 14,
+            center: myLatLng,
+        });
 
-        </script>
-        <script defer>
-            // Initialize and add the map
-            function initMap() {
-                const myLatLng = { lat: 52.7859359, lng: 27.5199607 };
-                const map = new google.maps.Map(document.getElementById("map"), {
-                    zoom: 14,
-                    center: myLatLng,
-                });
-
-                new google.maps.Marker({
-                    position: myLatLng,
-                    map,
-                    title: "7trans!",
-                });
-            }
-        </script>
+        new google.maps.Marker({
+            position: myLatLng,
+            map,
+            title: "7trans!",
+        });
+    }
+</script>

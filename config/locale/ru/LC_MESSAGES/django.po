@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-23 16:04+0000\n"
+"POT-Creation-Date: 2022-01-23 16:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,35 +30,30 @@ msgstr "Английский"
 msgid "Russian"
 msgstr "Русский"
 
-#: templates/about.html:11
-#, fuzzy
-#| msgid "Новости"
-msgid "Главная / О компании"
-msgstr "Главная / Новости"
+#: templates/about.html:11 templates/article.html:10 templates/contacts.html:10
+#: templates/news.html:10 templates/one_service.html:12
+#: templates/services.html:10
+msgid "Главная"
+msgstr "Главная"
 
-#: templates/about.html:12 templates/base/header.html:25
-#: templates/index.html:29
+#: templates/about.html:11 templates/about.html:12
+#: templates/base/header.html:25 templates/index.html:29
 msgid "О компании"
 msgstr "О компании"
 
-#: templates/article.html:10 templates/news.html:10
-#, fuzzy
-#| msgid "Новости"
-msgid "Главная / Новости"
-msgstr "Главная / Новости"
-
-#: templates/article.html:11 templates/base/header.html:32
-#: templates/index.html:75 templates/news.html:11
+#: templates/article.html:10 templates/article.html:11
+#: templates/base/header.html:32 templates/index.html:75 templates/news.html:10
+#: templates/news.html:11
 msgid "Новости"
 msgstr "Новости"
 
 #: templates/base/footer.html:18
 msgid "УНП"
-msgstr ""
+msgstr "УНП"
 
 #: templates/base/footer.html:28
 msgid "Разработка сайта"
-msgstr ""
+msgstr "Разработка сайта"
 
 #: templates/base/footer.html:36 templates/contacts.html:69
 #, fuzzy
@@ -70,19 +65,17 @@ msgstr "Время работы:"
 msgid "Международные автомобильные перевозки по Европе и странам СНГ"
 msgstr "Международные автомобильные перевозки по Европе и странам СНГ"
 
-#: templates/base/header.html:28 templates/services.html:11
+#: templates/base/header.html:28 templates/one_service.html:12
+#: templates/services.html:10 templates/services.html:11
+#, fuzzy
+#| msgid "Услуги"
 msgid "Услуги"
 msgstr "Услуги"
 
-#: templates/base/header.html:35 templates/contacts.html:11
+#: templates/base/header.html:35 templates/contacts.html:10
+#: templates/contacts.html:11
 msgid "Контакты"
 msgstr "Контакты"
-
-#: templates/contacts.html:10
-#, fuzzy
-#| msgid "Новости"
-msgid "Главная / Контакты"
-msgstr "Главная / Новости"
 
 #: templates/contacts.html:25
 msgid "Юридические данные:"
@@ -98,7 +91,7 @@ msgstr "Юридические адрес:"
 
 #: templates/contacts.html:56
 msgid "Адрес:"
-msgstr ""
+msgstr "Адрес:"
 
 #: templates/contacts.html:82
 msgid "Наш телефон:"
@@ -146,10 +139,6 @@ msgstr "перевозок"
 #: templates/index.html:121
 msgid "Смотреть все новости"
 msgstr "Смотреть все новости"
-
-#: templates/one_service.html:12 templates/services.html:10
-msgid "Главная / Услуги"
-msgstr "Главная / Услуги"
 
 #: templates/one_service.html:19
 #, fuzzy
