@@ -8,8 +8,8 @@
             <div class="preheader__wrapper__bg"></div>
             <div class="preheader__content  _container">
                 <div class="preheader__body">
-                    <div class="breadcrumbs">Главная / О компании</div>
-                    <h2 class="preheader__title">О компании</h2>
+                    <div class="breadcrumbs">{% trans 'Главная / О компании' %}</div>
+                    <h2 class="preheader__title">{% trans 'О компании' %}</h2>
                 </div> <!--  __content-->
             </div><!--  __content-->
         </div>  <!-- __wrapper-->
@@ -38,16 +38,11 @@
                         <div class="table2x">
                             <div class="content__paragraph">
                                 <p>
-                                    {% blocktrans %}
-                                        Такая услуга, как грузоперевозки, становится все более востребованной на
-                                        белорусском рынке. И это не удивительно, поскольку бизнес не стоит на месте,
-                                        а постоянно развивается.
-                                        Сегодня многие компании заключают международные договора на  поставку и
-                                        очень важно, чтобы груз был доставлен вовремя, аккуратно и без повреждений.
-                                        Такие высокие требования способен удовлетворить не каждый, поэтому крайне важно
-                                        выбрать надежного и ответственного партнера, для которого интересы клиента
-                                        превыше всего!
-                                    {% endblocktrans %}
+                                    {% if LANGUAGE_CODE == 'ru' %}
+                                        {{ about_company.text_with_blue_background_ru|safe }}
+                                    {% else %}
+                                        {{ about_company.text_with_blue_background_en|safe }}
+                                    {% endif %}
                                 </p>
                             </div>
                             <div class="content__paragraph">
@@ -68,28 +63,28 @@
                             </div>
                         </div> <!--   paragraph-->
 
-                        <div class="table2x statistic_box">
-                            <div class="about__item">
-                                <div class="about__info">25 лет</div>
-                                <div class="about__subitem">безупречной работы</div>
-                            </div>
-                            <div class="about__item">
-                                <div class="about__subitem">более</div>
-                                <div class="about__info">50 млн. км.</div>
-                                <div class="about__subitem">пробега</div>
-                            </div>
-                            <div class="about__item">
-                                <div class="about__info">45000</div>
-                                <div class="about__subitem">перевозок</div>
-                            </div>
-                        </div> <!-- table2x-->
+                    <div class="table2x statistic_box">
+                        <div class="about__item">
+                            <div class="about__info">25 лет</div>
+                            <div class="about__subitem">безупречной работы</div>
+                        </div>
+                        <div class="about__item">
+                            <div class="about__subitem">более</div>
+                            <div class="about__info">50 млн. км.</div>
+                            <div class="about__subitem">пробега</div>
+                        </div>
+                        <div class="about__item">
+                            <div class="about__info">45000</div>
+                            <div class="about__subitem">перевозок</div>
+                        </div>
+                    </div> <!-- table2x-->
 
-                    </div> <!-- box-->
+                </div> <!-- box-->
 
 
-                </div>
             </div>
         </div>
+    </div>
 
-    </section>
+</section>
 {% endblock content %}

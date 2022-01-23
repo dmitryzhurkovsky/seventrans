@@ -92,7 +92,7 @@ class ServiceView(View):
         service = Service.objects.get(id=pk)
 
         return render(
-            request, template_name='service.html', context={
+            request, template_name='one_service.html', context={
                 'contacts': contacts,
                 'service': service
             }
