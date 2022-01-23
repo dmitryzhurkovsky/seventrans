@@ -14,7 +14,7 @@ newsComponent = {
     methods: {
         async fetchNews() {
             try {
-                const response = await axios.get(`http://localhost:8000/api/v1/news`, {
+                const response = await axios.get(`http://7trans.by/api/v1/news`, {
                     params: {page: this.page},
                     headers: {'Accept-Language': this.language}
                 });
