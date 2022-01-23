@@ -1,15 +1,29 @@
 newsComponent = {
     data() {
         return {
-            news: null,
+            news: [],
             totalPages: null,
+
             pageLimit: 6,
             page: 1,
-            numberOfPages: []
+            pages: []
         }
     },
     computed: {
-        getCountOfPages: function () {
+    },
+    methods: {
+        async fetchNews() {
+            try {
+                const response = await axios.get(`http://localhost:8000/api/v1/news`, {
+                    params: {page: this.page},
+                    headers: {'Accept-Language': this.language}
+                });
+                this.news = response.data.results;
+                this.totalPages = Math.ceil(response.data.count / this.pageLimit);
+            } catch (e) {
+            }
+        },
+        getCountOfPages () {
             if (this.page === 1) {
                 this.numberOfPages = [this.page, this.page + 1, this.page + 2, this.page + 3, this.page + 4];
             } else if (this.page === 2) {
@@ -20,19 +34,6 @@ newsComponent = {
                 this.numberOfPages = [this.page - 3, this.page - 2, this.page - 1, this.page, this.page + 1];
             } else {
                 this.numberOfPages = [this.page - 2, this.page - 1, this.page, this.page + 1, this.page + 2];
-            }
-        }
-    },
-    methods: {
-        async fetchNews() {
-            try {
-                const response = await axios.get(`http://7trans.by/api/v1/news`, {
-                    params: {page: this.page},
-                    headers: {'Accept-Language': this.language}
-                });
-                this.news = response.data.results;
-                this.totalPages = Math.ceil(response.data.count / this.pageLimit);
-            } catch (e) {
             }
         },
         changePage(pageNumber) {
@@ -45,6 +46,8 @@ newsComponent = {
             if (typeof pageNumber === 'number') {
                 this.page = pageNumber;
             }
+            this.getCountOfPages();
+            console.log(this.numberOfPages)
             this.fetchNews();
         },
         getArticleUrl(articleId) {
@@ -62,24 +65,24 @@ newsComponent = {
         :key="article.id"
         :href="getArticleUrl(article.id)"
         class="list_news__item"
-    >
-        <div class="list_news__img">
-            <img :src="article.img_url" alt="">
-        </div>
-
-        <div class="list_news__description">
-            <div class="one_news__date one_news__item">{{ article.publish_date }}</div>
-            <div class="one_news__title one_news__item">{{ article.title }}</div>
-            <div class="one_news__text one_news__item">{{ article.preview_body }}</div>
-        </div>
-    </a>
+        >
+            <div class="list_news__img">
+                <img :src="article.img_url" alt="">
+            </div>
+    
+            <div class="list_news__description">
+                <div class="one_news__date one_news__item">{{ article.publish_date }}</div>
+                <div class="one_news__title one_news__item">{{ article.title }}</div>
+                <div class="one_news__text one_news__item">{{ article.preview_body }}</div>
+            </div>
+        </a>
     </div> <!--__box-->
     <div class="list_news__pagination pagination _flex">
         <div class="pagination__link page_back" @click="changePage('previous')">Назад</div>
         <ul class="pagination__numbers">
             <li
-                v-for="(pageNumber, idx) in numberOfPages"
-                :key="this.page"
+                v-for="pageNumber in numberOfPages"
+                :key="pageNumber"
                 :class="{'_active': page === pageNumber}"
                 @click="changePage(pageNumber)"
                 class="pagination__item"

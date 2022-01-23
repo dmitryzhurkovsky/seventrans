@@ -4,10 +4,10 @@ from typing import Optional
 
 import requests
 from bs4 import BeautifulSoup
-# from django.conf import settings
+from django.conf import settings
 
 
-from config import settings # only for testing!
+# from config import settings # only for testing!
 
 
 class BamapParser:
@@ -80,16 +80,19 @@ class TransInfoParser:
                 if 'transinfo' in title.lower().split() or 'transinfo' in preview_body.lower().split():
                     continue
 
-                body_article, publication_date = self.get_article_date_and_body(article_url=article_url)
+                body, publish_date = self.get_article_date_and_body(article_url=article_url)
 
-                if 'transinfo' in body_article.lower().split():
+                if 'transinfo' in body.lower().split():
                     continue
 
                 news.append({
                     'title': title,
                     'preview_body': preview_body,
                     'img_url': img_url,
-                    'article_url': article_url
+                    'article_url': article_url,
+                    'body': body,
+                    'publish_date': publish_date
+
                 })
 
         return news
@@ -99,28 +102,23 @@ class TransInfoParser:
         soup = BeautifulSoup(response.text, features="html.parser")
 
         article_body = soup.find('div', {'class': 'news_view__text'}).text.strip()
-        raw_publication_date = soup.find('p', {'class': 'news-view__date'}).span.text[13:]
+        raw_publish_date = soup.find('p', {'class': 'news-view__date'}).span.text[13:]
 
-        raw_date = raw_publication_date.lower().split(', ')[0]
-        raw_time = raw_publication_date.lower().split(', ')[1]
+        raw_date = raw_publish_date.lower().split(', ')[0]
+        raw_time = raw_publish_date.lower().split(', ')[1]
         time = datetime.strptime(raw_time, '%H:%M')
 
         if 'Сегодня' in raw_date:
-            publication_date = datetime.today()
-            publication_date.hour = time.hour
-            publication_date.minute = time.minute
+            publish_date = datetime.today()
+            publish_date.hour = time.hour
+            publish_date.minute = time.minute
 
         elif 'Вчера' in raw_date:
-            publication_date = datetime.today() - timedelta(days=1)
-            publication_date.hour = time.hour
-            publication_date.minute = time.minute
+            publish_date = datetime.today() - timedelta(days=1)
+            publish_date.hour = time.hour
+            publish_date.minute = time.minute
 
         else:
-            publication_date = datetime.strptime(raw_publication_date, '%d.%m.%Y, %H:%M')
+            publish_date = datetime.strptime(raw_publish_date, '%d.%m.%Y, %H:%M')
 
-        return article_body, publication_date
-
-
-parser = TransInfoParser()
-
-parser.get_news()
+        return article_body, publish_date
