@@ -23,9 +23,9 @@ class ServiceSerializer(serializers.ModelSerializer):
         language = self.get_language()
 
         if language == 'ru':
-            return instance.content_ru
+            return instance.content_1_ru
 
-        return instance.content_en
+        return instance.content_1_en
 
     def get_title(self, instance):
         language = self.get_language()
