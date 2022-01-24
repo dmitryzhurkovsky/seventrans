@@ -116,6 +116,14 @@
   display: flex;
   align-items: center;
 }
+.header__img {
+  width: 225px;
+}
+@media (max-width: 1355px) {
+  .header__img {
+    width: calc(150px + 75 * ((100vw - 320px) / 1035));
+  }
+}
 .header__logo-text {
   font-family: Roboto;
   font-style: normal;
@@ -291,11 +299,7 @@
 }
 
 .news__wrapper {
-  position: relative;
-  background-image: url("../img/bg-news.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 100px 0 50px 0;
+  padding: 50px 0 50px 0;
 }
 .news__content h2 {
   margin-bottom: 40px;
@@ -315,7 +319,6 @@
 @media (max-width: 767.98px) {
   .news__block:nth-child(1) .one_news__block {
     flex-basis: 50%;
-    padding-left: 25px;
     display: flex;
     margin-bottom: 25px;
   }
@@ -329,6 +332,11 @@
 }
 .news__block:nth-child(2) {
   padding-left: 25px;
+}
+@media (max-width: 767.98px) {
+  .news__block:nth-child(2) {
+    padding-left: 0px;
+  }
 }
 .news__block:nth-child(2) .one_news__block {
   display: flex;
@@ -383,50 +391,34 @@
 .banner__wrapper {
   position: relative;
   background-image: url("../img/bg-banner1.png");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
-  padding: 0 0 180px 0;
-}
-@media (max-width: 767.98px) {
-  .banner__wrapper {
-    padding: 0 0 0 0;
-  }
+  background-position: center;
 }
 .banner__content {
   position: relative;
 }
 .banner__body {
   height: 800px;
+  height: 800px;
   position: relative;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 1355px) {
   .banner__body {
-    height: 360px;
-  }
-}
-@media (max-width: 479.98px) {
-  .banner__body {
-    height: 200px;
+    height: calc(200px + 600 * ((100vw - 320px) / 1035));
   }
 }
 .banner__title {
   display: flex;
   align-items: center;
-  position: absolute;
-  top: 116px;
-  left: 150px;
+  padding-top: 116px;
   font-weight: bold;
   font-size: 50px;
   color: #fff;
 }
 @media (max-width: 1355px) {
   .banner__title {
-    top: calc(50px + 66 * ((100vw - 320px) / 1035));
-  }
-}
-@media (max-width: 1355px) {
-  .banner__title {
-    left: calc(50px + 100 * ((100vw - 320px) / 1035));
+    padding-top: calc(40px + 76 * ((100vw - 320px) / 1035));
   }
 }
 .banner__title .square {
@@ -435,7 +427,6 @@
   width: 175px;
   height: 175px;
   background-color: #0F78D6;
-  font-size: calc(50px + 50 * ((100vw - 320px) / 1600));
 }
 @media (max-width: 1355px) {
   .banner__title .square {
@@ -447,9 +438,12 @@
     height: calc(100px + 75 * ((100vw - 320px) / 1035));
   }
 }
+.banner__title .square div:nth-child(1) {
+  font-size: calc(50px + 50 * ((100vw - 320px) / 1600));
+}
 .banner__title .square div:nth-child(2) {
   font-weight: 500;
-  font-size: 30px;
+  font-size: calc(20px + 10 * ((100vw - 320px) / 1600));
   letter-spacing: 0.3em;
   text-transform: uppercase;
 }
@@ -476,25 +470,26 @@
   }
 }
 .banner__about {
-  position: absolute;
-  bottom: 0;
-  transform: translate(-50%, 50%);
-  width: 100%;
-  margin: 0 auto;
-  left: 50%;
   display: flex;
+  position: relative;
+  justify-content: center;
+  margin: -150px auto 0 auto;
+  width: 100%;
+}
+@media (max-width: 767.98px) {
+  .banner__about {
+    margin: -100px auto 0 auto;
+  }
+}
+@media (max-width: 479.98px) {
+  .banner__about {
+    margin: 0 auto 0 auto;
+  }
 }
 .banner__about h2 {
   margin-bottom: 40px;
   position: center;
   transform: none;
-}
-@media (max-width: 767.98px) {
-  .banner__about {
-    flex-direction: column;
-    position: unset;
-    transform: none;
-  }
 }
 .banner__about .statistic_box {
   display: flex;
@@ -521,12 +516,16 @@
   justify-content: center;
 }
 .about__block {
+  display: flex;
   border-radius: 2px;
 }
-.about__block .table2x {
-  min-width: 400px;
+@media (max-width: 767.98px) {
+  .about__block {
+    flex-direction: column;
+  }
 }
 .about__block .table2x:nth-child(1) {
+  flex-basis: 65%;
   padding: 70px 60px;
   background: #F1F7FC;
 }
@@ -535,7 +534,13 @@
     padding: 35px 40px;
   }
 }
+@media (max-width: 479.98px) {
+  .about__block .table2x:nth-child(1) {
+    padding: 20px 10px;
+  }
+}
 .about__block .table2x:nth-child(2) {
+  flex-basis: 35%;
   background: #102B43;
 }
 .about__text {
@@ -573,11 +578,14 @@
 .about__item:nth-child(2) {
   background: #0F78D6;
 }
-.about__info:nth-child(2) {
-  margin: 10px 0;
+.about__item:nth-child(2) .about__subitem:nth-child(1) {
+  margin-top: 0;
+  margin-bottom: 5px;
 }
 .about__subitem {
   font-size: 17px;
+  font-weight: 300;
+  margin-top: 5px;
 }
 
 .map__wrapper {
@@ -783,10 +791,11 @@ h6 {
   background: #FFFFFF;
   border: 1px solid #D8E4EE;
   border-radius: 2px;
-  margin-bottom: 30px;
 }
-.uslugi__item:nth-child(odd) {
-  margin-right: 30px;
+@media (max-width: 767.98px) {
+  .uslugi__item {
+    margin-bottom: 25px;
+  }
 }
 .uslugi__item:hover {
   background: #D8E4EE;
@@ -803,11 +812,15 @@ h6 {
   }
 }
 
+.usluga__img {
+  flex-basis: 32%;
+}
 .usluga__img img {
   width: 100%;
   max-width: 100%;
 }
 .usluga__textbox {
+  flex-basis: 68%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -849,6 +862,11 @@ h6 {
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 30px;
   grid-row-gap: 30px;
+}
+@media (max-width: 1367px) {
+  .list_news__box {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 767.98px) {
   .list_news__box {
@@ -1017,6 +1035,16 @@ h6 {
 .footer__col:nth-child(1) .company__item:nth-child(2) {
   width: 300px;
 }
+@media (max-width: 1367px) {
+  .footer__col:nth-child(2) .company__item {
+    width: 170px;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer__col:nth-child(2) .company__item {
+    width: 100%;
+  }
+}
 .footer__col .company__item {
   font-size: 16px;
   line-height: 25px;
@@ -1077,9 +1105,11 @@ body {
 
 .btn {
   justify-content: center;
-  padding: 8px 30px;
+  padding: 17px 30px;
   background: #0F78D6;
   border-radius: 2px;
+  font-family: Roboto;
+  font-weight: 500;
   font-size: 15px;
   text-transform: uppercase;
   color: #FFFFFF;
@@ -1091,7 +1121,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 30px;
+}
+@media (max-width: 479.98px) {
+  .btn-arrow {
+    width: 100%;
+  }
 }
 .btn-arrow img {
   margin-left: 30px;
@@ -1104,6 +1138,7 @@ body {
 
 h2 {
   font-weight: bold;
+  font-size: calc(20px + 15 * ((100vw - 320px) / 1600));
   font-size: 35px;
   color: #212121;
 }
