@@ -36,7 +36,7 @@
                     </div> <!--   paragraph-->
                     <div class="content__box">
                         <div class="table2x">
-                            <div class="content__paragraph">
+                            <div class="content__paragraph paragraph_block">
                                 <p>
                                     {% if LANGUAGE_CODE == 'ru' %}
                                         {{ about_company.text_with_blue_background_ru|safe }}
@@ -45,7 +45,7 @@
                                     {% endif %}
                                 </p>
                             </div>
-                            <div class="content__paragraph paragraph_block">
+                            <div class="content__paragraph">
                                 <h3>
                                     {% if LANGUAGE_CODE == 'ru' %}
                                         {{ about_company.sub_title_2_ru|safe }}
@@ -65,17 +65,17 @@
 
                     <div class="table2x statistic_box">
                         <div class="about__item">
-                            <div class="about__info">25 лет</div>
-                            <div class="about__subitem">безупречной работы</div>
+                            <div class="about__info">25 {% trans 'лет' %}</div>
+                            <div class="about__subitem">{% trans 'безупречной работы' %}</div>
                         </div>
                         <div class="about__item">
-                            <div class="about__subitem">более</div>
-                            <div class="about__info">50 млн. км.</div>
-                            <div class="about__subitem">пробега</div>
+                            <div class="about__subitem">{% trans 'более' %}</div>
+                            <div class="about__info">{% trans '50 млн. км.' %}</div>
+                            <div class="about__subitem">{% trans 'пробега' %}</div>
                         </div>
                         <div class="about__item">
                             <div class="about__info">45000</div>
-                            <div class="about__subitem">перевозок</div>
+                            <div class="about__subitem">{% trans 'перевозок' %}</div>
                         </div>
                     </div> <!-- table2x-->
 
