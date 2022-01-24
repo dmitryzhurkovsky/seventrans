@@ -174,7 +174,7 @@
 }
 @media (max-width: 1355px) {
   .menu__item {
-     margin-right: calc(22px + 38 * ((100vw - 320px) / 1035));
+     margin-right: calc(16px + 44 * ((100vw - 320px) / 1035));
   }
 }
 .menu__item:last-child {
@@ -291,6 +291,10 @@
 }
 
 .news__wrapper {
+  position: relative;
+  background-image: url("../img/bg-news.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 100px 0 50px 0;
 }
 .news__content h2 {
@@ -398,6 +402,11 @@
 @media (max-width: 767.98px) {
   .banner__body {
     height: 360px;
+  }
+}
+@media (max-width: 479.98px) {
+  .banner__body {
+    height: 200px;
   }
 }
 .banner__title {
@@ -697,6 +706,13 @@ h6 {
 .content__paragraph p {
   margin-bottom: 15px;
 }
+.content__paragraph ul {
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+.content__paragraph li {
+  list-style: disc;
+}
 .content__box {
   display: flex;
   align-items: flex-start;
@@ -709,6 +725,11 @@ h6 {
 .content__box .table2x:nth-child(1) {
   flex-basis: 70%;
   padding-right: 30px;
+}
+@media (max-width: 479.98px) {
+  .content__box .table2x:nth-child(1) {
+    padding-right: 0px;
+  }
 }
 .content__box .table2x:nth-child(1) .paragraph_block {
   background: #F1F7FC;
@@ -749,6 +770,11 @@ h6 {
   grid-column-gap: 30px;
   grid-row-gap: 30px;
 }
+@media (max-width: 767.98px) {
+  .uslugi__box {
+    display: block;
+  }
+}
 .uslugi__item {
   display: flex;
   align-items: center;
@@ -777,6 +803,10 @@ h6 {
   }
 }
 
+.usluga__img img {
+  width: 100%;
+  max-width: 100%;
+}
 .usluga__textbox {
   display: flex;
   flex-direction: column;
@@ -953,9 +983,14 @@ h6 {
 }
 .preheader__title {
   font-weight: bold;
-  font-size: 50px;
+  font-size: calc(25px + 25 * ((100vw - 320px) / 1600));
   line-height: 60px;
   color: #FFFFFF;
+}
+@media (max-width: 1355px) {
+  .preheader__title {
+    line-height: calc(34px + 26 * ((100vw - 320px) / 1035));
+  }
 }
 
 .footer__wrapper {
@@ -1079,6 +1114,11 @@ h2 {
 }
 .pagination__link {
   cursor: pointer;
+}
+@media (max-width: 479.98px) {
+  .pagination__link {
+    display: none;
+  }
 }
 .pagination__item {
   width: 46px;
