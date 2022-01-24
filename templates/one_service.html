@@ -27,9 +27,9 @@
                     <div class="content__paragraph">
                         <p>
                             {% if LANGUAGE_CODE == 'ru' %}
-                                {{ service.content_1_ru }}
+                                {{ service.content_1_ru|safe }}
                             {% else %}
-                                {{ service.content_1_en }}
+                                {{ service.content_1_en|safe }}
                             {% endif %}
                         </p>
                     </div> <!--   paragraph-->
@@ -38,9 +38,9 @@
                             <div class="content__paragraph">
                                 <p>
                                     {% if LANGUAGE_CODE == 'ru' %}
-                                        {{ service.content_2_ru }}
+                                        {{ service.content_2_ru|safe }}
                                     {% else %}
-                                        {{ service.content_2_en }}
+                                        {{ service.content_2_en|safe }}
                                     {% endif %}
                                 </p>
                             </div>
@@ -53,9 +53,9 @@
                     <div class="content__paragraph">
                         <p>
                             {% if LANGUAGE_CODE == 'ru' %}
-                                {{ service.content_3_ru }}
+                                {{ service.content_3_ru|safe }}
                             {% else %}
-                                {{ service.content_3_en }}
+                                {{ service.content_3_en|safe }}
                             {% endif %}
                         </p>
                     </div> <!--   paragraph-->
