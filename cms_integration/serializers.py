@@ -1,3 +1,4 @@
+from django.conf import settings
 from rest_framework import serializers
 
 from cms_integration.models import Service
@@ -23,9 +24,9 @@ class ServiceSerializer(serializers.ModelSerializer):
         language = self.get_language()
 
         if language == 'ru':
-            return instance.content_1_ru
+            return instance.content_1_ru[:settings.SERVICES_PAGE_SERVICE_CONTENT_LENGTH]
 
-        return instance.content_1_en
+        return instance.content_1_en[:settings.SERVICES_PAGE_SERVICE_CONTENT_LENGTH]
 
     def get_title(self, instance):
         language = self.get_language()

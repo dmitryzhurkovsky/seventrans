@@ -4,10 +4,10 @@ from typing import Optional
 
 import requests
 from bs4 import BeautifulSoup
-# from django.conf import settings
+from django.conf import settings
 
 
-from config import settings # only for testing!
+# from config import settings # only for testing!
 
 
 class BamapParser:

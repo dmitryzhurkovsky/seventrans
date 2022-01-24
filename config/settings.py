@@ -110,7 +110,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 MEDIA_URL = 'media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_ROOT = 'https://7trans.by/public_html/media/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'config', 'static/')]
 
@@ -122,6 +123,8 @@ NEWS_INDEX_PAGE_SECOND_ARTICLE_TITLE_LENGTH = 56
 NEWS_INDEX_PAGE_SECOND_ARTICLE_PREVIEW_BODY_LENGTH = 80
 NEWS_INDEX_PAGE_THIRD_ARTICLE_TITLE_LENGTH = 56
 NEWS_INDEX_PAGE_THIRD_ARTICLE_PREVIEW_BODY_LENGTH = 80
+
+SERVICES_PAGE_SERVICE_CONTENT_LENGTH = 100
 
 BAMAP_PARSED_URL = 'http://bamap.org/engver/rtnews'
 
