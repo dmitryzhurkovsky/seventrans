@@ -95,7 +95,7 @@ msgstr "Contacts"
 
 #: templates/contacts.html:25
 msgid "Юридические данные:"
-msgstr "Legal information"
+msgstr "Legal information:"
 
 #: templates/contacts.html:26
 msgid "Полное наименование:"

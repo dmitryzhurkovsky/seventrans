@@ -7,7 +7,7 @@ servicesComponent = {
     methods: {
         async fetchServices() {
             try {
-                const response = await axios.get(`http://7trans.by/api/v1/services`, {
+                const response = await axios.get(`https://7trans.by/api/v1/services`, {
                     headers: {'Accept-Language': this.language}
                 });
                 this.services = response.data.results;
@@ -15,7 +15,7 @@ servicesComponent = {
             }
         },
         getServiceUrl(serviceId) {
-            return `http://7trans.by/services/${serviceId}/`
+            return `https://7trans.by/services/${serviceId}/`
         }
     },
     mounted() {
