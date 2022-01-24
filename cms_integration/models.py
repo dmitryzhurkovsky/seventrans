@@ -33,8 +33,14 @@ class Service(models.Model):
 
     img = models.ImageField()
 
-    content_en = RichTextField(verbose_name='Текст услуги на английском')
-    content_ru = RichTextField(verbose_name='Текст услуги ан русском')
+    content_1_en = RichTextField(verbose_name='Текст 1 абзаца услуги на английском', null=True, blank=True)
+    content_1_ru = RichTextField(verbose_name='Текст 1 абзаца услуги ан русском', null=True, blank=True)
+
+    content_2_en = RichTextField(verbose_name='Текст 2 абзаца услуги на английском', null=True, blank=True)
+    content_2_ru = RichTextField(verbose_name='Текст 2 абзаца услуги ан русском', null=True, blank=True)
+
+    content_3_en = RichTextField(verbose_name='Текст 3 абзаца услуги на английском', null=True, blank=True)
+    content_3_ru = RichTextField(verbose_name='Текст 3 абзаца услуги ан русском', null=True, blank=True)
 
     class Meta:
         verbose_name_plural = 'Список услуг'

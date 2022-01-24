@@ -3,77 +3,67 @@
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
 {% block content %}
-     <section class="preheader">
-    <div class="preheader__wrapper">
-        <div class="preheader__wrapper__bg"></div>
-        <div class="preheader__content  _container">
-            <div class="preheader__body">
-                <div class="breadcrumbs">
-                    {% trans 'Главная' %} / {% trans 'Услуги' %} /
-                    {% if LANGUAGE_CODE == 'ru' %}
-                        {{ service.title_ru }}
-                    {% else %}
-                        {{ service.title_en }}
-                    {% endif %}
+    <section class="preheader">
+        <div class="preheader__wrapper">
+            <div class="preheader__wrapper__bg"></div>
+            <div class="preheader__content  _container">
+                <div class="preheader__body">
+                    <div class="breadcrumbs">
+                        {% trans 'Главная' %} / {% trans 'Услуги' %} /
+                        {% if LANGUAGE_CODE == 'ru' %}
+                            {{ service.title_ru }}
+                        {% else %}
+                            {{ service.title_en }}
+                        {% endif %}
+                    </div>
+                </div> <!--  __content-->
+            </div><!--  __content-->
+        </div>  <!-- __wrapper-->
+    </section>
+    <section class="content">
+        <div class="content__wrapper">
+            <div class="content__content  _container">
+                <div class="content__body">
+                    <div class="content__paragraph">
+                        <p>
+                            {% if LANGUAGE_CODE == 'ru' %}
+                                {{ service.content_1_ru }}
+                            {% else %}
+                                {{ service.content_1_en }}
+                            {% endif %}
+                        </p>
+                    </div> <!--   paragraph-->
+                    <div class="content__box">
+                        <div class="table2x">
+                            <div class="content__paragraph">
+                                <p>
+                                    {% if LANGUAGE_CODE == 'ru' %}
+                                        {{ service.content_2_ru }}
+                                    {% else %}
+                                        {{ service.content_2_en }}
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </div>
+                        <div class="table2x">
+                            <img src="{{ service.img.url }}" alt="">
+                        </div> <!-- table2x-->
+
+                    </div> <!-- box-->
+                    <div class="content__paragraph">
+                        <p>
+                            {% if LANGUAGE_CODE == 'ru' %}
+                                {{ service.content_3_ru }}
+                            {% else %}
+                                {{ service.content_3_en }}
+                            {% endif %}
+                        </p>
+                    </div> <!--   paragraph-->
+
                 </div>
-            </div> <!--  __content-->
-       </div><!--  __content-->
-    </div>  <!-- __wrapper-->
-</section>
-        <section class="content">
-    <div class="content__wrapper">
-        <div class="content__content  _container">
-            <div class="content__body">
-                <div class="content__paragraph">
-                    {% if LANGUAGE_CODE == 'ru' %}
-                        {{ service.content_ru }}
-                    {% else %}
-                        {{ service.content_en }}
-                    {% endif %}
-                    <img src="{{ service.img.url }}" alt="">
-                </div> <!--   paragraph-->
-{#                <div class="content__box">#}
-{#                    <div class="table2x">#}
-{#                        <div class="content__paragraph paragraph_block">#}
-{#                            <p>Такая услуга, как грузоперевозки, становится все более востребованной на белорусском рынке. И это не удивительно, поскольку  бизнес не стоит на месте, а постоянно развивается. Сегодня многие компании заключают международные договора на поставку и очень важно, чтобы груз был доставлен вовремя, аккуратно и без повреждений. Такие высокие требования способен удовлетворить не каждый, поэтому крайне важно выбрать надежного и ответственного партнера, для которого интересы клиента превыше всего!#}
-{#                            </p>#}
-{#                        </div>#}
-{#                        <div class="content__paragraph">#}
-{#                            <h3>Подзаголовок для этого текста</h3>#}
-{#                            <p>Наша компания является лидером на белорусском рынке и имеет множество положительных отзывов от благодарных клиентов!  Вывод списка в тексте:</p>#}
-{#                            <ul type="disc" class="content__list">#}
-{#                                <li>Если Ваш бизнес нуждается в доставке  груза в противоположном направлении – мы также будем рады помочь!</li>#}
-{#                                <li>Для перевозки мы используем только современный и надежный транспорт, грузоподъемностью от 1-й до 20-ти тонн.</li>#}
-{#                                <li>Транспортировка небольших грузов  осуществляется с помощью формирования попутных, сборных и обратных грузов (это позволяет существенно снизить затраты).</li>#}
-{#                            </ul>#}
-{##}
-{##}
-{##}
-{#                        </div>#}
-{#                    </div> <!--   paragraph-->#}
-
-                    <div class="table2x statistic_box">
-                        <div class="about__item">
-                            <div class="about__info">25 {% trans 'лет' %}</div>
-                            <div class="about__subitem">{% trans 'безупречной работы' %}</div>
-                        </div>
-                        <div class="about__item">
-                            <div class="about__subitem">{% trans 'более' %}</div>
-                            <div class="about__info">{% trans '50 млн. км.' %}</div>
-                            <div class="about__subitem">{% trans 'пробега' %}</div>
-                        </div>
-                        <div class="about__item">
-                            <div class="about__info">45000</div>
-                            <div class="about__subitem">{% trans 'перевозок' %}</div>
-                        </div>
-                    </div> <!-- table2x-->
-
-                </div> <!-- box-->
-
-
             </div>
         </div>
-    </div>
 
-</section>
+    </section>
 {% endblock %}
+
