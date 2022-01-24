@@ -16,6 +16,13 @@
                             {{ service.title_en }}
                         {% endif %}
                     </div>
+                    <h2 class="preheader__title">
+                        {% if LANGUAGE_CODE == 'ru' %}
+                            {{ service.title_ru }}
+                        {% else %}
+                            {{ service.title_en }}
+                        {% endif %}
+                    </h2>
                 </div> <!--  __content-->
             </div><!--  __content-->
         </div>  <!-- __wrapper-->
