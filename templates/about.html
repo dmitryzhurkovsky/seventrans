@@ -1,133 +1,81 @@
-<!DOCTYPE html>
-<html lang="en">
-
-    <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width", initial-scale="1.0">
-  <link rel="stylesheet" href="css/style.min.css">
-  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-
-  <title>7trans | О компании</title>
-
-
-
-
-
-
-
-</head>
-
-    <body>
-        <header class="header">
-    <div class="header__wrapper">
-        <div class="header__content  _container">
-            <div class="header__body">
-                <nav class="header__navigation">
-                    <button id="burger" type="button" class="icon-menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                    <div class="header__logo-box">
-                        <a class="header__logo" href="/" alt="">
-                            <img class="header__img" src="img/svg/logo.svg" alt="seventrans">
-                        </a>
-                        <div class="header__logo-text">
-                            Международные
-                            автомобильные перевозки
-                            по Европе и странам СНГ
-                        </div>
-                    </div>
-                    <div  class="header__menu menu">
-                        <nav id="burger_menu" class="menu__body">
-                            <ul class="menu__list">
-                                <li class="menu__item">
-                                    <a class="menu__link" href="">О компании</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="">Услуги</a>
-                                </li>
-
-                                <li class="menu__item">
-                                    <a class="menu__link" href="">Новости</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a class="menu__link" href="">Контакты</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="header__language language _flex">
-                        <div class="language__box">
-                            <div class="language__item _active _flex">RU</div>
-                            <div class="language__item _flex">EN</div>
-                        </div>
-
-                    </div>
-                </nav>
-            </div>
-        </div>
-    </div>
-
-</header>
-        <section class="preheader">
-    <div class="preheader__wrapper">
-        <div class="preheader__wrapper__bg"></div>
-        <div class="preheader__content  _container">
-            <div class="preheader__body">
-                <div class="breadcrumbs">Главная / О компании</div>
-                <h2 class="preheader__title">О компании</h2>
-            </div> <!--  __content-->
-       </div><!--  __content-->
-    </div>  <!-- __wrapper-->
-</section>
-        <section class="content">
-    <div class="content__wrapper">
-        <div class="content__content  _container">
-            <div class="content__body">
-                <div class="content__paragraph">
-                    <h3>Подзаголовок для этого текста</h3>
-                    <p>Компания ЧТУП «СевенТрансСервис» на протяжении 25 лет осуществляет автомобильные международные грузоперевозки наземным транспортом, являясь надежным партнером для коллег и заказчиков.</p>
-
-                    <p>Одним из направлений деятельности компании является экспедирование грузов в страны Европы и СНГ.</p>
-                    <p></p>
-                    <p>Автопарк компании включает в себя собственные тентованные и рефрижераторные автопоезда стандарта Евро-5, Евро-6.</p>
-                    </p>
-                </div> <!--   paragraph-->
-                <div class="content__box">
-                    <div class="table2x">
-                        <div class="content__paragraph paragraph_block">
-                            <p>Такая услуга, как грузоперевозки, становится все более востребованной на белорусском рынке. И это не удивительно, поскольку  бизнес не стоит на месте, а постоянно развивается. Сегодня многие компании заключают международные договора на поставку и очень важно, чтобы груз был доставлен вовремя, аккуратно и без повреждений. Такие высокие требования способен удовлетворить не каждый, поэтому крайне важно выбрать надежного и ответственного партнера, для которого интересы клиента превыше всего!
-                            </p>
-                        </div>
-                        <div class="content__paragraph">
-                            <h3>Подзаголовок для этого текста</h3>
-                            <p>Наша компания является лидером на белорусском рынке и имеет множество положительных отзывов от благодарных клиентов!  Вывод списка в тексте:</p>
-                            <ul type="disc" class="content__list">
-                                <li>Если Ваш бизнес нуждается в доставке  груза в противоположном направлении – мы также будем рады помочь!</li>
-                                <li>Для перевозки мы используем только современный и надежный транспорт, грузоподъемностью от 1-й до 20-ти тонн.</li>
-                                <li>Транспортировка небольших грузов  осуществляется с помощью формирования попутных, сборных и обратных грузов (это позволяет существенно снизить затраты).</li>
-                            </ul>
-
-
-
-                        </div>
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% block content %}
+    <section class="preheader">
+        <div class="preheader__wrapper">
+            <div class="preheader__wrapper__bg"></div>
+            <div class="preheader__content  _container">
+                <div class="preheader__body">
+                    <div class="breadcrumbs">{% trans 'Главная'  %} / {% trans 'О компании' %}</div>
+                    <h2 class="preheader__title">{% trans 'О компании' %}</h2>
+                </div> <!--  __content-->
+            </div><!--  __content-->
+        </div>  <!-- __wrapper-->
+    </section>
+    <section class="content">
+        <div class="content__wrapper">
+            <div class="content__content  _container">
+                <div class="content__body">
+                    <div class="content__paragraph">
+                        <h3>
+                            {% if LANGUAGE_CODE == 'ru' %}
+                                {{ about_company.sub_title_1_ru|safe }}
+                            {% else %}
+                                {{ about_company.sub_title_1_en|safe }}
+                            {% endif %}
+                        </h3>
+                        <p>
+                            {% if LANGUAGE_CODE == 'ru' %}
+                                {{ about_company.body_1_ru|safe }}
+                            {% else %}
+                                {{ about_company.body_1_en|safe }}
+                            {% endif %}
+                        </p>
                     </div> <!--   paragraph-->
+                    <div class="content__box">
+                        <div class="table2x">
+                            <div class="content__paragraph paragraph_block">
+                                <p>
+                                    {% if LANGUAGE_CODE == 'ru' %}
+                                        {{ about_company.text_with_blue_background_ru|safe }}
+                                    {% else %}
+                                        {{ about_company.text_with_blue_background_en|safe }}
+                                    {% endif %}
+                                </p>
+                            </div>
+                            <div class="content__paragraph">
+                                <h3>
+                                    {% if LANGUAGE_CODE == 'ru' %}
+                                        {{ about_company.sub_title_2_ru|safe }}
+                                    {% else %}
+                                        {{ about_company.sub_title_2_en|safe }}
+                                    {% endif %}
+                                </h3>
+                                <p>
+                                    {% if LANGUAGE_CODE == 'ru' %}
+                                        {{ about_company.body_2_ru|safe }}
+                                    {% else %}
+                                        {{ about_company.body_2_en|safe }}
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </div> <!--   paragraph-->
 
                     <div class="table2x statistic_box">
                         <div class="about__item">
-                            <div class="about__info">25 лет</div>
-                            <div class="about__subitem">безупречной работы</div>
+                            <div class="about__info">25 {% trans 'лет' %}</div>
+                            <div class="about__subitem">{% trans 'безупречной работы' %}</div>
                         </div>
                         <div class="about__item">
-                            <div class="about__subitem">более</div>
-                            <div class="about__info">50 млн. км.</div>
-                            <div class="about__subitem">пробега</div>
+                            <div class="about__subitem">{% trans 'более' %}</div>
+                            <div class="about__info">{% trans '50 млн. км.' %}</div>
+                            <div class="about__subitem">{% trans 'пробега' %}</div>
                         </div>
                         <div class="about__item">
                             <div class="about__info">45000</div>
-                            <div class="about__subitem">перевозок</div>
+                            <div class="about__subitem">{% trans 'перевозок' %}</div>
                         </div>
                     </div> <!-- table2x-->
 
@@ -139,57 +87,4 @@
     </div>
 
 </section>
-        <footer class="footer">
-    <div class="footer__wrapper">
-        <div class="footer__content _container">
-            <div class="footer__body">
-                <div class="company_name">ЧТУП «СевенТрансСервис» </div>
-                <div class="footer__menu">
-                    <div class="footer__col">
-                        <div class="company__item">УНП 690630311</div>
-                        <div class="company__item">
-                            223710, Минская обл., Солигорский р-н,
-                            Чижевичский с/с, д.68, пом.56,
-                            Район промзоны 1 РУ</div>
-                        <div class="company__item">Разработка сайта -
-                            <a  href="https://profox.by/" class="page__link">ProFox</a>
-                        </div>
-
-                    </div> <!--__col-->
-
-                    <div class="footer__col">
-                        <div class="company__item">Время работы: пн-пт с 8.00 до 17.00</div>
-                        <div class="company__item">E-mail:
-                            <a class="_link_underline"  href="mailto:info@remohire.co" >seventrans@mail.ru</a>
-                        </div>
-                        <div class="company__item">
-                            <a class="_link mr-20" href="tel:+375174323323">+375 (174) 323323,</a>
-                            <a class="_link" href="tel:+375296253512">+375 (29) 6253512</a>
-                        </div>
-                        <div class="company__item">
-                            <a href="" >
-                                <img class="_icon mr-20" src="img/instagram.svg" alt="instagram">
-                            </a>
-                            <a href="">
-                                <img class="_icon" src="img/linkedin.svg" alt="linkedin">
-                            </a>
-                        </div>
-                    </div> <!--__col-->
-                    <div class="footer__col maps__block">
-                        <div class="maps__logo">
-                            <img src="img/logo.png" alt="seventrans">
-                        </div> <!--__item-->
-                    </div> <!--__col-->
-
-                </div> <!--__menu-->
-
-
-
-            </div> <!--__body-->
-        </div> <!--__content-->
-    </div><!--__wrapper-->
-</footer>
-
-        <script src="js/app.min.js"></script>
-    </body>
-</html>
+{% endblock content %}

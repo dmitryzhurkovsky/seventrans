@@ -1,0 +1,44 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+    <section class="preheader">
+        <div class="preheader__wrapper">
+            <div class="preheader__wrapper__bg"></div>
+            <div class="preheader__content  _container">
+                <div class="preheader__body">
+                    <div class="breadcrumbs">{% trans 'Главная' %} / {% trans 'Новости' %}</div>
+                    <h2 class="preheader__title">{% trans 'Новости' %}</h2>
+                </div> <!--  __content-->
+            </div><!--  __content-->
+        </div>  <!-- __wrapper-->
+    </section>
+
+    <section class="list_news">
+        <div class="list_news__wrapper">
+            <div class="list_news__content  _container">
+                <div class="list_news__body">
+                    <div class="list_news__paragraph">
+
+                        <div class="list_news__item">
+                            <div class="list_news__img">
+                                <img src="{{ article.img_url }}" alt="">
+                            </div>
+
+                            <div class="list_news__description">
+                                <div class="one_news__date one_news__item">{{ article.publish_date }}</div>
+                                <div class="one_news__title one_news__item">{{ article.title }}</div>
+                            </div>
+                            <p>
+                                {{ article.body|safe }}
+                            </p>
+                        </div>
+                    </div>
+                </div><!--__body-->
+            </div><!--__content-->
+        </div> <!--__wrapper-->
+
+    </section>
+
+{% endblock content %}
+{% static 'js/fetchNews.js' %}

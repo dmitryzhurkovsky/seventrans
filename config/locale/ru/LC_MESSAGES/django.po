@@ -1,0 +1,149 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-24 10:26+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: config/settings.py:99
+msgid "English"
+msgstr "Английский"
+
+#: config/settings.py:100
+#, fuzzy
+#| msgid "Rusian"
+msgid "Russian"
+msgstr "Русский"
+
+#: templates/about.html:11 templates/article.html:10 templates/contacts.html:10
+#: templates/news.html:10 templates/one_service.html:12
+#: templates/services.html:10
+msgid "Главная"
+msgstr "Главная"
+
+#: templates/about.html:11 templates/about.html:12
+#: templates/base/header.html:24 templates/index.html:29
+msgid "О компании"
+msgstr "О компании"
+
+#: templates/about.html:68 templates/index.html:18 templates/index.html:51
+msgid "лет"
+msgstr "лет"
+
+#: templates/about.html:69 templates/index.html:52
+msgid "безупречной работы"
+msgstr "безупречной работы"
+
+#: templates/about.html:72 templates/index.html:55
+msgid "более"
+msgstr "более"
+
+#: templates/about.html:73 templates/index.html:56
+msgid "50 млн. км."
+msgstr "50 млн. км."
+
+#: templates/about.html:74 templates/index.html:57
+msgid "пробега"
+msgstr "пробега"
+
+#: templates/about.html:78 templates/index.html:61
+msgid "перевозок"
+msgstr "перевозок"
+
+#: templates/article.html:10 templates/article.html:11
+#: templates/base/header.html:31 templates/index.html:75 templates/news.html:10
+#: templates/news.html:11
+msgid "Новости"
+msgstr "Новости"
+
+#: templates/base/footer.html:18
+msgid "УНП"
+msgstr "УНП"
+
+#: templates/base/footer.html:28
+msgid "Разработка сайта"
+msgstr "Разработка сайта"
+
+#: templates/base/footer.html:36 templates/contacts.html:69
+#, fuzzy
+#| msgid "Время работы: пн-пт с 8.00 до 17.00"
+msgid "Время работы:"
+msgstr "Время работы:"
+
+#: templates/base/header.html:18
+msgid "Международные автомобильные перевозки по Европе и странам СНГ"
+msgstr "Международные автомобильные перевозки по Европе и странам СНГ"
+
+#: templates/base/header.html:27 templates/one_service.html:12
+#: templates/services.html:10 templates/services.html:11
+#, fuzzy
+#| msgid "Услуги"
+msgid "Услуги"
+msgstr "Услуги"
+
+#: templates/base/header.html:34 templates/contacts.html:10
+#: templates/contacts.html:11
+msgid "Контакты"
+msgstr "Контакты"
+
+#: templates/contacts.html:25
+msgid "Юридические данные:"
+msgstr "Юридические данные:"
+
+#: templates/contacts.html:26
+msgid "Полное наименование:"
+msgstr "Полное наименование:"
+
+#: templates/contacts.html:35
+msgid "Юридические адрес:"
+msgstr "Юридические адрес:"
+
+#: templates/contacts.html:44
+msgid "УНП:"
+msgstr "УНП:"
+
+#: templates/contacts.html:56
+msgid "Адрес:"
+msgstr "Адрес:"
+
+#: templates/contacts.html:82
+msgid "Наш телефон:"
+msgstr "Наш телефон:"
+
+#: templates/contacts.html:91
+msgid "Наша почта:"
+msgstr "Наша почта:"
+
+#: templates/index.html:22
+#, fuzzy
+#| msgid "на рынке междунарожных грузоперевозок"
+msgid "на рынке международных грузоперевозок"
+msgstr "на рынке международных грузоперевозок"
+
+#: templates/index.html:43
+msgid "Подробнее"
+msgstr "Подробнее"
+
+#: templates/index.html:121
+msgid "Смотреть все новости"
+msgstr "Смотреть все новости"
+
+#, fuzzy
+#~| msgid "Услуги"
+#~ msgid "Услуга"
+#~ msgstr "Услуги"

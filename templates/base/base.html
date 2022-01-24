@@ -34,14 +34,13 @@
 
 
 </head>
-
 <body>
+<div id="app">
 {% include 'base/header.html' %}
-<div id="app">{% block content %}{% endblock %}</div>
+{% block content %}{% endblock %}
 {% include 'base/footer.html' %}
+</div>
+{% include 'base/vue_conetction.html' %}
 <script src="{% static 'js/app.min.js' %}"></script>
-<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="https://unpkg.com/vue@next"></script>
-<script src="{% static 'js/vue.js' %}"></script>
 </body>
 </html>

@@ -1,13 +1,14 @@
 {% extends 'base/base.html' %}
 {% load static %}
+{% load i18n %}
 {% block content %}
     <section class="preheader">
         <div class="preheader__wrapper">
             <div class="preheader__wrapper__bg"></div>
             <div class="preheader__content  _container">
                 <div class="preheader__body">
-                    <div class="breadcrumbs">Главная / Новости</div>
-                    <h2 class="preheader__title">Новости</h2>
+                    <div class="breadcrumbs">{% trans 'Главная' %} / {% trans 'Новости' %}</div>
+                    <h2 class="preheader__title">{% trans 'Новости' %}</h2>
                 </div> <!--  __content-->
             </div><!--  __content-->
         </div>  <!-- __wrapper-->
@@ -20,11 +21,11 @@
                     <div class="list_news__paragraph">
 
                         <p>
-                            В условиях постоянно развивающейся экономики нашей страны, международные перевозки грузов
-                            обретают все большую популярность. На сегодняшний день ни одна фирма, которая осуществляет
-                            внешнеэкономическую деятельность, не обходится без сотрудничества с компанией,
-                            осуществляющей
-                            международные грузоперевозки.
+                            {% if LANGUAGE_CODE == 'ru' %}
+                                {{ news_page_sub_title.sub_title_ru|safe }}
+                            {% else %}
+                                {{ news_page_sub_title.sub_title_en|safe }}
+                            {% endif %}
                         </p>
                     </div>
                     <news></news>
@@ -34,4 +35,3 @@
 
     </section>
 {% endblock content %}
-{% static 'js/fetchNews.js' %}

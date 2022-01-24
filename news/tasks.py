@@ -13,12 +13,10 @@ def parse_news_and_populate_database(pages: int = 2) -> None:
         news = parser.get_news(page_number=page)
 
         for article in news:
-            body_article, publication_date = parser.get_article_date_and_body(article_url=article['article_url'])
-
             Article.objects.get_or_create(
                 title=article['title'],
-                publish_date=publication_date,
-                body=body_article,
+                publish_date=article['publish_date'],
+                body=article['body'],
                 preview_body=article['preview_body'],
                 img_url=article['img_url'],
             )

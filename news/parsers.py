@@ -1,12 +1,13 @@
 from datetime import datetime
+from datetime import timedelta
 from typing import Optional
 
 import requests
 from bs4 import BeautifulSoup
-from django.conf import settings
+# from django.conf import settings
 
 
-# from config import settings # only for testing!
+from config import settings # only for testing!
 
 
 class BamapParser:
@@ -64,9 +65,6 @@ class TransInfoParser:
 
         raw_data = soup.find_all('div', {'class': 'list-item_inner'})
 
-        if not raw_data:
-            return None
-
         news = []
 
         for article in raw_data[:self.COUNT_OF_RECORDS_ON_PAGE]:
@@ -75,16 +73,27 @@ class TransInfoParser:
             if raw_title:
                 title = raw_title.text
 
-                preview_body = article.find('p', {'class': 'list-item_text'}).text
-                img_url = article.find('div', {'class': 'list-item_img'}).a.img.get('src')
-                article_url = article.find('h2', {'class': 'list-item_title'}).a.get('href')
+            preview_body = article.find('p', {'class': 'list-item_text'}).text
+            img_url = article.find('div', {'class': 'list-item_img'}).a.img.get('src')
+            article_url = article.find('h2', {'class': 'list-item_title'}).a.get('href')
 
-                news.append({
-                    'title': title,
-                    'preview_body': preview_body,
-                    'img_url': img_url,
-                    'article_url': article_url
-                })
+            if 'transinfo' in title.lower().split() or 'transinfo' in preview_body.lower().split():
+                continue
+
+            body, publish_date = self.get_article_date_and_body(article_url=article_url)
+
+            if 'transinfo' in body.lower().split():
+                continue
+
+            news.append({
+                'title': title,
+                'preview_body': preview_body,
+                'img_url': img_url,
+                'article_url': article_url,
+                'body': body,
+                'publish_date': publish_date
+
+            })
 
         return news
 
@@ -92,8 +101,28 @@ class TransInfoParser:
         response = requests.get(url=article_url)
         soup = BeautifulSoup(response.text, features="html.parser")
 
-        article_body = soup.find('div', {'class': 'news_view__text'}).text.strip()
-        raw_publication_date = soup.find('p', {'class': 'news-view__date'}).span.text[13:]
-        publication_date = datetime.strptime(raw_publication_date, '%d.%m.%Y, %H:%M')
+        article_body = soup.find('div', {'class': 'news_view__text'}).contents[2:]
+        raw_publish_date = soup.find('p', {'class': 'news-view__date'}).span.text[13:]
 
-        return article_body, publication_date
+        raw_date = raw_publish_date.lower().split(', ')[0]
+        raw_time = raw_publish_date.lower().split(', ')[1]
+        time = datetime.strptime(raw_time, '%H:%M')
+
+        if 'Сегодня' in raw_date:
+            publish_date = datetime.today()
+            publish_date.hour = time.hour
+            publish_date.minute = time.minute
+
+        elif 'Вчера' in raw_date:
+            publish_date = datetime.today() - timedelta(days=1)
+            publish_date.hour = time.hour
+            publish_date.minute = time.minute
+
+        else:
+            publish_date = datetime.strptime(raw_publish_date, '%d.%m.%Y, %H:%M')
+
+        return article_body, publish_date
+
+
+api = TransInfoParser()
+api.get_news()

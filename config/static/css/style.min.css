@@ -459,7 +459,7 @@
   }
 }
 .banner__title .title__col:nth-child(2) {
-  width: 375px;
+  width: 440px;
   padding-left: 20px;
   font-weight: bold;
   font-size: calc(25px + 25 * ((100vw - 320px) / 1600));
