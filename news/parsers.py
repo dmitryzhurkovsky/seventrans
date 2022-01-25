@@ -82,8 +82,9 @@ class TransInfoParser:
 
             body, publish_date = self.get_article_date_and_body(article_url=article_url)
 
-            if 'transinfo' in body.lower().split():
-                continue
+            for word in body.split():
+                if 'transinfo' in word.lower():
+                    continue
 
             news.append({
                 'title': title,
