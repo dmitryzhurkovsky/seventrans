@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-24 10:26+0000\n"
+"POT-Creation-Date: 2022-01-25 08:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,36 +33,36 @@ msgid "Главная"
 msgstr "Main"
 
 #: templates/about.html:11 templates/about.html:12
-#: templates/base/header.html:24 templates/index.html:29
+#: templates/base/header.html:24 templates/index.html:37
 msgid "О компании"
 msgstr "About company"
 
-#: templates/about.html:68 templates/index.html:18 templates/index.html:51
+#: templates/about.html:68 templates/index.html:18 templates/index.html:60
 msgid "лет"
 msgstr "years"
 
-#: templates/about.html:69 templates/index.html:52
+#: templates/about.html:69 templates/index.html:61
 msgid "безупречной работы"
 msgstr "flawless work"
 
-#: templates/about.html:72 templates/index.html:55
+#: templates/about.html:72 templates/index.html:64
 msgid "более"
 msgstr "more than"
 
-#: templates/about.html:73 templates/index.html:56
+#: templates/about.html:73 templates/index.html:65
 msgid "50 млн. км."
 msgstr "50 million km."
 
-#: templates/about.html:74 templates/index.html:57
+#: templates/about.html:74 templates/index.html:66
 msgid "пробега"
 msgstr "mileage"
 
-#: templates/about.html:78 templates/index.html:61
+#: templates/about.html:78 templates/index.html:70
 msgid "перевозок"
 msgstr "transportation"
 
 #: templates/article.html:10 templates/article.html:11
-#: templates/base/header.html:31 templates/index.html:75 templates/news.html:10
+#: templates/base/header.html:31 templates/index.html:84 templates/news.html:10
 #: templates/news.html:11
 msgid "Новости"
 msgstr "News"
@@ -125,14 +125,10 @@ msgstr "Our email:"
 msgid "на рынке международных грузоперевозок"
 msgstr "on the international cargo transportation market"
 
-#: templates/index.html:43
+#: templates/index.html:52
 msgid "Подробнее"
-msgstr "Detailed"
+msgstr "More details"
 
-#: templates/index.html:121
+#: templates/index.html:131
 msgid "Смотреть все новости"
 msgstr "See all news"
-
-#~| msgid "Услуги"
-#~ msgid "Услуга"
-#~ msgstr "Services"
