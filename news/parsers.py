@@ -82,8 +82,8 @@ class TransInfoParser:
 
             body, publish_date = self.get_article_date_and_body(article_url=article_url)
 
-            for word in body.split():
-                if 'transinfo' in word.lower():
+            for word in body:
+                if 'transinfo' in word.text().lower():
                     continue
 
             news.append({
@@ -123,7 +123,3 @@ class TransInfoParser:
             publish_date = datetime.strptime(raw_publish_date, '%d.%m.%Y, %H:%M')
 
         return article_body, publish_date
-
-
-api = TransInfoParser()
-api.get_news()
