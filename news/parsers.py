@@ -91,7 +91,7 @@ class TransInfoParser:
                 'preview_body': preview_body,
                 'img_url': img_url,
                 'article_url': article_url,
-                'body': ''.join(str(body)),
+                'body': str(''.join(str(body))),
                 'publish_date': publish_date
 
             })
