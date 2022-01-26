@@ -3,9 +3,9 @@ const config = {
     methods: {
         redirectToPage(endPoint) {
             if (endPoint === 'news') {
-                window.open(`http://7trans.by/news`);
+                window.open(`https://7trans.by/news`);
             } else if (endPoint === 'about') {
-                window.open(`http://7trans.by/about`);
+                window.open(`https://7trans.by/about`);
             }
         }
     }
