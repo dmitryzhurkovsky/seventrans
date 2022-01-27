@@ -56,7 +56,7 @@
                         <div class="table2x">
                             <div class="contacts__row">
                                 <img class="contacts__icon" src="{% static 'img/svg/point.svg' %}" alt="Adress">
-                                <div class="contacts__item">{% trans 'Адрес:' %}
+                                <div class="contacts__item"><strong>{% trans 'Адрес:' %}</strong>
                                     <span>
                                         {% if  LANGUAGE_CODE == 'ru' %}
                                             {{ contacts.address_ru|safe }}
@@ -69,7 +69,7 @@
                             <div class="contacts__row">
                                 <img class="contacts__icon" src="{% static 'img/svg/time.svg' %}" alt="Working time">
                                 <div class="contacts__item">
-                                    {% trans 'Время работы:' %}
+                                    <strong>{% trans 'Время работы:' %}</strong>
                                     <span>
                                     {% if  LANGUAGE_CODE == 'ru' %}
                                         {{ contacts.working_time_ru|safe }}

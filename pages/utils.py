@@ -18,3 +18,14 @@ def modify_len_title_and_body_of_news(news: QuerySet) -> list:
     third_article['preview_body'] = third_article.get('body')[:settings.NEWS_INDEX_PAGE_THIRD_ARTICLE_PREVIEW_BODY_LENGTH]
 
     return [first_article, second_article, third_article]
+
+
+def modify_preview_body_of_news(news: list) -> list:
+    for article in news:
+        preview_body = article.get('preview_body')
+
+
+
+        article['preview_body'] = modify_preview_body
+
+    return news
