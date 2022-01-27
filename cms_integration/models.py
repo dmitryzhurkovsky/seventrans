@@ -113,10 +113,16 @@ class Contact(models.Model):
         verbose_name='Время работы, английский'
     )
 
-    phone_number = models.CharField(
+    phone_number_1 = models.CharField(
         max_length=255,
-        verbose_name='Номера телефонов'
+        verbose_name='1 номер телефона'
     )
+
+    phone_number_2 = models.CharField(
+        max_length=255,
+        verbose_name='2 номер телефона'
+    )
+
     email = models.EmailField(
         max_length=255,
         verbose_name='email'
