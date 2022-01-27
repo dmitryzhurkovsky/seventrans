@@ -1,7 +1,7 @@
 languageTumblerComponent = {
     data() {
         return {
-            language: this.getCookie('django_language'),
+            language: this.getCookie('django_language') ? this.getCookie('django_language') : 'ru',
         }
     },
     methods: {

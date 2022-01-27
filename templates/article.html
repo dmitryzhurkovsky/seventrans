@@ -2,12 +2,15 @@
 {% load static %}
 {% load i18n %}
 {% block content %}
-    <section class="preheader">
+    <section class="preheader" xmlns="http://www.w3.org/1999/html">
         <div class="preheader__wrapper">
             <div class="preheader__wrapper__bg"></div>
             <div class="preheader__content  _container">
                 <div class="preheader__body">
-                    <div class="breadcrumbs">{% trans 'Главная' %} / {% trans 'Новости' %}</div>
+                    <div class="breadcrumbs">
+                        <a class="breadcrumbs" href="/">{% trans 'Главная' %}</a> /
+                        <a class="breadcrumbs" href="/news">{% trans 'Новости' %}</a>
+                    </div>
                     <h2 class="preheader__title">{% trans 'Новости' %}</h2>
                 </div> <!--  __content-->
             </div><!--  __content-->

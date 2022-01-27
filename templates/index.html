@@ -92,7 +92,7 @@
                             <div class="one_news__description">
                                 <div class="one_news__date one_news__item">{{ first_article.publish_date }}</div>
                                 <div class="one_news__title one_news__item"> {{ first_article.title }}</div>
-                                <div class="one_news__text one_news__item">{{ first_article.preview_body }}
+                                <div class="one_news__text one_news__item">{{ first_article.preview_body|safe }}
                                 </div>
                             </div>
 
@@ -107,7 +107,7 @@
                             <div class="one_news__description">
                                 <div class="one_news__date one_news__item">{{ second_article.publish_date }}</div>
                                 <div class="one_news__title one_news__item"> {{ second_article.title }}</div>
-                                <div class="one_news__text one_news__item">{{ second_article.preview_body }}
+                                <div class="one_news__text one_news__item">{{ second_article.preview_body|safe }}
                                 </div>
                             </div>
 
@@ -121,7 +121,7 @@
                             <div class="one_news__description">
                                 <div class="one_news__date one_news__item">{{ third_article.publish_date }}</div>
                                 <div class="one_news__title one_news__item"> {{ third_article.title }}</div>
-                                <div class="one_news__text one_news__item">{{ third_article.preview_body }}
+                                <div class="one_news__text one_news__item">{{ third_article.preview_body|safe }}
                                 </div>
                             </div>
 

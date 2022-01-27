@@ -8,7 +8,10 @@
             <div class="preheader__wrapper__bg"></div>
             <div class="preheader__content  _container">
                 <div class="preheader__body">
-                    <div class="breadcrumbs">{% trans 'Главная'  %} / {% trans 'О компании' %}</div>
+                    <div class="breadcrumbs">
+                        <a class="breadcrumbs" href="/">{% trans 'Главная'  %}</a> /
+                        <a class="breadcrumbs" href="/about">{% trans 'О компании' %}</a>
+                    </div>
                     <h2 class="preheader__title">{% trans 'О компании' %}</h2>
                 </div> <!--  __content-->
             </div><!--  __content-->
