@@ -7,7 +7,10 @@
             <div class="preheader__wrapper__bg"></div>
             <div class="preheader__content  _container">
                 <div class="preheader__body">
-                    <div class="breadcrumbs">{% trans 'Главная' %} / {% trans 'Контакты' %}</div>
+                    <div class="breadcrumbs">
+                        <a class="breadcrumbs" href="/">{% trans 'Главная' %}</a>  /
+                        <a class="breadcrumbs" href="/contacts">{% trans 'Контакты' %}</a>
+                    </div>
                     <h2 class="preheader__title">{% trans 'Контакты' %}</h2>
                 </div> <!--  __content-->
             </div><!--  __content-->
@@ -53,7 +56,7 @@
                         <div class="table2x">
                             <div class="contacts__row">
                                 <img class="contacts__icon" src="{% static 'img/svg/point.svg' %}" alt="Adress">
-                                <div class="contacts__item">{% trans 'Адрес:' %}
+                                <div class="contacts__item"><strong>{% trans 'Адрес:' %}</strong>
                                     <span>
                                         {% if  LANGUAGE_CODE == 'ru' %}
                                             {{ contacts.address_ru|safe }}
@@ -66,7 +69,7 @@
                             <div class="contacts__row">
                                 <img class="contacts__icon" src="{% static 'img/svg/time.svg' %}" alt="Working time">
                                 <div class="contacts__item">
-                                    {% trans 'Время работы:' %}
+                                    <strong>{% trans 'Время работы:' %}</strong>
                                     <span>
                                     {% if  LANGUAGE_CODE == 'ru' %}
                                         {{ contacts.working_time_ru|safe }}
@@ -79,16 +82,16 @@
                             <div class="contacts__row">
                                 <img class="contacts__icon" src="{% static 'img/svg/phone.svg' %}" alt="Telephon">
                                 <div class="contacts__item">
-                                    {% trans 'Наш телефон:' %}
+                                    <strong>{% trans 'Наш телефон:' %}</strong>
                                     <span>
-                                        {{ contacts.phone_number }}
+                                        <a class="_link" href="tel:{{ contacts.phone_number_1 }}">{{ contacts.phone_number_1 }}</a>
                                 </span>
                                 </div>
                             </div>
                             <div class="contacts__row">
                                 <img class="contacts__icon" src="{% static 'img/svg/email.svg' %}" alt="Email">
                                 <div class="contacts__item">
-                                    {% trans 'Наша почта:' %}
+                                    <strong>{% trans 'Наша почта:' %}</strong>
                                     <span>
                                       {{ contacts.email }}
                                 </span>

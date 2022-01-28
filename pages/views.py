@@ -12,7 +12,7 @@ from cms_integration.models import (
     NewsSubTitle
 )
 from news.models import Article
-from pages.utils import modify_len_title_and_body_of_news
+from pages.utils import modify_len_title_and_body_of_news, modify_preview_body_of_news
 
 
 class IndexView(View):
@@ -22,6 +22,7 @@ class IndexView(View):
 
         news = Article.objects.all()[:3]
         news = modify_len_title_and_body_of_news(news)
+        # news = modify_preview_body_of_news(news)
 
         return render(
             request, template_name='index.html', context={
