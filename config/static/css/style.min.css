@@ -611,6 +611,10 @@
   margin-top: 0;
   margin-bottom: 5px;
 }
+.about__item:nth-child(3) .about__subitem:nth-child(1) {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
 .about__subitem {
   font-size: 17px;
   font-weight: 300;
@@ -960,6 +964,15 @@ h6 {
 .list_news__pagination {
   margin: 20px 0;
   justify-content: center;
+}
+
+.arcticle__img {
+  max-width: 500px;
+  float: right;
+  margin-right: 15px;
+}
+.arcticle__description p {
+  margin-bottom: 5px;
 }
 
 .contacts {
