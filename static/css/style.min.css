@@ -966,12 +966,12 @@ h6 {
   justify-content: center;
 }
 
-.arcticle__img {
+.article__img {
   max-width: 500px;
   float: right;
   margin-right: 15px;
 }
-.arcticle__description p {
+.article__description p {
   margin-bottom: 5px;
 }
 
