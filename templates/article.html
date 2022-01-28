@@ -17,20 +17,20 @@
         </div>  <!-- __wrapper-->
     </section>
 
-    <section class="list_news">
-        <div class="list_news__wrapper">
-            <div class="list_news__content  _container">
-                <div class="list_news__body">
-                    <div class="list_news__paragraph">
+    <section class="article">
+        <div class="article__wrapper">
+            <div class="article__content  _container">
+                <div class="article__body">
+                    <div class="article__paragraph">
 
-                        <div class="list_news__item">
-                            <div class="list_news__img">
+                        <div class="article__item">
+                            <div class="article__img">
                                 <img src="{{ article.img_url }}" alt="">
                             </div>
 
-                            <div class="list_news__description">
-                                <div class="one_news__date one_news__item">{{ article.publish_date }}</div>
-                                <div class="one_news__title one_news__item">{{ article.title }}</div>
+                            <div class="article__description">
+                                <div class="one__date one_news__item">{{ article.publish_date }}</div>
+                                <div class="one__title one_news__item">{{ article.title }}</div>
                             </div>
                             <p>
                                 {{ article.body|safe }}
