@@ -4,9 +4,9 @@ from typing import Optional
 
 import requests
 from bs4 import BeautifulSoup
-from django.conf import settings
+# from django.conf import settings
 
-# from config import settings  # only for testing!
+from config import settings  # only for testing!
 
 
 class BamapParser:
@@ -82,7 +82,7 @@ class TransInfoParser:
             body, publish_date = self.get_article_date_and_body(article_url=article_url)
 
             for word in body:
-                if 'transinfo' in word.text.lower():
+                if 'transinfo' in word.lower():
                     continue
 
             news.append({
@@ -109,17 +109,17 @@ class TransInfoParser:
         raw_time = raw_publish_date.lower().split(', ')[1]
         time = datetime.strptime(raw_time, '%H:%M')
 
-        if 'Сегодня' in raw_date:
+        if 'сегодня' in raw_date:
             publish_date = datetime.today()
-            publish_date.hour = time.hour
-            publish_date.minute = time.minute
+            publish_date.replace(hour=time.hour, minute=time.minute)
 
-        elif 'Вчера' in raw_date:
+        elif 'вчера' in raw_date:
             publish_date = datetime.today() - timedelta(days=1)
-            publish_date.hour = time.hour
-            publish_date.minute = time.minute
+            publish_date.replace(hour=time.hour, minute=time.minute)
 
         else:
             publish_date = datetime.strptime(raw_publish_date, '%d.%m.%Y, %H:%M')
 
         return article_body, publish_date
+
+s = TransInfoParser().get_news()
