@@ -6,8 +6,7 @@ import requests
 from bs4 import BeautifulSoup
 from django.conf import settings
 
-
-# from config import settings # only for testing!
+# from config import settings  # only for testing!
 
 
 class BamapParser:
@@ -103,6 +102,7 @@ class TransInfoParser:
         soup = BeautifulSoup(response.text, features="html.parser")
 
         article_body = soup.find('div', {'class': 'news_view__text'}).contents[2:]
+        article_body = [row.text.replace(chr(160), ' ') if row != '\n' else '\n' for row in article_body]
         raw_publish_date = soup.find('p', {'class': 'news-view__date'}).span.text[13:]
 
         raw_date = raw_publish_date.lower().split(', ')[0]
