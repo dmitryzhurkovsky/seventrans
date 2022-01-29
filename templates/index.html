@@ -79,7 +79,7 @@
         </div>  <!-- ..wrapper-->
     </section>
 
-    <section class="news">
+    <section v-if="language === 'ru'" class="news">
         <div class="news__wrapper">
             <div class="news__content _container">
                 <h2>{% trans 'Новости' %}</h2>
