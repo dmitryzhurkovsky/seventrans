@@ -2,11 +2,14 @@ from datetime import datetime
 from datetime import timedelta
 from typing import Optional
 
+import bs4
 import requests
 from bs4 import BeautifulSoup
-# from django.conf import settings
 
 from config import settings  # only for testing!
+
+
+# from django.conf import settings
 
 
 class BamapParser:
@@ -82,7 +85,7 @@ class TransInfoParser:
             body, publish_date = self.get_article_date_and_body(article_url=article_url)
 
             for word in body:
-                if 'transinfo' in word.lower():
+                if 'transinfo' in word.text.lower():
                     continue
 
             news.append({
@@ -102,7 +105,8 @@ class TransInfoParser:
         soup = BeautifulSoup(response.text, features="html.parser")
 
         article_body = soup.find('div', {'class': 'news_view__text'}).contents[2:]
-        article_body = [row.text.replace(chr(160), ' ') if row != '\n' else '\n' for row in article_body]
+        article_body = self.delete_non_breaking_spaces(article_body)
+
         raw_publish_date = soup.find('p', {'class': 'news-view__date'}).span.text[13:]
 
         raw_date = raw_publish_date.lower().split(', ')[0]
@@ -121,5 +125,16 @@ class TransInfoParser:
             publish_date = datetime.strptime(raw_publish_date, '%d.%m.%Y, %H:%M')
 
         return article_body, publish_date
+
+    @staticmethod
+    def delete_non_breaking_spaces(article_body: bs4.BeautifulSoup) -> bs4.BeautifulSoup:
+        for el in article_body:
+            if el.text == '\n':
+                continue
+            else:
+                el.text.replace(chr(160), ' ')
+
+        return article_body
+
 
 s = TransInfoParser().get_news()
