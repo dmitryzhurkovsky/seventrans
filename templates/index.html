@@ -86,7 +86,7 @@
                 <div class="news__body">
 
                     <div class="news__block">
-                        <div class="one_news__block">
+                        <a href="https://7trans.by/news/{{ first_article.id }}" class="one_news__block">
                             <div class="one_news__img">
                                 <img src="{{ first_article.img_url }}" alt="Новости">
                             </div>
@@ -98,10 +98,10 @@
                             </div>
 
 
-                        </div>
+                        </a>
                     </div>
                     <div class="news__block">
-                        <div class="one_news__block">
+                        <a href="https://7trans.by/news/{{ second_article.id }}" class="one_news__block">
                             <div class="one_news__img">
                                 <img src="{{ second_article.img_url }}" alt="Новости">
                             </div>
@@ -113,9 +113,9 @@
                             </div>
 
 
-                        </div>
+                        </a>
 
-                        <div class="one_news__block">
+                        <a href="https://7trans.by/news/{{ third_article.id }}" class="one_news__block">
                             <div class="one_news__img">
                                 <img src="{{ third_article.img_url }}" alt="Новости">
                             </div>
@@ -126,7 +126,7 @@
                                 </div>
                             </div>
 
-                        </div>
+                        </a>
                         <div class="one_news__btn">
                             <button @click="redirectToPage('news')"
                                     class="btn btn-arrow">{% trans 'Смотреть все новости' %}
