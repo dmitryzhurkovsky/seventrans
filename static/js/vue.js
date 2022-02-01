@@ -8,9 +8,9 @@ const config = {
     methods: {
         redirectToPage(endPoint) {
             if (endPoint === 'news') {
-                window.open(`https://7trans.by/news`);
+                window.location.href = `https://7trans.by/news`;
             } else if (endPoint === 'about') {
-                window.open(`https://7trans.by/about`);
+                window.location.href = `https://7trans.by/about`;
             }
         },
         getCookie(cookieName) {
