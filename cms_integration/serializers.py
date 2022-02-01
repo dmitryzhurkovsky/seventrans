@@ -6,7 +6,6 @@ from cms_integration.models import Service
 
 class ServiceSerializer(serializers.ModelSerializer):
     title = serializers.SerializerMethodField()
-    preview = serializers.SerializerMethodField()
 
     class Meta:
         model = Service
@@ -14,7 +13,8 @@ class ServiceSerializer(serializers.ModelSerializer):
             'id',
             'title',
             'img',
-            'preview',
+            'preview_ru',
+            'preview_en',
         )
 
     def get_language(self):
@@ -27,11 +27,3 @@ class ServiceSerializer(serializers.ModelSerializer):
             return instance.title_ru
 
         return instance.title_en
-
-    def get_preview(self, instance):
-        language = self.get_language()
-
-        if language == 'ru':
-            return instance.preview_ru
-
-        return instance.preview_en
