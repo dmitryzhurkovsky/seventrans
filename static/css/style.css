@@ -845,10 +845,12 @@ h6 {
 
 .usluga__img {
   flex-basis: 32%;
+  height: 100%;
 }
 .usluga__img img {
   width: 100%;
-  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .usluga__textbox {
   flex-basis: 68%;
@@ -992,6 +994,7 @@ h6 {
 }
 .article p {
   margin-bottom: 10px;
+  line-height: 1.5;
 }
 
 .contacts {
@@ -1104,6 +1107,13 @@ h6 {
 }
 .footer__col:nth-child(1) .company__item:nth-child(2) {
   width: 300px;
+}
+.footer__col:nth-child(2) .company__item:nth-child(3) {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer__col:nth-child(2) .company__item:nth-child(3) ._link:nth-child(1) {
+  margin-right: 10px;
 }
 @media (max-width: 1367px) {
   .footer__col:nth-child(2) .company__item {
