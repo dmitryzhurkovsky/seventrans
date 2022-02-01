@@ -8,8 +8,8 @@ servicesComponent = {
     methods: {
         async fetchServices() {
             try {
-                const response = await axios.get(`https://7trans.by/api/v1/services`, {
-                    headers: {'Accept-Language': language}
+                const response = await axios.get(`http://localhost:8000/api/v1/services/`, {
+                    // headers: {'Accept-Language': this.language}
                 });
                 this.services = response.data.results;
             } catch (e) {
@@ -35,9 +35,8 @@ servicesComponent = {
                 </div>
                 <div class="usluga__textbox">
                     <h4 v-html="service.title" class="usluga__title"></h4>
-                    <div v-if="lanuage === ru" v-html="service.preview_ru" class="usluga__description">
-                    <div v-else v-html="service.preview_en" class="usluga__description">
-                    </div>
+                    <div v-if="language === ru" class="usluga__description">{{ service.preview_ru }}</div>
+                    <div v-else class="usluga__description">{{ service.preview_en }}</div>
                 </div>
             </a>
          </div>
