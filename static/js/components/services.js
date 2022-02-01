@@ -4,11 +4,12 @@ servicesComponent = {
             services: null
         }
     },
+    props: ['language'],
     methods: {
         async fetchServices() {
             try {
                 const response = await axios.get(`https://7trans.by/api/v1/services`, {
-                    headers: {'Accept-Language': this.language}
+                    headers: {'Accept-Language': language}
                 });
                 this.services = response.data.results;
             } catch (e) {

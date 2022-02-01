@@ -33,8 +33,8 @@ class Service(models.Model):
 
     img = models.ImageField()
 
-    preview_en = models.CharField(max_length=255, verbose_name='Превью услуги на английском')
-    preview_ru = models.CharField(max_length=255, verbose_name='Превью услуги на русском')
+    preview_en = models.TextField(verbose_name='Превью услуги на английском')
+    preview_ru = models.TextField(verbose_name='Превью услуги на русском')
 
     content_1_en = RichTextField(verbose_name='Текст 1 абзаца услуги на английском', null=True, blank=True)
     content_1_ru = RichTextField(verbose_name='Текст 1 абзаца услуги ан русском', null=True, blank=True)
