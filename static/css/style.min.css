@@ -750,8 +750,6 @@ h6 {
   list-style: disc;
 }
 .content__box {
-  display: flex;
-  align-items: flex-start;
 }
 @media (max-width: 767.98px) {
   .content__box {
@@ -773,8 +771,11 @@ h6 {
   border: 1px solid #DFEAF3;
 }
 .content__box .table2x:nth-child(2) {
-  flex-basis: 30%;
-  background: #102B43;
+    flex-basis: 30%;
+    background: #102B43;
+    float: right;
+    margin-left: 20px;
+
 }
 @media (max-width: 767.98px) {
   .content__box .table2x:nth-child(2) {
@@ -825,7 +826,8 @@ h6 {
 }
 @media (max-width: 767.98px) {
   .uslugi__item {
-    margin-bottom: 25px;
+      margin-bottom: 25px;
+      align-items: stretch;
   }
 }
 .uslugi__item:hover {
@@ -841,6 +843,11 @@ h6 {
     flex-basis: 100%;
     flex-direction: column;
   }
+}
+@media (max-width: 767.98px) {
+    .usluga__img {
+        height:none
+    }
 }
 
 .usluga__img {
