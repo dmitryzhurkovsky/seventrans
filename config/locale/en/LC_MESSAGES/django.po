@@ -69,7 +69,7 @@ msgstr "News"
 
 #: templates/base/footer.html:18
 msgid "УНП"
-msgstr "Reg.no"
+msgstr "Reg.no:"
 
 #: templates/base/footer.html:28
 msgid "Разработка сайта"
