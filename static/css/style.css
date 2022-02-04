@@ -1275,6 +1275,19 @@ h2 {
   color: #FFFFFF;
 }
 
+.content__img {
+  float: right;
+  margin-left: 20px;
+}
+@media (max-width: 479.98px) {
+  .content__img {
+    margin-left: 0;
+  }
+}
+.content__img img {
+  max-width: 100%;
+}
+
 /* Set the size of the div element that contains the map */
 #map {
   height: 400px;
