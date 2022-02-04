@@ -750,6 +750,8 @@ h6 {
   list-style: disc;
 }
 .content__box {
+  display: flex;
+  align-items: flex-start;
 }
 @media (max-width: 767.98px) {
   .content__box {
@@ -773,9 +775,6 @@ h6 {
 .content__box .table2x:nth-child(2) {
     flex-basis: 30%;
     background: #102B43;
-    float: right;
-    margin-left: 20px;
-
 }
 @media (max-width: 767.98px) {
   .content__box .table2x:nth-child(2) {

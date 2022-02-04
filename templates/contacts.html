@@ -92,9 +92,9 @@
                                 <img class="contacts__icon" src="{% static 'img/svg/email.svg' %}" alt="Email">
                                 <div class="contacts__item">
                                     <strong>{% trans 'Наша почта:' %}</strong>
-                                    <span>
+                                    <a href="mailto:{{ contact.email }}">
                                       {{ contacts.email }}
-                                </span>
+                                </a>
                                 </div>
                             </div>
 
