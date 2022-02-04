@@ -41,6 +41,9 @@
                             {% endif %}
                         </p>
                     </div> <!--   paragraph-->
+                    <div class="content__img">
+                        <img src="{{ service.img.url }}" alt="">
+                    </div>
                     <div class="content__paragraph">
                         <p>
                             {% if LANGUAGE_CODE == 'ru' %}
@@ -50,18 +53,15 @@
                             {% endif %}
                         </p>
                     </div>
-                    <div class="content__img">
-                        <img src="{{ service.img.url }}" alt="">
-                    </div>
                     <div class="content__paragraph">
-                    <p>
-                        {% if LANGUAGE_CODE == 'ru' %}
-                            {{ service.content_3_ru|safe }}
-                        {% else %}
-                            {{ service.content_3_en|safe }}
-                        {% endif %}
-                    </p>
-                </div> <!--   paragraph-->
+                        <p>
+                            {% if LANGUAGE_CODE == 'ru' %}
+                                {{ service.content_3_ru|safe }}
+                            {% else %}
+                                {{ service.content_3_en|safe }}
+                            {% endif %}
+                        </p>
+                    </div> <!--   paragraph-->
                 </div>
             </div>
         </div>
