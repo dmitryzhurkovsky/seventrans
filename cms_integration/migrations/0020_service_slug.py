@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='service',
             name='slug',
-            field=models.SlugField(blank=True, unique=True, verbose_name='Название услуги в адресной строке'),
+            field=models.SlugField(blank=True, verbose_name='Название услуги в адресной строке'),
         ),
     ]

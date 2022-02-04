@@ -624,8 +624,13 @@
 .map__wrapper {
   background: linear-gradient(180deg, #F1F7FC 0%, rgba(255, 255, 255, 0) 100%);
 }
-.map__content {
+.map__content_ru {
   background-image: url("../img/map.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.map__content_en {
+  background-image: url("../img/map_en.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
