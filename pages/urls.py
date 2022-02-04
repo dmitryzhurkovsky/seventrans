@@ -17,5 +17,6 @@ urlpatterns = [
     path('news/<int:pk>/', ArticleView.as_view()),
     path('contacts/', ContactsView.as_view()),
     path('services/', ServicesView.as_view()),
+    path('services/<str:slug>/', ServiceView.as_view()),
     path('services/<int:pk>/', ServiceView.as_view()),
 ]

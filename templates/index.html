@@ -147,8 +147,10 @@
 
     <section class="map">
         <div class="map__wrapper">
-            <div class="map__content _container">
-
+            <div
+                    class="_container"
+                    :class="{map__content_ru: language === 'ru', map__content_en: language === 'en' }"
+            >
                 <div class="map__body">
                 </div> <!-- ..body-->
             </div>   <!-- ..content-->

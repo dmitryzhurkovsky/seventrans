@@ -15,7 +15,7 @@
                 <div class="footer__menu">
                     <div class="footer__col">
                         <div class="company__item">
-                            {% trans 'УНП' %}{{ contacts.unp }}
+                            {% trans 'УНП' %} {{ contacts.unp }}
                         </div>
                         <div class="company__item">
                             {% if  LANGUAGE_CODE == 'ru' %}
@@ -51,10 +51,10 @@
                             </a>
                         </div>
                         <div class="company__item">
-                            <a href="">
+                            <a href="{{ contacts.instagram_href }}">
                                 <img class="_icon mr-20" src="{% static 'img/instagram.svg' %}" alt="instagram">
                             </a>
-                            <a href="">
+                            <a href="{{ contacts.linkedin_href }}">
                                 <img class="_icon" src="{% static 'img/linkedin.svg' %}" alt="linkedin">
                             </a>
                         </div>

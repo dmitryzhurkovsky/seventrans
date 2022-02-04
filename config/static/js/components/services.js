@@ -17,6 +17,9 @@ servicesComponent = {
         },
         getServiceUrl(serviceId) {
             return `https://7trans.by/services/${serviceId}/`
+        },
+        getSlugServiceUrl(slug) {
+            return `https://7trans.by/services/${slug}/`
         }
     },
     mounted() {
@@ -27,7 +30,7 @@ servicesComponent = {
             <a
                 v-for="(service, idx) in services"
                 :key="service.id"
-                :href="getServiceUrl(service.id)"
+                :href="getSlugServiceUrl(service.slug)"
                 class="uslugi__item usluga"
             >
                 <div class="usluga__img">

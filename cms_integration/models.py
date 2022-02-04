@@ -1,5 +1,6 @@
 from ckeditor.fields import RichTextField
 from django.db import models
+from django.shortcuts import reverse
 
 
 class AboutCompanyOnIndexPage(models.Model):
@@ -28,6 +29,8 @@ class ServiceText(models.Model):
 
 class Service(models.Model):
     """ Service page """
+    slug = models.SlugField(max_length=50, blank=True, unique=True, verbose_name='Название услуги в адресной строке')
+
     title_en = models.CharField(max_length=255, verbose_name='Название услуг на английском')
     title_ru = models.CharField(max_length=255, verbose_name='Название услуги на русском')
 
@@ -50,6 +53,11 @@ class Service(models.Model):
 
     def __str__(self):
         return f'{self.title_ru}. <- Эта услуга будет отображаться на странице услуг'
+
+    def get_absolute_url(self):
+        if self.slug is None:
+            return reverse('имя ссылки на персональную страницу из файла urls.py', kwargs={'pk': self.pk})
+        return reverse('имя ссылки на персональную страницу из файла urls.py', kwargs={'slug': self.slug})
 
 
 class AboutCompany(models.Model):
@@ -144,6 +152,9 @@ class Contact(models.Model):
         max_length=255,
         verbose_name='УНП'
     )
+
+    instagram_href = models.CharField(max_length=255, null=True, blank=True)
+    linkedin_href = models.CharField(max_length=255, null=True, blank=True)
 
     class Meta:
         verbose_name_plural = 'Страница "Контакты" и "Футер"'

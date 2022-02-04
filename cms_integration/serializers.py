@@ -15,6 +15,7 @@ class ServiceSerializer(serializers.ModelSerializer):
             'img',
             'preview_ru',
             'preview_en',
+            'slug'
         )
 
     def get_language(self):

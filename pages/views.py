@@ -1,4 +1,3 @@
-from django.conf import settings
 from django.shortcuts import render
 from django.views import View
 from django.views.generic import ListView
@@ -12,7 +11,7 @@ from cms_integration.models import (
     NewsSubTitle
 )
 from news.models import Article
-from pages.utils import modify_len_title_and_body_of_news, modify_preview_body_of_news
+from pages.utils import modify_len_title_and_body_of_news
 
 
 class IndexView(View):
@@ -88,9 +87,13 @@ class ServicesView(View):
 
 
 class ServiceView(View):
-    def get(self, request, pk, *args, **kwargs):
+    def get(self, request, pk=None, slug=None, *args, **kwargs):
         contacts = Contact.objects.get()
-        service = Service.objects.get(id=pk)
+
+        if pk:
+            service = Service.objects.get(id=pk)
+        if slug:
+            service = Service.objects.get(slug=slug)
 
         return render(
             request, template_name='one_service.html', context={
