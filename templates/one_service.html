@@ -41,34 +41,30 @@
                             {% endif %}
                         </p>
                     </div> <!--   paragraph-->
-                    <div class="content__box">
-                        <div class="table2x">
-                            <div class="content__paragraph">
-                                <p>
-                                    {% if LANGUAGE_CODE == 'ru' %}
-                                        {{ service.content_2_ru|safe }}
-                                    {% else %}
-                                        {{ service.content_2_en|safe }}
-                                    {% endif %}
-                                </p>
-                            </div>
-                        </div>
-                        <div class="table2x">
-                            <img src="{{ service.img.url }}" alt="">
-                        </div> <!-- table2x-->
-
-                    </div> <!-- box-->
                     <div class="content__paragraph">
                         <p>
                             {% if LANGUAGE_CODE == 'ru' %}
-                                {{ service.content_3_ru|safe }}
+                                {{ service.content_2_ru|safe }}
                             {% else %}
-                                {{ service.content_3_en|safe }}
+                                {{ service.content_2_en|safe }}
                             {% endif %}
                         </p>
-                    </div> <!--   paragraph-->
-
+                    </div>
                 </div>
+                <div class="content__img">
+                    <img src="{{ service.img.url }}" alt="">
+                </div>
+
+
+                <div class="content__paragraph">
+                    <p>
+                        {% if LANGUAGE_CODE == 'ru' %}
+                            {{ service.content_3_ru|safe }}
+                        {% else %}
+                            {{ service.content_3_en|safe }}
+                        {% endif %}
+                    </p>
+                </div> <!--   paragraph-->
             </div>
         </div>
 
