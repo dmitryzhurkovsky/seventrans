@@ -53,8 +53,7 @@
                     <div class="content__img">
                         <img src="{{ service.img.url }}" alt="">
                     </div>
-                </div>
-                <div class="content__paragraph">
+                    <div class="content__paragraph">
                     <p>
                         {% if LANGUAGE_CODE == 'ru' %}
                             {{ service.content_3_ru|safe }}
@@ -63,6 +62,7 @@
                         {% endif %}
                     </p>
                 </div> <!--   paragraph-->
+                </div>
             </div>
         </div>
 
