@@ -5,13 +5,12 @@ from cms_integration.models import Service
 
 
 class ServiceSerializer(serializers.ModelSerializer):
-    title = serializers.SerializerMethodField()
-
     class Meta:
         model = Service
         fields = (
             'id',
-            'title',
+            'title_ru',
+            'title_en',
             'img',
             'preview_ru',
             'preview_en',
@@ -20,11 +19,3 @@ class ServiceSerializer(serializers.ModelSerializer):
 
     def get_language(self):
         return self.context['request'].headers.get('Accept-Language')
-
-    def get_title(self, instance):
-        language = self.get_language()
-
-        if language == 'ru':
-            return instance.title_ru
-
-        return instance.title_en
