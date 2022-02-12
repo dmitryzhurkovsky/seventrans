@@ -8,7 +8,15 @@
     <meta name="viewport" content="width=device-width" , initial-scale="1.0">
     <link rel="stylesheet" href="{% static 'css/style.min.css' %}">
     <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
-    <meta name="mailru-domain" content="jpRZIb6UiY0GRJfM" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/img/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static '/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static '/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static '/site.webmanifes' %}t">
+    <link rel="mask-icon" href="{% static '/safari-pinned-tab.svg' %}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta name="mailru-domain" content="jpRZIb6UiY0GRJfM"/>
 
     <title>7trans | Международные перевозки</title>
 
@@ -37,9 +45,9 @@
 </head>
 <body>
 <div id="app">
-{% include 'base/header.html' %}
-<div>{% block content %}{% endblock %}</div>
-{% include 'base/footer.html' %}
+    {% include 'base/header.html' %}
+    <div>{% block content %}{% endblock %}</div>
+    {% include 'base/footer.html' %}
 </div>
 {% include 'base/vue_conetction.html' %}
 <script src="{% static 'js/app.min.js' %}"></script>
