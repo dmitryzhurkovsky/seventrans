@@ -47,7 +47,6 @@ newsComponent = {
                 this.page = pageNumber;
             }
             this.getCountOfPages();
-            console.log(this.numberOfPages)
             this.fetchNews();
         },
         getArticleUrl(articleId) {
