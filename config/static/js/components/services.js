@@ -38,7 +38,7 @@ servicesComponent = {
                 </div>
                 <div class="usluga__textbox">
                     <h4 v-if="language === 'ru'" v-html="service.title_ru" class="usluga__title"></h4>
-                    <h4 v-html="service.title_en" class="usluga__title"></h4>
+                    <h4 v-else v-html="service.title_en" class="usluga__title"></h4>
                     <div v-if="language === 'ru'" class="usluga__description">{{ service.preview_ru }}</div>
                     <div v-else class="usluga__description">{{ service.preview_en }}</div>
                 </div>
