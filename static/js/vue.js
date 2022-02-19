@@ -1,7 +1,8 @@
 const config = {
     data() {
         return {
-            language: this.getCookie('django_language') ? this.getCookie('django_language') : this.changeLanguage('ru')
+            language: this.getCookie('django_language') ? this.getCookie('django_language') : this.changeLanguage('ru'),
+            burgerIsOpen: false
         }
     },
     delimiters: ["[[", "]]"],

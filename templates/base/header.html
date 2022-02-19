@@ -5,7 +5,7 @@
         <div class="header__content  _container">
             <div class="header__body">
                 <nav class="header__navigation">
-                    <button id="burger" type="button" class="icon-menu">
+                    <button @click="burgerIsOpen = !burgerIsOpen" id="burger" type="button" class="icon-menu">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -32,6 +32,9 @@
                                 </li>
                                 <li class="menu__item">
                                     <a class="menu__link" href="/contacts">{% trans 'Контакты' %}</a>
+                                </li>
+                                <li v-if="burgerIsOpen" class="menu__item">
+                                    <img class="menu__link _size135" src="{% static 'img/logo/seventrans-07.png' %}">
                                 </li>
                             </ul>
                         </nav>
